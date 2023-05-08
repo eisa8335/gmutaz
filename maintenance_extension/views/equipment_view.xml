@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- equipments tree view start -->
+    <record model="ir.ui.view" id="view_installation_tree">
+        <field name="name">equipments.installation.base</field>
+        <field name="model">equipments.installation.base</field>
+        <field name="arch" type="xml">
+            <tree sample="1">
+                <field name="record_id" string="Record No." decoration-bf="1"/>
+                <field name="name"/>
+                <field name="model"/>
+                <field name="supplier_id" decoration-bf="1"/>
+                <field name="serial_number"/>
+                <field name="delivery_date" decoration-bf="1"/>
+                <field name="price" decoration-bf="1"/>
+                <field name="classification_id" optional="hide"/>
+                <field name="percentage_depreciation" optional="hide"/>
+                <field name="operational_cost" optional="show"/>
+                <field name="state" optional="show" widget="badge" decoration-info="state == 'draft'"
+                       decoration-success="state == 'confirm'"/>
+                <field name="value_depreciation" optional="hide"/>
+            </tree>
+        </field>
+    </record>
+    <!-- equipments tree view end -->
+
+    <!-- equipments form view start -->
+    <record model="ir.ui.view" id="view_installation_form">
+        <field name="name">equipments.installation.base.form</field>
+        <field name="model">equipments.installation.base</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="set_to_draft" type="object" string="Draft" class="oe_highlight"
+                            attrs="{'invisible':[('state','=','draft')]}"/>
+                    <button name="set_to_confirm" type="object" string="Confirm" class="oe_highlight"
+                            attrs="{'invisible':[('state','=','confirm')]}" confirm="Are you sure to confirm this Equipment."/>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <widget name="web_ribbon" title="Archived" bg_color="bg-danger"
+                            attrs="{'invisible': [('active', '=', True)]}"/>
+                    <field name="image" widget="image" class="oe_avatar"/>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="record_id"/>
+                        </h1>
+                    </div>
+                    <br/>
+                    <h1>Installation Base</h1>
+                    <br/>
+                    <group>
+                        <group>
+                            <field name="name" required="1" attrs="{'readonly':[('state','=','confirm')]}"/>
+                            <field name="supplier_id" required="1"
+                                   options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"
+                                   attrs="{'readonly':[('state','=','confirm')]}"/>
+                            <field name="model" required="1" attrs="{'readonly':[('state','=','confirm')]}"/>
+                            <field name="serial_number" required="1" attrs="{'readonly':[('state','=','confirm')]}"/>
+                            <field name="batch" required="1" attrs="{'readonly':[('state','=','confirm')]}"/>
+                            <field name="delivery_date" required="1" attrs="{'readonly':[('state','=','confirm')]}"/>
+                            <field name="procurement_id" attrs="{'readonly':[('state','=','confirm')]}"/>
+                        </group>
+                        <group>
+                            <field name="warranty_start_date" required="1"
+                                   attrs="{'readonly':[('state','=','confirm')]}"/>
+                            <field name="warranty_period" required="1" attrs="{'readonly':[('state','=','confirm')]}"/>
+                            <field name="price" attrs="{'readonly':[('state','=','confirm')]}"/>
+                            <field name="currency_id" invisible="1"/>
+                            <field name="classification_id" required="1"
+                                   options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"
+                                   attrs="{'readonly':[('state','=','confirm')]}"/>
+                            <field name="room" required="1" attrs="{'readonly':[('state','=','confirm')]}"/>
+                            <field name="floor" attrs="{'readonly':[('state','=','confirm')]}"/>
+                            <field name="note" attrs="{'readonly':[('state','=','confirm')]}"/>
+                        </group>
+                    </group>
+                    <br/>
+                    <h1>History Card</h1>
+                    <br/>
+                    <group>
+                        <group>
+                            <field name="percentage_depreciation" required="1"
+                                   attrs="{'readonly':[('state','=','confirm')]}"/>
+                            <field name="value_depreciation" attrs="{'readonly':[('state','=','confirm')]}"/>
+                            <field name="current_value" attrs="{'readonly':[('state','=','confirm')]}"/>
+                            <field name="operational_cost" attrs="{'readonly':[('state','=','confirm')]}"/>
+                        </group>
+                        <group>
+                            <field name="equipment_age" attrs="{'readonly':[('state','=','confirm')]}"/>
+                            <field name="request_ids" widget="many2many_tags"
+                                   domain="[('installation_base_id', '=', False)]"
+                                   options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"
+                                   attrs="{'readonly':[('state','=','confirm')]}"/>
+                            <field name="no_of_item" attrs="{'readonly':[('state','=','confirm')]}"/>
+                            <field name="active" invisible="1" readonly="1"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Spare Parts" name="spare_part">
+                            <field name="part_line_ids" editable="bottom"
+                                   attrs="{'readonly':[('state','=','confirm')]}">
+                                <tree>
+                                    <field name="part_id"
+                                           options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"
+                                           domain="[('is_part', '=', True)]"/>
+                                    <field name="qty"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <!--  -->
+                <div class="oe_chatter" groups="maintenance_extension.chatter_hide_group">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+    <!-- equipments form view end -->
+
+    <!-- equipments search view start -->
+    <record id="view_installation_search" model="ir.ui.view">
+        <field name="name">equipments.installation.base.search</field>
+        <field name="model">equipments.installation.base</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="supplier_id"/>
+                <field name="model"/>
+                <field name="classification_id"/>
+                <field name="active"/>
+                <filter string="Archived" name="active" domain="[('active', '=', False)]"/>
+                <group expand="0" string="Group By">
+                    <filter string="Classification" name="classification_id"
+                            context="{'group_by': 'classification_id'}"/>
+                    <filter string="Supplier" name="supplier_id" context="{'group_by': 'supplier_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+    <!-- equipments search view end -->
+
+
+    <!-- equipments kanban view start -->
+    <record id="view_equipments_installation_base_kanban" model="ir.ui.view">
+        <field name="name">equipments.installation.base.kanban</field>
+        <field name="model">equipments.installation.base</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <field name="state"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_card">
+                            <div class="oe_kanban_card_header">
+                                <div class="oe_kanban_card_title">
+                                    <field name="name"/>
+                                </div>
+                            </div>
+                            <div class="oe_kanban_card_content">
+                                <img t-if="record.image"
+                                     t-att-src="'data:image/png;base64,%s' % record.image"
+                                     class="oe_kanban_image"/>
+                                <div class="oe_kanban_card_details">
+                                    <div class="oe_kanban_card_field oe_kanban_card_field_serial_number">
+                                        <span class="oe_kanban_card_label">Serial Number:</span>
+                                        <field name="serial_number"/>
+                                    </div>
+                                    <div class="oe_kanban_card_field oe_kanban_card_field_supplier_id">
+                                        <span class="oe_kanban_card_label">Supplier:</span>
+                                        <field name="supplier_id"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+    <!-- equipments kanban view end -->
+
+    <!-- Action For Equipments start -->
+    <record id="action_equipment_installation" model="ir.actions.act_window">
+        <field name="name">Equipment</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">equipments.installation.base</field>
+        <field name="view_mode">tree,form,pivot</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Please Add a New Equipment
+            </p>
+        </field>
+    </record>
+    <!-- Action For Equipments end -->
+
+    <!-- menu For Equipments start -->
+    <menuitem id="equipments_installation_menu" name="Equipment" sequence="0"
+              parent="maintenance.menu_maintenance_title" action="action_equipment_installation"/>
+    <!-- menu For Equipments end -->
+
+</odoo>

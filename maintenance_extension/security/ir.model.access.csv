@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_equipments_installation_base,equipments.installation.base,model_equipments_installation_base,base.group_user,1,1,1,1
+access_contact_address_line,contact.address.line,model_contact_address_line,base.group_user,1,1,1,1
+access_spare_part_line,spare.part.line,model_spare_part_line,base.group_user,1,1,1,1
+access_part_used_line,part.used.line,model_part_used_line,base.group_user,1,1,1,1

@@ -1,0 +1,301 @@
+<odoo>
+    <template t-name="maintenance_request_report.request_report">
+        <t t-call="web.html_container">
+
+            <t t-call="web.internal_layout">
+                <t t-foreach="docs" t-as="o">
+
+                    <div class="page">
+                        <style type="text/css">
+                            .main_wraper {
+                            width: 100%;
+                            margin: 0px auto;
+                            }
+                            .main_div {
+                            width: 100%;
+                            }
+                            .inline{
+                            display:inline;
+                            }
+                            .name_h{
+                            text-align:center;
+                            margin-top:15px;
+                            margin-bottom:40px;
+
+                            }
+                            .w_30{
+                            float: left;
+                            display:inline;
+                            margin-top:25px;
+                            }
+                            .w_20{
+                            float: left;
+                            width:25%;
+                            margin-top:25px;
+                            }
+                            .w_15{
+                            float: left;
+                            width:15%;
+                            }
+                            .mb{
+                            margin-bottom:2px;
+                            }
+                            .clear{
+                            width:100%;
+                            float:left;
+                            }
+                            .rem{
+                            border:1px solid black;
+                            min-height:100px;
+                            padding:10px;
+
+                            }
+                            .mb_by{
+                            text-align:center;
+                            }
+                            .footer {
+                            position: fixed;
+                            left: 0;
+                            bottom:0px;
+                            width: 100%;
+                            text-align: center;
+                            }
+                            table{
+                            border: 2px solid;
+                            padding:8px;
+                            }
+                            th{
+                            border: 2px solid black;
+                            color:white;
+                            background-color:black;
+                            text-align:center;
+
+                            }
+                            tr{
+                            border: 1px solid black;
+                            color:black;
+                            background-color:white;
+
+                            }
+
+                            table {
+                            width: 100%;
+                            border-collapse: collapse;
+                            }
+                            .div_3{
+                            width:26%;margin-top: 47px;float:left;
+                            }
+                            .mb_1{
+                            margin-bottom:1px;
+
+                            }
+                            .pr_5{
+                            padding-left:5px;
+                            }
+                            .sr{
+                            border:2px solid;
+                            padding:8px;
+                            text-align:center;
+                            }
+                            .desc{
+                            border:2px solid;
+                            padding-right:8px;
+                            padding-top:8px;
+                            padding-bottom:8px;
+                            }
+                            .amt{
+                            border:2px solid;
+                            padding:8px;
+                            text-align:right;
+                            }
+                            .bank_lines{
+                            margin-bottom:2px;
+                            padding-left:8px;
+                            }
+                            .bank_details{
+                            border:2px solid
+                            black;width:60%;border-left:0px;background-color:#d8e0f3;margin-bottom:80px;
+                            }
+                            .amt_total{
+                            text-align:right;
+                            padding:5px;
+                            border:none !important;
+                            margin-bottom: 0px;
+                            }
+                            .amounts{
+                            border:2px solid black;border-top:0px;width:132px;text-align:right;padding:5px;
+                            margin-bottom: 0px;min-height: 36px;
+                            }
+                        </style>
+                        <div class="main_wraper">
+                            <div class="main_div">
+                                <h2 class="name_h mt-2">
+                                    <b>Work Request Report</b>
+                                </h2>
+
+                            </div>
+                            <div style="width:40%;float:left">
+                                <p>
+                                    <b>Date/Time Request:</b>
+                                        <span class="pr_5" t-field="o.create_date"/>
+                                    
+                                </p>
+                                <p>
+                                    <b>Requester:</b>
+                                        <span class="pr_5" t-field="o.user_id.name"/>
+                                    
+                                </p>
+                                <p>
+                                    <b>Equipment:</b>
+                                        <span class="pr_5" t-field="o.installation_base_id.name"/>
+                                    
+                                </p>
+                                <p>
+                                    <b>Priority:</b>
+                                        <span class="pr_5" t-field="o.priority"/>
+                                    
+                                </p>
+                            </div>
+                            <div style="width:40%;float:left">
+                                <p>
+                                    <b>Assigned To:</b>
+                                        <span class="pr_5" t-field="o.employee_id.name"/>
+                                    
+                                </p>
+                                <p>
+                                    <b>Request Type:</b>
+                                        <span class="pr_5" t-field="o.maintenance_type"/>
+                                    
+                                </p>
+                                <p>
+                                    <b>Location:</b>
+                                        <span class="pr_5" t-field="o.installation_base_id.room"/>,
+                                        <span class="pr_5" t-field="o.installation_base_id.floor"/>
+                                    
+                                </p>
+                                <p>
+                                    <b>Description Of Problem:</b>
+                                        <span class="pr_5" t-field="o.description"/>
+                                    
+                                </p>
+                            </div>
+
+                        </div>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <table width="70%">
+
+                            <tr>
+                                <th style="text-align: left;padding-left:10px;padding-top:10px;padding-bottom:10px;">Part</th>
+                                <th style="text-align: left;padding-left:10px;padding-top:10px;padding-bottom:10px;">Quantity</th>
+                            </tr>
+
+                            <t t-foreach="o.used_line_ids" t-as="data">
+
+                                <tr>
+                                    <td style="text-align: left;padding-left:10px;padding-top:10px;padding-bottom:10px;">
+                                        <span t-esc="data.part_id.name"/>
+                                    </td>
+                                    <td style="text-align: left;padding-left:10px;padding-top:10px;padding-bottom:10px;">
+                                        <span t-esc="data.qty"/>
+                                    </td>
+                                </tr>
+                            </t>
+                        </table>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <div style="width:40%;float:left">
+                            <p>
+                                <b>Date:</b>
+                                    <t t-if="o.schedule_date">
+                                        <span class="pr_5" t-field="o.schedule_date"/>
+                                    </t>
+                                
+                            </p>
+                            <p>
+                                <b>Employee Name:</b>
+                                    <span class="pr_5" t-field="o.employee_id.name"/>
+                                
+                            </p>
+                            <!-- <span class="corner-text" style="font-weight:bold !important;">Employee's
+                                Signature
+                            </span>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <img t-attf-src="data:image/*;base64,{{o.signature}}" t-att-alt="Logo"
+                                 style="width: 100% !important; height: 150px !important;"/>
+ -->
+                        </div>
+                        <div style="width:40%;float:right">
+                            <span style="font-weight:bold !important;">Employee's
+                                Signature
+                            </span>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <img t-attf-src="data:image/*;base64,{{o.signature}}" t-att-alt="Logo"
+                                 style="width: 100% !important; height: 150px !important;"/>
+
+                        </div>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <!-- <div style="width:100%">
+
+                            <div class="w_20">
+                                <p style="margin-bottom: 5px;text-align: center;">___________________</p>
+                                <p class="mb_by">
+                                    <b>Prepared by</b>
+                                </p>
+
+                            </div>
+                            <div class="w_20">
+                                <p style="margin-bottom: 5px;text-align: center;">___________________</p>
+                                <p class="mb_by">
+                                    <b>Approved by</b>
+                                </p>
+
+                            </div>
+                            <div class="w_20">
+                                <p style="margin-bottom: 5px;text-align: center;">___________________</p>
+                                <p class="mb_by">
+                                    <b>Authorised by</b>
+                                </p>
+
+                            </div>
+                            <div class="w_20">
+                                <p style="margin-bottom: 5px;text-align: center;">___________________</p>
+                                <p class="mb_by">
+                                    <b>Checked by</b>
+                                </p>
+
+                            </div>
+                        </div> -->
+                    </div>
+                </t>
+            </t>
+        </t>
+
+    </template>
+</odoo>

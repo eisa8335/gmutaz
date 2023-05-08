@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <!-- inherit res.partner start -->
+    <record id='inherited_view_partner_form' model='ir.ui.view'>
+        <field name='name'>inherited_view_partner_form</field>
+        <field name='model'>res.partner</field>
+        <field name='inherit_id' ref='base.view_partner_form'/>
+        <field name='arch' type='xml'>
+            <xpath expr='//page[@name="internal_notes"]' position='attributes'>
+                <attribute name='string'>Notes</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id='inherited_view_partner_form' model='ir.ui.view'>
+        <field name='name'>inherited_view_partner_form</field>
+        <field name='model'>res.partner</field>
+        <field name='inherit_id' ref='base.view_partner_form'/>
+        <field name='arch' type='xml'>
+
+            <xpath expr="//page[1]" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//page[1]" position="before">
+                <page name="contact_addresses" string="Contact">
+                    <field name="contact_line_ids"/>
+                </page>
+            </xpath>
+        </field>
+    </record>
+    <!-- inherit res.partner end -->
+
+
+    <!-- inherit hr.employee start -->
+    <record id='inherited_view_employee_form' model='ir.ui.view'>
+        <field name='name'>inherited_view_employee_form</field>
+        <field name='model'>hr.employee</field>
+        <field name='inherit_id' ref='hr.view_employee_form'/>
+        <field name='arch' type='xml'>
+            <xpath expr='//field[@name="coach_id"]' position='after'>
+                <field name="working_hours" widget="float_time"/>
+                <field name="hourly_rate" string="Hourly Rate"/>
+            </xpath>
+            <xpath expr="//page[@name='public']" position="attributes">
+                <attribute name="groups">maintenance_extension.hr_hide_group</attribute>
+            </xpath>
+            <xpath expr="//page[@name='personal_information']" position="attributes">
+                <attribute name="groups">maintenance_extension.hr_hide_group</attribute>
+            </xpath>
+            <xpath expr="//page[@name='hr_settings']" position="attributes">
+                <attribute name="groups">maintenance_extension.hr_hide_group</attribute>
+            </xpath>
+        </field>
+    </record>
+    <!-- inherit hr.employee end -->
+
+
+    <!-- inherit maintenance.request start -->
+    <record id='inherited_view_maintenance_form' model='ir.ui.view'>
+        <field name='name'>inherited_view_maintenance_form</field>
+        <field name='model'>maintenance.request</field>
+        <field name='inherit_id' ref='maintenance.hr_equipment_request_view_form'/>
+        <field name='arch' type='xml'>
+            <xpath expr='//header' position='inside'>
+                <button name="print_report" string="Work Request Report" type="object" class="btn-primary"/>
+                <button name="create_delivery_order" string="Create Stock Move" type="object" class="btn-primary"/>
+            </xpath>
+            <xpath expr='//sheet/div[1]' position='before'>
+               <div class="oe_button_box" name="button_box">
+                   <button name="show_picking" type="object" class="oe_stat_button" icon="fa-cubes">
+                        <field name="picking_count" widget="statinfo" string="Stock"/>
+                   </button>
+                </div>
+            </xpath>
+
+            <xpath expr='//field[@name="description"]/parent::node()' position='after'>
+                <notebook>
+                    <page string="Parts Used" name="signature">
+                        <field name="used_line_ids" editable="bottom">
+                            <tree>
+                                <field name="part_id"
+                                       options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}" domain="[('is_part', '=', True)]"/>
+                                <field name="qty"/>
+                            </tree>
+                        </field>
+                    </page>
+                    <page string="Signature" name="signature">
+                        <group>
+                            <group>
+                                <field name="signature" widget='signature'/>
+                            </group>
+                        </group>
+                    </page>
+                </notebook>
+            </xpath>
+            <xpath expr='//field[@name="equipment_id"]' position='attributes'>
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr='//field[@name="request_date"]' position='after'>
+                <field name="location_id" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+                <field name="stock_id" readonly="1" invisible="1"/>
+            </xpath>
+            <xpath expr='//field[@name="employee_id"]' position='attributes'>
+                <attribute name="string">Responsible</attribute>
+            </xpath>
+            <xpath expr='//field[@name="user_id"]' position='attributes'>
+                <attribute name="string">Created By</attribute>
+            </xpath>
+            <xpath expr='//field[@name="duration"]' position='attributes'>
+                <attribute name="required">1</attribute>
+            </xpath>
+            <xpath expr='//field[@name="employee_id"]' position='attributes'>
+                <attribute name="required">1</attribute>
+            </xpath>
+            <xpath expr='//field[@name="employee_id"]' position='after'>
+                <field name="installation_base_id"
+                       options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}" domain="[('state', '=', 'confirm')]"/>
+            </xpath>
+
+        </field>
+    </record>
+    <!-- inherit maintenance.request end -->
+
+<!--     inherit equipment.category start -->
+<!--    <record id='inherited_view_equipment_category_form' model='ir.ui.view'>-->
+<!--        <field name='name'>inherited_view_equipment_category_form</field>-->
+<!--        <field name='model'>maintenance.equipment.category</field>-->
+<!--        <field name='inherit_id' ref='maintenance.hr_equipment_category_view_form'/>-->
+<!--        <field name='arch' type='xml'>-->
+<!--            <xpath expr='//field[@name="equipment_count"]/parent::node()' position='replace'>-->
+<!--               <button name="show_equipments" type="object" class="oe_stat_button" icon="fa-cubes">-->
+<!--                    <field name="installation_base_count" widget="statinfo"/>-->
+<!--                </button>-->
+<!--            </xpath>-->
+<!--        </field>-->
+<!--    </record>-->
+
+    <record id='hr_employee_maintenance_form_inherit' model='ir.ui.view'>
+        <field name='name'>hr_employee_maintenance_form_inherit</field>
+        <field name='model'>hr.employee</field>
+        <field name='inherit_id' ref='hr_maintenance.hr_employee_view_form'/>
+        <field name='arch' type='xml'>
+            <xpath expr='//field[@name="equipment_count"]/parent::node()' position='replace'>
+               <button name="show_equipments" type="object" class="oe_stat_button" icon="fa-cubes" string="Equipments">
+                    <field name="installation_base_count" widget="statinfo"/>
+                </button>
+            </xpath>
+        </field>
+    </record>
+    <!-- inherit equipment.category end -->
+
+    <!-- view tree contact detail start -->
+    <record id="contact_address_tree_view" model="ir.ui.view">
+        <field name="name">contact_address_tree_view</field>
+        <field name="model">contact.address.line</field>
+        <field name="arch" type="xml">
+            <tree string="Contact Information">
+                <field name="phone"/>
+                <field name="mobile"/>
+                <field name="email"/>
+                <field name="website"/>
+                <field name="address"/>
+            </tree>
+        </field>
+    </record>
+    <!-- view tree contact detail end -->
+
+    <!-- view form contact detail start -->
+    <record id="contact_address_line_form_view" model="ir.ui.view">
+        <field name="name">contact.address.line.form</field>
+        <field name="model">contact.address.line</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group name="group_top">
+                        <group name="group_left">
+                            <field name="phone" widget="phone" options="{'enable_sms': false}"/>
+                            <field name="mobile" widget="phone" options="{'enable_sms': false}"/>
+                        </group>
+                        <group name="group_left">
+                            <field name="email" widget="email"/>
+                            <field name="website" widget="website_redirect_button"/>
+                            <field name="address"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <!-- view form contact detail end -->
+
+    <!-- view tree product used start -->
+    <record id="part_used_line_tree_view" model="ir.ui.view">
+        <field name="name">part_used_line_tree_view</field>
+        <field name="model">part.used.line</field>
+        <field name="arch" type="xml">
+            <tree >
+                <field name="part_id"/>
+                <field name="qty"/>
+            </tree>
+        </field>
+    </record>
+    <!-- view tree product used end -->
+
+    <!-- view form product used start -->
+    <record id="part_used_line_form_view" model="ir.ui.view">
+        <field name="name">part_used_line_form_view.form</field>
+        <field name="model">part.used.line</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group name="group_top">
+                        <group name="group_left">
+                            <field name="part_id" domain="[('is_part', '=', True)]" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}" required="1"/>
+                        </group>
+                        <group name="group_left">
+                            <field name="qty"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <!-- view form product used end -->
+
+    <!-- view tree product line start -->
+    <record id="spare_part_line_tree_view" model="ir.ui.view">
+        <field name="name">spare.part.line.tree</field>
+        <field name="model">spare.part.line</field>
+        <field name="arch" type="xml">
+            <tree >
+                <field name="part_id"/>
+                <field name="qty"/>
+            </tree>
+        </field>
+    </record>
+    <!-- view tree product line end -->
+
+    <!-- view form product used start -->
+    <record id="spare_part_line_form_view" model="ir.ui.view">
+        <field name="name">spare_part_line_form_view.form</field>
+        <field name="model">spare.part.line</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group name="group_top">
+                        <group name="group_left">
+                            <field name="part_id" domain="[('is_part', '=', True)]"  options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}" required="1"/>
+                        </group>
+                        <group name="group_left">
+                            <field name="qty"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <!-- view form product used end -->
+
+    
+    <!-- update menu start -->
+    <record id="maintenance.menu_maintenance_cat" model="ir.ui.menu">
+        <field name="name">Equipment Classification</field>
+    </record>
+    <record id="maintenance.menu_maintenance_title" model="ir.ui.menu">
+        <field name="name">Equipment &amp; Maintenance</field>
+    </record>
+    <record id="contacts.menu_contacts" model="ir.ui.menu">
+        <field name="name">Suppliers</field>
+    </record>
+    <record id="contacts.res_partner_menu_contacts" model="ir.ui.menu">
+        <field name="name">Suppliers</field>
+    </record>
+    <record id="contacts.action_contacts" model="ir.actions.act_window">
+        <field name="name">Suppliers</field>
+    </record>
+    <record id="maintenance.menu_equipment_form" model="ir.ui.menu">
+        <field name="active">False</field>
+    </record>
+    <!-- update menu end -->
+
+    <!-- create groups strat -->
+    <record id="hr_hide_group" model="res.groups">
+        <field name="name">Hide Employee Info Tabs</field>
+    </record>
+    <record id="chatter_hide_group" model="res.groups">
+        <field name="name">Hide Chatter</field>
+    </record>
+    <!-- create groups end -->
+
+
+
+</odoo>

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- product own tree view start -->
+    <record model="ir.ui.view" id="product_product_own_tree_view">
+        <field name="name">product_product_own_tree_view</field>
+        <field name="model">product.product</field>
+        <field name="arch" type="xml">
+            <tree sample="1">
+                <field name="part_id" decoration-bf="1"/>
+                <field name="name"/>
+                <field name="model"/>
+                <field name="supplier_id"/>
+                <field name="manufacturer"/>
+                <field name="dimensions" optional="hide"/>
+                <field name="weight" optional="hide"/>
+                <field name="condition" optional="show" decoration-success="condition == 'new'"
+                       decoration-primary="condition == 'used'" decoration-info="condition == 'refurbished'"
+                       widget="badge"/>
+                <field name="qty_available" decoration-bf="1"/>
+            </tree>
+        </field>
+    </record>
+    <!-- product own tree view end -->
+
+    <!-- product own form view start -->
+    <record model="ir.ui.view" id="product_product_own_form_view">
+        <field name="name">view_parts_form</field>
+        <field name="model">product.product</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button string="Update Quantity" type="object" name="action_update_quantity_on_hand" attrs="{'invisible': [('detailed_type', '!=', 'product')]}"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <field name="show_on_hand_qty_status_button" invisible="1"/>
+                        <button class="oe_stat_button" name="action_open_quants" icon="fa-cubes" type="object"
+                                attrs="{'invisible':[('show_on_hand_qty_status_button', '=', False)]}">
+                            <div class="o_field_widget o_stat_info">
+                                <span class="o_stat_value">
+                                    <field name="qty_available" widget="statinfo" nolabel="1" class="mr4"/>
+                                    <field name="uom_name"/>
+                                </span>
+                                <span class="o_stat_text">On Hand</span>
+                            </div>
+                        </button>
+                    </div>
+                    <field name="image" widget="image" class="oe_avatar"/>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" required="1"/>
+                        </h1>
+                    </div>
+                    <br/>
+                    <h3>General Information</h3>
+                    <br/>
+                    <group>
+                        <group>
+                            <field name="part_id"/>
+                            <field name="supplier_id" required="1"
+                                   options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+                            <field name="model" required="1"/>
+                            <field name="manufacturer" required="1"/>
+                            <field name="dimensions" required="1"/>
+                            <field name="weight"/>
+                        </group>
+                        <group>
+                            <field name="compatibility" required="1"
+                                   options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+                            <field name="lst_price" string="Price"/>
+                            <field name="condition" required="1"/>
+                            <field name="warranty" required="1"/>
+                            <field name="is_part" invisible="1"/>
+                            <field name="detailed_type" invisible="1"/>
+                            <field name="categ_id" invisible="1"/>
+                            <field name="sale_ok" invisible="1"/>
+                            <field name="purchase_ok" invisible="1"/>
+                            <field name="description" required="1"/>
+                        </group>
+                    </group>
+                </sheet>
+                <!--  -->
+                <div class="oe_chatter" groups="maintenance_extension.chatter_hide_group">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+    <!-- product own form view end -->
+
+    <!-- product own search view start -->
+    <record id="view_part_search" model="ir.ui.view">
+        <field name="name">part.detail.search</field>
+        <field name="model">product.product</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="supplier_id"/>
+                <field name="manufacturer"/>
+                <field name="compatibility"/>
+                <field name="condition"/>
+                <field name="active"/>
+                <filter string="Archived" name="active" domain="[('active', '=', False)]"/>
+                <group expand="0" string="Group By">
+                    <filter string="Condition" name="condition" context="{'group_by': 'condition'}"/>
+                    <filter string="Compatibility" name="compatibility" context="{'group_by': 'compatibility'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+    <!-- product own search view end -->
+
+    <!-- product own kanban view start -->
+    <record id="view_spare_part_kanban" model="ir.ui.view">
+        <field name="name">part.detail.kanban</field>
+        <field name="model">product.product</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_global_click">
+                            <div class="oe_kanban_details">
+                                <div class="oe_kanban_title">
+                                    <h3>
+                                        <strong>
+                                            <field name="name"/>
+                                        </strong>
+                                        <br/>
+                                    </h3>
+                                    <strong>
+                                        <field name="part_id"/>
+                                    </strong>
+                                    <br/>
+                                </div>
+                                <div class="oe_kanban_content">
+                                    <span class="oe_kanban_record_date">
+                                        <field name="image" widget="image"/>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+
+            </kanban>
+        </field>
+    </record>
+    <!-- product own kanban view end -->
+
+    <!-- action product own start -->
+    <record id="parts_action" model="ir.actions.act_window">
+        <field name="name">Parts</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">product.product</field>
+        <field name="view_mode">tree,form,pivot</field>
+        <field name="search_view_id" ref="view_part_search"/>
+        <field name="view_ids" eval="[(5, 0, 0),
+            (0, 0, {'view_mode': 'tree', 'view_id': ref('maintenance_extension.product_product_own_tree_view')}),(0, 0, {'view_mode': 'form', 'view_id': ref('maintenance_extension.product_product_own_form_view')})]"/>
+        <field name="context">{'default_detailed_type': 'product','default_sale_ok': True,'default_purchase_ok':
+            True,'default_is_part': True}
+        </field>
+        <field name="domain">[('is_part', '=', True)]</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Add a New Spare Part.
+            </p>
+        </field>
+    </record>
+    <!-- action product own end -->
+
+
+    <!-- menu product own start -->
+    <menuitem id="parts_menu" name="Parts" sequence="12" parent="maintenance.menu_maintenance_title"
+              action="parts_action"/>
+    <!-- menu product own end -->
+
+
+</odoo>
