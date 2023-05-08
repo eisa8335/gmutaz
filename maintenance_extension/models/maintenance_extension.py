@@ -298,23 +298,23 @@ class ProductProductExt(models.Model):
         return res
 
 
-class EquipmentCategoryExt(models.Model):
-    _inherit = 'maintenance.equipment.category'
-
-    installation_base_count = fields.Integer(compute='_compute_equipment_count')
-
-    def show_equipments(self):
-        return {
-            'type': 'ir.actions.act_window',
-            'name': 'Equipments',
-            'res_model': 'equipments.installation.base',
-            'view_mode': 'tree,form',
-            'view_type': 'form',
-            'view_id': False,
-            'domain': [('classification_id', '=', self.id)],
-        }
-
-    def _compute_equipment_count(self):
-        for rec in self:
-            rec.installation_base_count = self.env['equipments.installation.base'].search_count(
-                [('classification_id', '=', self.id)])
+# class EquipmentCategoryExt(models.Model):
+#     _inherit = 'maintenance.equipment.category'
+#
+#     installation_base_count = fields.Integer(compute='_compute_equipment_count')
+#
+#     def show_equipments(self):
+#         return {
+#             'type': 'ir.actions.act_window',
+#             'name': 'Equipments',
+#             'res_model': 'equipments.installation.base',
+#             'view_mode': 'tree,form',
+#             'view_type': 'form',
+#             'view_id': False,
+#             'domain': [('classification_id', '=', self.id)],
+#         }
+#
+#     def _compute_equipment_count(self):
+#         for rec in self:
+#             rec.installation_base_count = self.env['equipments.installation.base'].search_count(
+#                 [('classification_id', '=', self.id)])
