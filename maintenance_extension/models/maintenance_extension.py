@@ -14,7 +14,7 @@ class MaintenanceRequestInherit(models.Model):
     _inherit = 'maintenance.request'
 
     signature = fields.Char(string='Signature')
-    installation_base_id = fields.Many2one('equipments.installation.base', string="Equipment", tracking=True)
+    installation_base_id = fields.Many2one('equipments.installation.base', string="Installation Base", tracking=True)
     location_id = fields.Many2one('stock.location', string="Location", tracking=True,domain="[('usage', '=', 'internal')]")
     stock_id = fields.Many2one('stock.picking', string="Picking", tracking=True)
     used_line_ids = fields.One2many('part.used.line', 'maintenance_id', string="Equipment")
@@ -267,6 +267,7 @@ class SparePartLine(models.Model):
     _name = 'spare.part.line'
 
     part_id = fields.Many2one('product.product', string='Part', domain=[('part_state', '=', 'confirm')])
+    qty_available = fields.Float(related='part_id.qty_available', store=True, string='Quantity Available')
     qty = fields.Float()
     equipment_id = fields.Many2one('equipments.installation.base')
 
@@ -275,6 +276,7 @@ class SpareUsedLine(models.Model):
     _name = 'part.used.line'
 
     part_id = fields.Many2one('product.product', string='Part', domain=[('part_state', '=', 'confirm')])
+    qty_available = fields.Float(related='part_id.qty_available', store=True, string='Quantity Available')
     qty = fields.Float()
     maintenance_id = fields.Many2one('maintenance.request')
 
@@ -307,23 +309,23 @@ class ProductProductExt(models.Model):
         return res
 
 
-# class EquipmentCategoryExt(models.Model):
-#     _inherit = 'maintenance.equipment.category'
-#
-#     installation_base_count = fields.Integer(compute='_compute_equipment_count')
-#
-#     def show_equipments(self):
-#         return {
-#             'type': 'ir.actions.act_window',
-#             'name': 'Equipments',
-#             'res_model': 'equipments.installation.base',
-#             'view_mode': 'tree,form',
-#             'view_type': 'form',
-#             'view_id': False,
-#             'domain': [('classification_id', '=', self.id)],
-#         }
-#
-#     def _compute_equipment_count(self):
-#         for rec in self:
-#             rec.installation_base_count = self.env['equipments.installation.base'].search_count(
-#                 [('classification_id', '=', self.id)])
+class EquipmentCategoryExt(models.Model):
+    _inherit = 'maintenance.equipment.category'
+
+    installation_base_count = fields.Integer(compute='_compute_installation_base_count')
+
+    def show_equipments(self):
+        return {
+            'type': 'ir.actions.act_window',
+            'name': 'Equipments',
+            'res_model': 'equipments.installation.base',
+            'view_mode': 'tree,form',
+            'view_type': 'form',
+            'view_id': False,
+            'domain': [('classification_id', '=', self.id)],
+        }
+
+    def _compute_installation_base_count(self):
+        for rec in self:
+            rec.installation_base_count = self.env['equipments.installation.base'].search_count(
+                [('classification_id', '=', self.id if self.id else 0)])

@@ -81,6 +81,7 @@
                             <tree>
                                 <field name="part_id"
                                        options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}" domain="[('is_part', '=', True)]"/>
+                                <field name="qty_available"/>
                                 <field name="qty"/>
                             </tree>
                         </field>
@@ -114,7 +115,7 @@
                 <attribute name="required">1</attribute>
             </xpath>
             <xpath expr='//field[@name="employee_id"]' position='after'>
-                <field name="installation_base_id"
+                <field name="installation_base_id" string="Equipment"
                        options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}" domain="[('state', '=', 'confirm')]"/>
             </xpath>
 
@@ -123,18 +124,18 @@
     <!-- inherit maintenance.request end -->
 
 <!--     inherit equipment.category start -->
-<!--    <record id='inherited_view_equipment_category_form' model='ir.ui.view'>-->
-<!--        <field name='name'>inherited_view_equipment_category_form</field>-->
-<!--        <field name='model'>maintenance.equipment.category</field>-->
-<!--        <field name='inherit_id' ref='maintenance.hr_equipment_category_view_form'/>-->
-<!--        <field name='arch' type='xml'>-->
-<!--            <xpath expr='//field[@name="equipment_count"]/parent::node()' position='replace'>-->
-<!--               <button name="show_equipments" type="object" class="oe_stat_button" icon="fa-cubes">-->
-<!--                    <field name="installation_base_count" widget="statinfo"/>-->
-<!--                </button>-->
-<!--            </xpath>-->
-<!--        </field>-->
-<!--    </record>-->
+    <record id='inherited_view_equipment_category_form' model='ir.ui.view'>
+        <field name='name'>inherited_view_equipment_category_form</field>
+        <field name='model'>maintenance.equipment.category</field>
+        <field name='inherit_id' ref='maintenance.hr_equipment_category_view_form'/>
+        <field name='arch' type='xml'>
+            <xpath expr='//field[@name="equipment_count"]/parent::node()' position='replace'>
+               <button name="show_equipments" type="object" class="oe_stat_button" icon="fa-cubes">
+                    <field name="installation_base_count" widget="statinfo"/>
+                </button>
+            </xpath>
+        </field>
+    </record>
 
     <record id='hr_employee_maintenance_form_inherit' model='ir.ui.view'>
         <field name='name'>hr_employee_maintenance_form_inherit</field>
@@ -198,6 +199,7 @@
             <tree >
                 <field name="part_id"/>
                 <field name="qty"/>
+                <field name="qty_available"/>
             </tree>
         </field>
     </record>
@@ -213,9 +215,10 @@
                     <group name="group_top">
                         <group name="group_left">
                             <field name="part_id" domain="[('is_part', '=', True)]" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}" required="1"/>
+                            <field name="qty"/>
                         </group>
                         <group name="group_left">
-                            <field name="qty"/>
+                            <field name="qty_available"/>
                         </group>
                     </group>
                 </sheet>
@@ -232,6 +235,7 @@
             <tree >
                 <field name="part_id"/>
                 <field name="qty"/>
+                <field name="qty_available"/>
             </tree>
         </field>
     </record>
@@ -247,9 +251,10 @@
                     <group name="group_top">
                         <group name="group_left">
                             <field name="part_id" domain="[('is_part', '=', True)]"  options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}" required="1"/>
+                            <field name="qty"/>
                         </group>
                         <group name="group_left">
-                            <field name="qty"/>
+                            <field name="qty_available"/>
                         </group>
                     </group>
                 </sheet>
