@@ -31,11 +31,11 @@
         <field name="arch" type="xml">
             <form>
                 <header>
-                    <button name="set_to_draft" type="object" string="Draft" class="oe_highlight"
+                    <button name="set_to_draft" type="object" string="Set to Draft" class="oe_highlight"
                             attrs="{'invisible':[('state','=','draft')]}"/>
                     <button name="set_to_confirm" type="object" string="Confirm" class="oe_highlight"
                             attrs="{'invisible':[('state','=','confirm')]}" confirm="Are you sure to confirm this Equipment."/>
-                    <field name="state" widget="statusbar"/>
+                    <field name="state" widget="statusbar" readonly="1"/>
                 </header>
                 <sheet>
                     <widget name="web_ribbon" title="Archived" bg_color="bg-danger"
@@ -68,7 +68,7 @@
                             <field name="price" attrs="{'readonly':[('state','=','confirm')]}"/>
                             <field name="currency_id" invisible="1"/>
                             <field name="classification_id" required="1"
-                                   options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"
+                                   options="{'no_quick_create':True}"
                                    attrs="{'readonly':[('state','=','confirm')]}"/>
                             <field name="room" required="1" attrs="{'readonly':[('state','=','confirm')]}"/>
                             <field name="floor" attrs="{'readonly':[('state','=','confirm')]}"/>

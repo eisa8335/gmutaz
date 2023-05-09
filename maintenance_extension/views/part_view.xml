@@ -18,6 +18,8 @@
                        decoration-primary="condition == 'used'" decoration-info="condition == 'refurbished'"
                        widget="badge"/>
                 <field name="qty_available" decoration-bf="1"/>
+                <field name="part_state" optional="show" widget="badge" decoration-info="part_state == 'draft'"
+                       decoration-success="part_state == 'confirm'"/>
             </tree>
         </field>
     </record>
@@ -30,7 +32,10 @@
         <field name="arch" type="xml">
             <form>
                 <header>
-                    <button string="Update Quantity" type="object" name="action_update_quantity_on_hand" attrs="{'invisible': [('detailed_type', '!=', 'product')]}"/>
+                    <button string="Update Quantity" type="object" name="action_update_quantity_on_hand" attrs="{'invisible': [('detailed_type', '!=', 'product')]}" class="oe_highlight"/>
+                    <button name="action_draft" type="object" string="Set to Draft" class="oe_highlight" attrs="{'invisible':[('part_state','=','draft')]}"/>
+                    <button name="action_confirm" type="object" string="Confirm" class="oe_highlight" attrs="{'invisible':[('part_state','=','confirm')]}" confirm="Are you sure to confirm this Spare Part."/>
+                    <field name="part_state" widget="statusbar" readonly="1"/>
                 </header>
                 <sheet>
                     <div class="oe_button_box" name="button_box">
@@ -46,10 +51,10 @@
                             </div>
                         </button>
                     </div>
-                    <field name="image" widget="image" class="oe_avatar"/>
+                    <field name="image_1920" widget="image" class="oe_avatar"/>
                     <div class="oe_title">
                         <h1>
-                            <field name="name" required="1"/>
+                            <field name="name" required="1" attrs="{'readonly':[('part_state','=','confirm')]}"/>
                         </h1>
                     </div>
                     <br/>
@@ -57,26 +62,26 @@
                     <br/>
                     <group>
                         <group>
-                            <field name="part_id"/>
+                            <field name="part_id" attrs="{'readonly':[('part_state','=','confirm')]}"/>
                             <field name="supplier_id" required="1"
-                                   options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
-                            <field name="model" required="1"/>
-                            <field name="manufacturer" required="1"/>
-                            <field name="dimensions" required="1"/>
-                            <field name="weight"/>
+                                   options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}" attrs="{'readonly':[('part_state','=','confirm')]}"/>
+                            <field name="model" required="1" attrs="{'readonly':[('part_state','=','confirm')]}"/>
+                            <field name="manufacturer" required="1" attrs="{'readonly':[('part_state','=','confirm')]}"/>
+                            <field name="dimensions" required="1" attrs="{'readonly':[('part_state','=','confirm')]}"/>
+                            <field name="weight" attrs="{'readonly':[('part_state','=','confirm')]}"/>
                         </group>
                         <group>
                             <field name="compatibility" required="1"
-                                   options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
-                            <field name="lst_price" string="Price"/>
-                            <field name="condition" required="1"/>
-                            <field name="warranty" required="1"/>
-                            <field name="is_part" invisible="1"/>
-                            <field name="detailed_type" invisible="1"/>
-                            <field name="categ_id" invisible="1"/>
-                            <field name="sale_ok" invisible="1"/>
-                            <field name="purchase_ok" invisible="1"/>
-                            <field name="description" required="1"/>
+                                   options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}" attrs="{'readonly':[('part_state','=','confirm')]}"/>
+                            <field name="lst_price" string="Price" attrs="{'readonly':[('part_state','=','confirm')]}"/>
+                            <field name="condition" required="1" attrs="{'readonly':[('part_state','=','confirm')]}"/>
+                            <field name="warranty" required="1" attrs="{'readonly':[('part_state','=','confirm')]}"/>
+                            <field name="is_part" invisible="1" attrs="{'readonly':[('part_state','=','confirm')]}"/>
+                            <field name="detailed_type" invisible="1" attrs="{'readonly':[('part_state','=','confirm')]}"/>
+                            <field name="categ_id" invisible="1" attrs="{'readonly':[('part_state','=','confirm')]}"/>
+                            <field name="sale_ok" invisible="1" attrs="{'readonly':[('part_state','=','confirm')]}"/>
+                            <field name="purchase_ok" invisible="1" attrs="{'readonly':[('part_state','=','confirm')]}"/>
+                            <field name="description" required="1" attrs="{'readonly':[('part_state','=','confirm')]}"/>
                         </group>
                     </group>
                 </sheet>
@@ -113,52 +118,14 @@
     </record>
     <!-- product own search view end -->
 
-    <!-- product own kanban view start -->
-    <record id="view_spare_part_kanban" model="ir.ui.view">
-        <field name="name">part.detail.kanban</field>
-        <field name="model">product.product</field>
-        <field name="arch" type="xml">
-            <kanban>
-                <templates>
-                    <t t-name="kanban-box">
-                        <div class="oe_kanban_global_click">
-                            <div class="oe_kanban_details">
-                                <div class="oe_kanban_title">
-                                    <h3>
-                                        <strong>
-                                            <field name="name"/>
-                                        </strong>
-                                        <br/>
-                                    </h3>
-                                    <strong>
-                                        <field name="part_id"/>
-                                    </strong>
-                                    <br/>
-                                </div>
-                                <div class="oe_kanban_content">
-                                    <span class="oe_kanban_record_date">
-                                        <field name="image" widget="image"/>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </t>
-                </templates>
-
-            </kanban>
-        </field>
-    </record>
-    <!-- product own kanban view end -->
-
     <!-- action product own start -->
     <record id="parts_action" model="ir.actions.act_window">
         <field name="name">Parts</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">product.product</field>
-        <field name="view_mode">tree,form,pivot</field>
+        <field name="view_mode">kanban,tree,form,pivot</field>
         <field name="search_view_id" ref="view_part_search"/>
-        <field name="view_ids" eval="[(5, 0, 0),
-            (0, 0, {'view_mode': 'tree', 'view_id': ref('maintenance_extension.product_product_own_tree_view')}),(0, 0, {'view_mode': 'form', 'view_id': ref('maintenance_extension.product_product_own_form_view')})]"/>
+        <field name="view_ids" eval="[(5, 0, 0), (0, 0, {'view_mode': 'kanban', 'view_id': ref('product.product_template_kanban_view')}) ,(0, 0, {'view_mode': 'form', 'view_id': ref('maintenance_extension.product_product_own_form_view')}), (0, 0, {'view_mode': 'tree', 'view_id': ref('maintenance_extension.product_product_own_tree_view')})]"/>
         <field name="context">{'default_detailed_type': 'product','default_sale_ok': True,'default_purchase_ok':
             True,'default_is_part': True}
         </field>

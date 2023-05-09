@@ -172,7 +172,10 @@ class EquipmentsInstallationBase(models.Model):
                 rec.equipment_age = 0
             else:
                 delta = fields.Date.today() - rec.delivery_date
-                rec.equipment_age = delta.days / 365
+                if delta.days > 0:
+                    rec.equipment_age = delta.days / 365
+                else:
+                    rec.equipment_age = 0
 
     @api.depends('delivery_date', 'percentage_depreciation', 'price')
     def _compute_depreciation(self):
@@ -181,7 +184,7 @@ class EquipmentsInstallationBase(models.Model):
                 delta_date = fields.Date.today() - rec.delivery_date
                 value_depreciation = math.floor(delta_date.days / 365) * (
                         rec.price * (rec.percentage_depreciation / 100))
-                if value_depreciation:
+                if value_depreciation > 0:
                     rec.value_depreciation = value_depreciation
                 else:
                     rec.value_depreciation = 0
@@ -263,7 +266,7 @@ class ContactAddress(models.Model):
 class SparePartLine(models.Model):
     _name = 'spare.part.line'
 
-    part_id = fields.Many2one('product.product', string='Part')
+    part_id = fields.Many2one('product.product', string='Part', domain=[('part_state', '=', 'confirm')])
     qty = fields.Float()
     equipment_id = fields.Many2one('equipments.installation.base')
 
@@ -271,7 +274,7 @@ class SparePartLine(models.Model):
 class SpareUsedLine(models.Model):
     _name = 'part.used.line'
 
-    part_id = fields.Many2one('product.product', string='Part')
+    part_id = fields.Many2one('product.product', string='Part', domain=[('part_state', '=', 'confirm')])
     qty = fields.Float()
     maintenance_id = fields.Many2one('maintenance.request')
 
@@ -280,7 +283,6 @@ class ProductProductExt(models.Model):
     _inherit = 'product.product'
 
     part_id = fields.Char(readonly=True)
-    image = fields.Binary()
     model = fields.Char(string='Model Number', tracking=True)
     manufacturer = fields.Char(string='Manufacturer', tracking=True)
     supplier_id = fields.Many2one('res.partner', string="Supplier", tracking=True)
@@ -290,6 +292,13 @@ class ProductProductExt(models.Model):
                                  default='new', tracking=True)
     warranty = fields.Date(tracking=True)
     is_part = fields.Boolean()
+    part_state = fields.Selection([('draft', 'Draft'), ('confirm', 'Confirm')], 'State', default='draft', tracking=True)
+
+    def action_draft(self):
+        self.part_state = "draft"
+
+    def action_confirm(self):
+        self.part_state = "confirm"
 
     @api.model
     def create(self, vals):

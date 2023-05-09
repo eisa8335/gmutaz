@@ -69,7 +69,7 @@
             <xpath expr='//sheet/div[1]' position='before'>
                <div class="oe_button_box" name="button_box">
                    <button name="show_picking" type="object" class="oe_stat_button" icon="fa-cubes">
-                        <field name="picking_count" widget="statinfo" string="Stock"/>
+                        <field name="picking_count" widget="statinfo" string="Stock Moves"/>
                    </button>
                 </div>
             </xpath>

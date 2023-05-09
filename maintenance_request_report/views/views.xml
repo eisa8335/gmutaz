@@ -2,7 +2,7 @@
     <template t-name="maintenance_request_report.request_report">
         <t t-call="web.html_container">
 
-            <t t-call="web.internal_layout">
+            <t t-call="web.external_layout">
                 <t t-foreach="docs" t-as="o">
 
                     <div class="page">
@@ -169,9 +169,15 @@
                                 </p>
                                 <p>
                                     <b>Location:</b>
-                                        <span class="pr_5" t-field="o.installation_base_id.room"/>,
+                                    <t t-if="o.installation_base_id.room">
+                                        <span>Room</span>
+                                        <span class="pr_5" t-field="o.installation_base_id.room"/>
+                                    </t>
+                                    <t t-if="o.installation_base_id.floor">
+                                        <span>, Floor</span>
                                         <span class="pr_5" t-field="o.installation_base_id.floor"/>
-                                    
+                                    </t>
+
                                 </p>
                                 <p>
                                     <b>Description Of Problem:</b>

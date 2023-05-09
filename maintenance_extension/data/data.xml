@@ -14,5 +14,19 @@
             <field name="padding">4</field>
             <field name="company_id" eval="False"/>
         </record>
+
+        <record id="equipment_category_class_1" model="maintenance.equipment.category">
+            <field name="name">Class 1</field>
+        </record>
+        <record id="equipment_category_class_2" model="maintenance.equipment.category">
+            <field name="name">Class 2</field>
+        </record>
+        <record id="equipment_category_class_3" model="maintenance.equipment.category">
+            <field name="name">Class 3</field>
+        </record>
+        <record id="equipment_category_class_4" model="maintenance.equipment.category">
+            <field name="name">Class 4</field>
+        </record>
+
     </data>
 </odoo>
