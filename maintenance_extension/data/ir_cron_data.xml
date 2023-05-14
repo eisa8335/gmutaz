@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.cron" id="auto_create_maintenance_request">
+            <field name="name">Auto-Create Maintenance Requests for Equipments</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field name="active">True</field>
+            <field name="model_id" ref="maintenance_extension.model_equipments_installation_base"/>
+            <field name="state">code</field>
+            <field name="code">model._generate_auto_work_request()</field>
+        </record>
+    </data>
+</odoo>

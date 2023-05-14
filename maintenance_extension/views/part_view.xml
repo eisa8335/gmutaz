@@ -73,7 +73,7 @@
                         <group>
                             <field name="compatibility" required="1"
                                    options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}" attrs="{'readonly':[('part_state','=','confirm')]}"/>
-                            <field name="lst_price" string="Price" attrs="{'readonly':[('part_state','=','confirm')]}"/>
+                            <field name="lst_price" string="Price" attrs="{'readonly':[('part_state','=','confirm')]}" required="1"/>
                             <field name="condition" required="1" attrs="{'readonly':[('part_state','=','confirm')]}"/>
                             <field name="warranty" required="1" attrs="{'readonly':[('part_state','=','confirm')]}"/>
                             <field name="is_part" invisible="1" attrs="{'readonly':[('part_state','=','confirm')]}"/>

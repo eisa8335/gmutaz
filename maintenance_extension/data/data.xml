@@ -7,6 +7,13 @@
             <field name="padding">4</field>
             <field name="company_id" eval="False"/>
         </record>
+
+        <record id="sequence_maintenance_request" model="ir.sequence">
+            <field name="name">Sequence Maintenance Request</field>
+            <field name="code">maintenance.request.sequence</field>
+            <field name="padding">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
         <!--Sequence for Installation Base-->
         <record id="sequence_parts_details" model="ir.sequence">
             <field name="name">Sequence Parts Details</field>

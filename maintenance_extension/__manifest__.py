@@ -12,6 +12,7 @@
     'data': [
         'security/ir.model.access.csv',
         'data/data.xml',
+        'data/ir_cron_data.xml',
         'views/maintenance_extension.xml',
         'views/equipment_view.xml',
         'views/part_view.xml',

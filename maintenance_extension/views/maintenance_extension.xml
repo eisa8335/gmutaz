@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    
     <!-- inherit res.partner start -->
     <record id='inherited_view_partner_form' model='ir.ui.view'>
         <field name='name'>inherited_view_partner_form</field>
@@ -62,48 +61,94 @@
         <field name='model'>maintenance.request</field>
         <field name='inherit_id' ref='maintenance.hr_equipment_request_view_form'/>
         <field name='arch' type='xml'>
-            <xpath expr='//header' position='inside'>
+            <xpath expr='//header/button[1]' position='before'>
+                <button name="lock_request" string="Close Request" type="object" class="btn-primary" confirm="Are you sure You want to close this Maintenance Request? Please note that this action cannot be undone." attrs="{'invisible': [('edit_state', '=', 'locked')]}"/>
                 <button name="print_report" string="Work Request Report" type="object" class="btn-primary"/>
-                <button name="create_delivery_order" string="Create Stock Move" type="object" class="btn-primary"/>
             </xpath>
             <xpath expr='//sheet/div[1]' position='before'>
-               <div class="oe_button_box" name="button_box">
-                   <button name="show_picking" type="object" class="oe_stat_button" icon="fa-cubes">
+                <div class="oe_button_box" name="button_box">
+                    <button name="show_picking" type="object" class="oe_stat_button" icon="fa-cubes">
                         <field name="picking_count" widget="statinfo" string="Stock Moves"/>
-                   </button>
+                    </button>
                 </div>
+            </xpath>
+
+            <xpath expr="//field[@name='employee_id']" position='before'>
+                <field name="reference" readonly="1" force_save="1"/>
             </xpath>
 
             <xpath expr='//field[@name="description"]/parent::node()' position='after'>
                 <notebook>
                     <page string="Parts Used" name="signature">
-                        <field name="used_line_ids" editable="bottom">
+                        <field name="used_line_ids" editable="bottom" attrs="{'readonly': [('edit_state', '=', 'locked')]}">
                             <tree>
-                                <field name="part_id"
-                                       options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}" domain="[('is_part', '=', True)]"/>
+                                <field name="part_id" options="{'no_quick_create':True,'no_create_edit':True}"
+                                       domain="[('is_part', '=', True)]" required="1"/>
                                 <field name="qty_available"/>
-                                <field name="qty"/>
+                                <field name="qty" required="1"/>
                             </tree>
                         </field>
                     </page>
                     <page string="Signature" name="signature">
                         <group>
                             <group>
-                                <field name="signature" widget='signature'/>
+                                <field name="signature" widget='signature'  attrs="{'readonly': [('edit_state', '=', 'locked')]}"/>
                             </group>
                         </group>
                     </page>
                 </notebook>
             </xpath>
+
+            <xpath expr='//field[@name="stage_id"]' position='after'>
+                <field name="edit_state" invisible="1"/>
+            </xpath>
+
+            <xpath expr='//field[@name="name"]' position='attributes'>
+                <attribute name="attrs">{'readonly': [('edit_state', '=', 'locked')]}</attribute>
+            </xpath>
+
+            <xpath expr='//field[@name="employee_id"]' position='attributes'>
+                <attribute name="attrs">{'readonly': [('edit_state', '=', 'locked')]}</attribute>
+            </xpath>
+            <xpath expr='//field[@name="maintenance_type"]' position='attributes'>
+                <attribute name="attrs">{'readonly': [('edit_state', '=', 'locked')]}</attribute>
+            </xpath>
+
+            <xpath expr='//field[@name="description"]' position='attributes'>
+                <attribute name="attrs">{'readonly': [('edit_state', '=', 'locked')]}</attribute>
+            </xpath>
+            <xpath expr='//field[@name="maintenance_team_id"]' position='attributes'>
+                <attribute name="attrs">{'readonly': [('edit_state', '=', 'locked')]}</attribute>
+            </xpath>
+            <xpath expr='//field[@name="user_id"]' position='attributes'>
+                <attribute name="attrs">{'readonly': [('edit_state', '=', 'locked')]}</attribute>
+            </xpath>
+            <xpath expr='//field[@name="schedule_date"]' position='attributes'>
+                <attribute name="attrs">{'readonly': [('edit_state', '=', 'locked')]}</attribute>
+            </xpath>
+
+            <xpath expr='//field[@name="duration"]' position='attributes'>
+                <attribute name="attrs">{'readonly': [('edit_state', '=', 'locked')]}</attribute>
+            </xpath>
+
+            <xpath expr='//field[@name="priority"]' position='attributes'>
+                <attribute name="attrs">{'readonly': [('edit_state', '=', 'locked')]}</attribute>
+            </xpath>
+
+            <xpath expr='//field[@name="email_cc"]' position='attributes'>
+                <attribute name="attrs">{'readonly': [('edit_state', '=', 'locked')]}</attribute>
+            </xpath>
+
             <xpath expr='//field[@name="equipment_id"]' position='attributes'>
                 <attribute name="invisible">1</attribute>
             </xpath>
             <xpath expr='//field[@name="request_date"]' position='after'>
-                <field name="location_id" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+                <field name="location_id" options="{'no_quick_create':True,'no_create_edit':True}" attrs="{'readonly': [('edit_state', '=', 'locked')]}"/>
                 <field name="stock_id" readonly="1" invisible="1"/>
             </xpath>
             <xpath expr='//field[@name="employee_id"]' position='attributes'>
                 <attribute name="string">Responsible</attribute>
+                <attribute name="options">"{'no_quick_create':True,'no_create_edit':True, 'no_open': False}"</attribute>
             </xpath>
             <xpath expr='//field[@name="user_id"]' position='attributes'>
                 <attribute name="string">Created By</attribute>
@@ -116,21 +161,22 @@
             </xpath>
             <xpath expr='//field[@name="employee_id"]' position='after'>
                 <field name="installation_base_id" string="Equipment"
-                       options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}" domain="[('state', '=', 'confirm')]"/>
+                       options="{'no_quick_create':True,'no_create_edit':True}"
+                       domain="[('state', '=', 'confirm')]" attrs="{'readonly': [('edit_state', '=', 'locked')]}"/>
             </xpath>
 
         </field>
     </record>
     <!-- inherit maintenance.request end -->
 
-<!--     inherit equipment.category start -->
+    <!--     inherit equipment.category start -->
     <record id='inherited_view_equipment_category_form' model='ir.ui.view'>
         <field name='name'>inherited_view_equipment_category_form</field>
         <field name='model'>maintenance.equipment.category</field>
         <field name='inherit_id' ref='maintenance.hr_equipment_category_view_form'/>
         <field name='arch' type='xml'>
             <xpath expr='//field[@name="equipment_count"]/parent::node()' position='replace'>
-               <button name="show_equipments" type="object" class="oe_stat_button" icon="fa-cubes">
+                <button name="show_equipments" type="object" class="oe_stat_button" icon="fa-cubes">
                     <field name="installation_base_count" widget="statinfo"/>
                 </button>
             </xpath>
@@ -143,7 +189,7 @@
         <field name='inherit_id' ref='hr_maintenance.hr_employee_view_form'/>
         <field name='arch' type='xml'>
             <xpath expr='//field[@name="equipment_count"]/parent::node()' position='replace'>
-               <button name="show_equipments" type="object" class="oe_stat_button" icon="fa-cubes" string="Equipments">
+                <button name="show_equipments" type="object" class="oe_stat_button" icon="fa-cubes" string="Equipments">
                     <field name="installation_base_count" widget="statinfo"/>
                 </button>
             </xpath>
@@ -196,7 +242,7 @@
         <field name="name">part_used_line_tree_view</field>
         <field name="model">part.used.line</field>
         <field name="arch" type="xml">
-            <tree >
+            <tree>
                 <field name="part_id"/>
                 <field name="qty"/>
                 <field name="qty_available"/>
@@ -214,7 +260,9 @@
                 <sheet>
                     <group name="group_top">
                         <group name="group_left">
-                            <field name="part_id" domain="[('is_part', '=', True)]" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}" required="1"/>
+                            <field name="part_id" domain="[('is_part', '=', True)]"
+                                   options="{'no_quick_create':True,'no_create_edit':True}"
+                                   required="1"/>
                             <field name="qty"/>
                         </group>
                         <group name="group_left">
@@ -232,7 +280,7 @@
         <field name="name">spare.part.line.tree</field>
         <field name="model">spare.part.line</field>
         <field name="arch" type="xml">
-            <tree >
+            <tree>
                 <field name="part_id"/>
                 <field name="qty"/>
                 <field name="qty_available"/>
@@ -250,7 +298,9 @@
                 <sheet>
                     <group name="group_top">
                         <group name="group_left">
-                            <field name="part_id" domain="[('is_part', '=', True)]"  options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}" required="1"/>
+                            <field name="part_id" domain="[('is_part', '=', True)]"
+                                   options="{'no_quick_create':True,'no_create_edit':True}"
+                                   required="1"/>
                             <field name="qty"/>
                         </group>
                         <group name="group_left">
@@ -263,7 +313,7 @@
     </record>
     <!-- view form product used end -->
 
-    
+
     <!-- update menu start -->
     <record id="maintenance.menu_maintenance_cat" model="ir.ui.menu">
         <field name="name">Equipment Classification</field>
@@ -293,7 +343,6 @@
         <field name="name">Hide Chatter</field>
     </record>
     <!-- create groups end -->
-
 
 
 </odoo>
