@@ -184,8 +184,7 @@ class EquipmentsInstallationBase(models.Model):
             scheduled_days = record.maintenance_request_days
             work_request_pool = self.env['maintenance.request']
             latest_record = work_request_pool.search([('installation_base_id', '=', record.id)], order='create_date desc', limit=1)
-            print('\n\n', date)
-            print(latest_record.create_date.date(), '\n\n')
+            stop
             days_delta = (date.today() - latest_record.create_date.date()).days
             if days_delta > scheduled_days:
                 stage = self.env['maintenance.stage'].search([], limit=1, order='id asc')
