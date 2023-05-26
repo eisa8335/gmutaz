@@ -3,6 +3,7 @@ from odoo import fields, models, api, _
 from odoo.exceptions import UserError, ValidationError
 import math
 from random import randint
+from datetime import date
 
 
 class PartnerInherit(models.Model):
@@ -182,8 +183,10 @@ class EquipmentsInstallationBase(models.Model):
         for record in installation_base_objects:
             scheduled_days = record.maintenance_request_days
             work_request_pool = self.env['maintenance.request']
-            latest_record = work_request_pool.search([('installation_base_id', '=', record.id), ('create_date', '!=', False)], order='create_date desc', limit=1)
-            days_delta = (fields.Date.today() - latest_record.create_date.date()).days
+            latest_record = work_request_pool.search([('installation_base_id', '=', record.id)], order='create_date desc', limit=1)
+            print('\n\n', date)
+            print(latest_record.create_date.date(), '\n\n')
+            days_delta = (date.today() - latest_record.create_date.date()).days
             if days_delta > scheduled_days:
                 stage = self.env['maintenance.stage'].search([], limit=1, order='id asc')
                 obj = work_request_pool.create({
