@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	
+	<!-- Website res settings -->
+	
+	<record id="res_config_settings_view_form" model="ir.ui.view">
+            <field name="name">res.config.settings.view.form.inherit.website</field>
+            <field name="model">res.config.settings</field>
+            <field name="priority" eval="22"/>
+            <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[hasclass('settings')]//field[@name='website_domain']" position="attributes">
+                	<attribute name='placeholder'></attribute>
+                </xpath>
+            </field>
+     </record>
+     
+     	<!-- powered by message -->
+	<template id='sh_website_debranding_promotion_message' inherit_id='web.brand_promotion_message' name='Website Promotion Message'>
+		<xpath expr="//t[@t-set='odoo_logo']" position="replace">
+			<t t-set='odoo_logo'>
+				<t t-set='debranding' t-value="request.env['sh.debranding.config'].sudo().search([],limit=1)" />
+				<a target="_blank" t-attf-href="#{debranding.url}" class="badge badge-light">
+					<img alt="None" t-att-src="image_data_uri(debranding.favicon)" style="height: 1em; vertical-align: baseline;" />
+				</a>
+			</t>
+		</xpath>
+	</template>
+
+	<template id="sh_website_debranding_promotion" name="Website Promotion" inherit_id="web.brand_promotion">
+		<xpath expr="//div[hasclass('o_brand_promotion')]" position="replace">
+			<div class="o_brand_promotion"></div>
+		</xpath>
+	</template>
+
+     
+
+     
+     
+</odoo>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	 <!-- <function model="ir.ui.view" name="_debrand_view" /> -->
+	<template id="fevicon_icon_template" inherit_id="web.layout">
+	       <xpath expr="//link[@rel='shortcut icon']" position="replace">
+	               <link rel="shortcut icon" href="/fevicon.ico" type="image/x-icon"/>
+	       </xpath>
+	    </template>
+	    
+	    
+	<template id="sh_portal_record_sidebar" inherit_id="portal.portal_record_sidebar">
+		<xpath expr="//div[@id='sidebar_content']//div[hasclass('card-footer')]" position="replace">
+			<div class="card-footer small text-center text-muted border-top-0 pt-1 pb-1 d-none d-lg-block">
+				Powered by <a target="_blank" href="/company_url">
+				<t t-as="debranding" t-foreach="request.env['sh.debranding.config'].sudo().search([],limit=1)">
+					<t t-esc="debranding.name"/>
+				</t>
+				</a>
+			</div>
+		</xpath>
+    </template>
+	
+	
+</odoo>
