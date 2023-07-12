@@ -1,0 +1,108 @@
+// Form views
+.o_form_view {
+    @include media-breakpoint-down(sm) {
+        min-width: auto;
+        .oe_title {max-width: 100% !important;}
+        .o_form_sheet {min-width: auto;}
+        .o_group .o_field_widget.o_text_overflow {width: auto !important;}
+        .o_group_col_6 {width: 100%;}
+        .o_statusbar_buttons_dropdown {border: {bottom: 0; radius: 0; top: 0;}height: 100%;}
+        .o_statusbar_buttons>.btn {border-radius: 0;border: 0;width: 100%;margin-bottom: 0.2rem;
+            &:last-child { margin-bottom: 0;}
+        }
+        .o_statusbar_status .o_arrow_button:first-child::before {content: none;display: none;}
+        .o_form_sheet,.oe_chatter{min-width: auto;max-width: 100%;}
+        .app_settings_block .row { margin: 0;}
+        
+    }
+}
+
+// 16 //
+.o_form_view .o_notebook>.tab-content>.tab-pane> :first-child:not(.o_group) .o_field_x2many.o_field_x2many_list {
+    margin: 0 !important;
+}
+body .o_form_view .o_form_uri,body .o_list_view .o_list_table .o_form_uri,.o_field_x2many_list_row_add a,.o_form_view .o_form_uri > span:first-child,.o_setting_container .settings .o_settings_container .o_setting_box .o_setting_right_pane a,
+body .o_phone_content .o_phone_form_link,
+.o_popover .o_cw_body .list-group .list-group-item .o_field_many2one a.o_form_uri,
+body .o_phone_content .o_field_phone_sms,
+.o_form_view .o_form_sheet_bg .o_field_widget.o_field_email a,
+.o_form_view .o_form_sheet_bg .o_field_widget.o_field_url a,
+body .o_field_phone .o_phone_content a.o_form_uri,
+body .o_field_widget.o_field_many2one .o_external_button,
+body .o_list_view .o_list_table .o_external_button,
+.o_form_view .o_field_domain .btn.o_domain_show_selection_button,
+.o_form_view .o_form_sheet_bg .o_field_sms_widget .o_sms_container .fa.fa-lg.fa-info-circle,
+.o_stock_reports_page .o_stock_reports_table .o_stock_reports_web_action,
+.o_stock_reports_page .o_stock_reports_table .o_stock_report_lot_action,
+.o_list_view .o_content .o_list_table .o_field_many2one[name="product_id"] a.o_form_uri,
+.o_mrp_bom_report_page h2 a,.o_control_panel .o_cp_bottom .o_cp_bottom_right .o_cp_bottom_right_sp .o-dropdown:not(.show) .dropdown-toggle.btn.btn-secondary,
+.o_mrp_bom_report_page td[name="td_mrp_bom"] a,
+body .o_hr_attendance_kiosk_mode_container .o_hr_attendance_kiosk_mode .o_hr_attendance_back_button,
+body .o_calendar_view .o_calendar_buttons .o_timeoff_buttons .btn.btn-secondary,
+.o_kanban_view .o_kanban_record .oe_module_desc .oe_module_action .btn.btn-secondary.float-end,
+.o_form_view .o_form_view_container .o_form_sheet [name="send_buttons"] [name="action_open_composer"],
+.o_form_view .o_form_view_container .o_form_sheet [name="send_buttons"] [name="action_send_sms"],
+.o_form_view .o_field_widget.o_field_many2many_binary .btn.btn-secondary.o_attach,
+.o_form_view .o_form_sheet_bg .o_form_sheet [name="action_product_forecast_report"] .o_button_icon,
+.o-form-buttonbox .btn.oe_stat_button > .o_field_statinfo .o_stat_value,
+.o_form_view .o_form_view_container .o_form_sheet .o_field_datetime + .btn.btn-secondary,
+.o_kanban_record .o_kanban_card_header .o_kanban_card_header_title .o_primary a.oe_kanban_action.oe_kanban_action_a,
+.o_form_view .o_form_sheet_bg .o_form_sheet [name="datas"].o_field_widget.o_field_binary .fa.btn,
+.o_form_view .o_form_sheet_bg .o_form_sheet [name="data"].o_field_widget.o_field_binary .fa.btn{color: $primaryColor;}
+.o_form_view .o_form_uri > span:first-child:hover, .o_form_view .o_form_uri > span:first-child:focus, .o_form_view .o_form_uri > span:first-child.focus{color: darken($primaryColor, 10%);}
+body .o_component_with_search_panel .o_search_panel .o_search_panel_section .o_search_panel_section_header .o_search_panel_section_icon,
+body .o_calendar_view .o_calendar_container .o_timeoff_calendar .o_timeoff_dashboard .text-odoo.o_timeoff_card,
+.o_cp_bottom .o_cp_bottom_right .o_search_options .btn.btn-secondary.o_add_condition,
+.o_form_view #o_employee_right .o_field_hr_org_chart .o_org_chart_group_up .o_org_chart_entry_manager a.o_employee_redirect,
+.o_form_view .o_kanban_renderer .o_kanban_record .o_kanban_content .o_kanban_record_subtitle .oe_kanban_action.oe_kanban_action_a{color: $primaryColor !important;}
+body .o_form_view .o_mass_mailing_mailing_form .o_notebook .tab-content .tab-pane .o_mail_body, body .o_legacy_form_view.o_mass_mailing_mailing_form .o_notebook .tab-content .tab-pane .o_mail_body{margin-top: 0px;}
+@media only screen and (min-width: 768px){
+    .o_form_view.o_field_highlight .o_field_widget .o_input,.o_field_highlight.o_field_widget .o_input{border-color: $primaryColor;}
+}
+.o_form_view .o_form_sheet_bg .o_form_sheet span.o_field_translate{vertical-align: middle;}
+
+.o_list_renderer .o_data_row.o_selected_row > .o_data_cell.o_required_modifier:not(.o_readonly_modifier){border-bottom: 1px solid $primaryColor;}
+.o_form_view .o_input{padding: 5px 5px !important;}
+
+/* chatter top panel */ 
+.o_FormRenderer_chatterContainer .o_Chatter_fixedPanel .o_ChatterTopbar .o_ChatterTopbar_actions .o_ChatterTopbar_tools .o_ChatterTopbar_rightSection .o_ChatterTopbar_button,
+.o_FormRenderer_chatterContainer .o_Chatter_fixedPanel .o_ChatterTopbar .o_ChatterTopbar_actions .o_ChatterTopbar_tools .o_ChatterTopbar_rightSection .o_FollowButton .o_FollowButton_follow.o_ChatterTopbar_button{background-color: #FFFFFF;border-color: #FFFFFF;}
+.o_FormRenderer_chatterContainer .o_Chatter_fixedPanel .o_ChatterTopbar .o_ChatterTopbar_actions .o_ChatterTopbar_tools .o_ChatterTopbar_rightSection .o_ChatterTopbar_button.btn-light:hover,
+.o_FormRenderer_chatterContainer .o_Chatter_fixedPanel .o_ChatterTopbar .o_ChatterTopbar_actions .o_ChatterTopbar_tools .o_ChatterTopbar_rightSection .o_FollowButton .o_FollowButton_follow.o_ChatterTopbar_button:hover {color: #000000;background-color: #f8f9fa;border-color: #f8f9fa;box-shadow: none;}
+.o_form_view .o_form_view_container .o_form_sheet [name="button_style"] #button_style,
+.o_form_view .o_form_view_container .o_form_sheet [name="separator_style"] #separator_style,
+.o_form_view .o_form_view_container .o_form_sheet [name="sidebar_style"] #sidebar_style,
+.o_form_view .o_form_view_container .o_form_sheet [name="login_page_style"] #login_page_style,
+.o_form_view .o_form_view_container .o_form_sheet [name="loading_style"] #loading_style,
+.o_form_view .o_form_view_container .o_form_sheet [name="festival_style"] #festival_style,
+.o_form_view .o_form_view_container .o_form_sheet [name="form_element_style"] #form_element_style,
+.o_form_view .o_form_view_container .o_form_sheet [name="horizontal_tab_style"] #horizontal_tab_style,
+.o_form_view .o_form_view_container .o_form_sheet [name="breadcrumb_style"] #breadcrumb_style,
+.o_form_view .o_form_view_container .o_form_sheet [name="vertical_tab_style"] #vertical_tab_style,
+.o_form_view .o_form_view_container .o_form_sheet [name="predefined_list_view_style"] #predefined_list_view_style{width: 100% !important;}
+.o_form_view .o_form_view_container .o_form_sheet .o_field_radio[name="mobile_icon_style"],
+.o_form_view .o_form_view_container .o_form_sheet [name="button_style"],.o_form_view .o_form_view_container .o_form_sheet [name="separator_style"],
+.o_form_view .o_form_view_container .o_form_sheet [name="sidebar_style"],.o_form_view .o_form_view_container .o_form_sheet [name="login_page_style"],
+.o_form_view .o_form_view_container .o_form_sheet [name="loading_style"],.o_form_view .o_form_view_container .o_form_sheet [name="festival_style"],
+.o_form_view .o_form_view_container .o_form_sheet [name="form_element_style"],
+.o_form_view .o_form_view_container .o_form_sheet [name="horizontal_tab_style"],.o_form_view .o_form_view_container .o_form_sheet [name="breadcrumb_style"],
+.o_form_view .o_form_view_container .o_form_sheet [name="vertical_tab_style"],.o_form_view .o_form_view_container .o_form_sheet [name="predefined_list_view_style"]{width: 90% !important;}
+
+/* Dashboards */ 
+.o_spreadsheet_dashboard_action .o_component_with_search_panel .o-chart-container .o-scorecard .o-title-text{font-size: 16px !important;padding: 5px 10px;}
+.o_spreadsheet_dashboard_action .o_component_with_search_panel .o-chart-container .o-scorecard .o-scorecard-content .o-key-text{color: $primaryColor !important;font-weight: bold !important;text-overflow: ellipsis;}
+.o_spreadsheet_dashboard_action .o_component_with_search_panel .o-chart-container .o-scorecard .o-baseline-text .o-baseline-text-value{font-weight: bold !important;font-size: 20px !important;}
+.o_spreadsheet_dashboard_action .o_component_with_search_panel .o-chart-container .o-scorecard .o-baseline-text .o-baseline-text-description{font-size: 18px !important;}
+.o_spreadsheet_dashboard_action .o_control_panel .o_cp_top_right{align-items: center !important;}
+
+// Lunch  // 
+.o_search_panel_section.o_search_panel_filter .o_search_panel_field .o_search_panel_filter_value .o_search_panel_label .o_search_panel_label_title{max-width: 70%;}
+
+.o_popover_field_selector .o_field_selector_popover:not(.o_legacy_field_selector_popover) .o_field_selector_popover_footer > input,
+.o_popover_field_selector .o_field_selector_popover:not(.o_legacy_field_selector_popover) .o_field_selector_popover_header .o_field_selector_search > .o_input{color: #FFFFFF;}
+.o_field_widget .o_datepicker .o_datepicker_button{top: 12px;right: 12px;}
+.o_form_view .o_form_sheet_bg .o_form_sheet .o_wrap_field .o_wrap_label{display: flex;align-items: center;}
+
+// Live Chat // 
+.o_form_view .o_history_container .o_history_kanban_container{width: 100%;}
+.o_form_view .o_history_container .o_wrap_field.d-flex.d-sm-contents.flex-column.mb-3.mb-sm-0 .o_cell.flex-grow-1.flex-sm-grow-0{grid-column: span 2;width: 100%;}

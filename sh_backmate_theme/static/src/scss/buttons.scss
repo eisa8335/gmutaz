@@ -1,0 +1,418 @@
+.btn-primary {background-color: $primaryColor;border-color: $primaryColor;}
+.btn-primary:hover {background-color: $primary_hover;border-color: $primary_hover;box-shadow: 0 0 2px rgba(0, 0, 0, .12), 0 2px 2px rgba(0, 0, 0, .2);}
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:not(:disabled):not(.disabled).active,
+.show>.btn-primary.dropdown-toggle {background-color: $primary_active;border-color: $primary_active;}
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.btn-primary:not(:disabled):not(.disabled).active:focus,
+.show>.btn-primary.dropdown-toggle:focus {box-shadow: none;}
+
+.btn-primary:focus,
+.btn-primary.focus {box-shadow: none;}
+.o_dropdown .dropdown-toggle:first-child {border: 0px;margin-right: 5px;}
+.o_ChatterTopbar_actions button.btn.btn-link {background: $primaryColor;color: #fff;margin-right: 3px;}
+.o_control_panel .o_cp_bottom_right > .o_cp_switch_buttons > .btn.active{background: $primaryColor;color: #fff;}
+.o_control_panel .o_cp_bottom .o_cp_bottom_left .o_cp_buttons .btn.btn-primary.sh_refresh {margin: 0 5px !important;}
+
+/*--button style--*/
+/*--style-1--*/
+
+@if $button_style=='style_1' {
+    .btn,
+    .o_form_sheet .sh_full_screen_icon_div .full_form_toggle,
+    .o_control_panel .o_cp_bottom_right .o_form_button_create,
+    .o_content .o_Chatter .o_Chatter_fixedPanel .o_ChatterTopbar_button,
+    .o_control_panel .o_cp_top .o_cp_bottom_right .btn.btn-light.o_form_button_save,
+    .o_main_navbar .o_menu_systray .sh_bookmark .sh_wqm_quick_menu_submenu_list_cls .sh_bookmark_search_div .sh_bookmark_search.form-control,
+    .o_main_navbar .o_menu_systray .MessagingMenuContainer .o_MessagingMenu .o_MessagingMenu_counter.badge, .o_main_navbar .o_menu_systray .o_ActivityMenuView .o_ActivityMenuView_dropdownToggle .o_ActivityMenuView_counter.badge { border-radius: 0px !important;}
+    .o_searchview .o_searchview_input_container .o_searchview_facet,.o_searchview .o_searchview_input_container .o_searchview_facet .o_searchview_facet_label {border-radius: 0px !important;}
+    .modal-footer .btn.btn-primary,.o_control_panel .o_cp_bottom .o_cp_bottom_left .o_cp_buttons .btn.btn-primary,.o_statusbar_buttons .btn.btn-primary {border: 1.5px solid $primaryColor;}
+    .btn-secondary:not(:disabled):not(.disabled):active,
+    .btn-secondary:not(:disabled):not(.disabled).active,
+    .show>.btn-secondary.dropdown-toggle:not(.scale_button_selection),.o_statusbar_buttons .btn.btn-primary:hover,
+    .modal-footer .btn-secondary:hover,.modal-footer .btn.btn-primary:hover,.o_control_panel .o_cp_bottom .o_cp_bottom_left .o_cp_buttons .btn.btn-primary:hover,.o_statusbar_buttons .btn-secondary:hover {background: $primary_hover;opacity: 1;color: #fff}
+    .o_control_panel .o_form_buttons_view .o_form_button_edit,
+    .o_menu_systray .sh_language_icon .sh_user_language_list_cls img.sh_lang_flag,.o_spreadsheet_dashboard_action .o_component_with_search_panel .o-chart-container .o-scorecard {border-radius: 0px !important;}
+    .o_statusbar_buttons .btn-secondary {border: 1.5px solid $primaryColor;background: #fff;border-radius: 0px !important;color: $primaryColor;}
+    .modal-footer .btn-secondary,.o_filters_menu .btn-secondary {border: 1.5px solid $primaryColor;background: #fff;border-radius: 0px !important;color: $primaryColor;}
+    .o_favorites_menu .btn-primary,.o_group_by_menu .btn-primary, .o_filters_menu .btn-primary {border: 1.5px solid $primaryColor!important;}
+    .o_filters_menu .btn-secondary:hover,.o_favorites_menu .btn.btn-primary:hover,.o_group_by_menu .btn.btn-primary:hover,.o_filters_menu .btn.btn-primary:hover {background: $primary_hover;opacity: 1;color: #fff}
+    .o_widget_Discuss .o_Discuss .o_DiscussSidebar.o_Discuss_sidebar .btn.btn-primary.rounded,
+    .o_x2m_control_panel .o_cp_buttons .o-kanban-button-new,
+    .o_kanban_view .o_kanban_renderer.o_kanban_grouped .o_kanban_record,
+    .o_kanban_view .o_kanban_renderer.o_kanban_grouped .o_kanban_record .oe_kanban_global_click {border-radius: 0px !important;}
+    //  16 //
+    .o_view_controller .o_kanban_ungrouped .oe_kanban_global_click{border-radius: 0px !important;}
+    .o_control_panel .o_cp_bottom .o_cp_bottom_left .o-dropdown--menu .btn-secondary {border: 1.5px solid $primaryColor;background: #fff !important;border-radius: 0px !important;color: #212121;margin-bottom: 5px;}
+    .o_control_panel .o_cp_bottom .o_cp_bottom_left .o-dropdown--menu{padding: 0 !important;}
+    .o_control_panel .o_cp_bottom .o_cp_bottom_left .o-dropdown--menu .btn-secondary:hover {background: $primary_hover !important;color: #fff !important;opacity: 1;}
+    @media (max-width: 1023px) {
+        .o_cp_bottom_left .o_cp_buttons .o_list_button_add:before,.o_cp_bottom_left .o_cp_buttons .o-kanban-button-new:before,.o_cp_bottom_left .o_cp_buttons .o_form_button_save:before,.o_control_panel .o_form_buttons_view .o_form_button_edit:before {color: #fff;}
+    }
+    @media only scren and (max-width: 767.98px) {
+        .o_cp_buttons .btn.btn-primary {border-radius: 0px !important;}
+    }
+    // notification info btn style 1  // 
+	.o_notification_manager .o_notification.bg-warning .o_notification_body,
+	.o_notification_manager .toast.o_notification.bg-warning .toast-body,	.o_notification_manager .toast.o_notification.bg-warning .toast-body .btn-primary,
+    .o_notification_manager .o_notification.bg-warning .o_notification_body .o_notification_buttons .btn.btn-primary,
+	.o_notification_manager .o_notification.bg-warning,.o_notification_manager .o_notification .toast-header,.o_notification_manager .o_notification.bg-danger,.o_notification_manager .o_notification.bg-info,.o_notification_manager .o_notification.bg-danger .o_notification_body,
+	.o_notification_manager .o_notification.bg-info .o_notification_body{border-radius: 0px !important;}
+    /* TO DO */ 
+    .todo_layout .add_todo_section .input-group .sh_add_todo_input,
+    .todo_layout .add_todo_section .input-group-append .btn.sh_add_todo,
+    .todo_layout .card .card-body,.todo_layout .card,
+    .todo_layout .card .sh-card-header .sh_mark_completed_tooltip, .todo_layout .card .sh-card-header-button .sh_to_do_edit_btn .sh_mark_edit_tooltip, .todo_layout .card .sh-card-header-button .sh_to_do_remove_btn .sh_mark_remove_tooltip, .todo_layout .card .sh-card-header-button .sh_to_do_save_btn .sh_mark_save_tooltip,
+    .todo_layout .card .card-header{border-radius: 0px !important;}
+
+    /*zoom in/out view*/
+    .sh_zoom_view_layout .btn.sh_zoom{border-top-right-radius: 0px !important;border-bottom-right-radius: 0px !important;}
+}
+/*--style-1--*/
+/*--style-2--*/
+@if $button_style=='style_2' {
+    .o_cp_bottom_left .o_cp_buttons .btn,
+    .o_control_panel .o_cp_top .o_cp_bottom_right .btn.btn-light.o_form_button_save,
+    .o_control_panel .o_cp_bottom_right .o_form_button_create,
+    .o_content .o_Chatter .o_Chatter_fixedPanel .o_ChatterTopbar_button,
+    .o_menu_systray .sh_language_icon .sh_user_language_list_cls img.sh_lang_flag,
+    .o_main_navbar .o_menu_systray .sh_bookmark .sh_wqm_quick_menu_submenu_list_cls .sh_bookmark_search_div .sh_bookmark_search.form-control {border-radius: 4px!important;}
+    .modal-footer .btn.btn-primary,.o_control_panel .o_cp_bottom .o_cp_bottom_left .o_cp_buttons .btn.btn-primary,.o_chatter .o_chatter_topbar>.btn {border: 1.5px solid $primaryColor;border-radius: 4px!important;}
+    .modal-footer .btn-secondary,.o_filters_menu .btn-secondary {border: 1.5px solid $primaryColor;background: #fff;border-radius: 4px!important;color: $primaryColor;}
+    .btn-secondary:not(:disabled):not(.disabled):active,
+    .btn-secondary:not(:disabled):not(.disabled).active,
+    .show>.btn-secondary.dropdown-toggle:not(.scale_button_selection) {background: $primary_hover;opacity: 1;color: #fff}  
+    .o_form_view .o_form_statusbar>.o_statusbar_buttons .btn,.o_spreadsheet_dashboard_action .o_component_with_search_panel .o-chart-container .o-scorecard, .o_kanban_view .o_kanban_renderer.o_kanban_grouped .o_kanban_record,
+    .o_kanban_view .o_kanban_renderer.o_kanban_grouped .o_kanban_record .oe_kanban_global_click {border-radius: 4px!important;}
+    .o_statusbar_buttons .btn.btn-primary {border: 1.5px solid $primaryColor;border-radius: 4px!important;box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);}
+    .o_statusbar_buttons .btn-secondary, .o_cp_buttons .btn-secondary{border: 1.5px solid $primaryColor;background: #fff;border-radius: 4px!important;color: $primaryColor;box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);}
+    .o_group_by_menu .btn.btn-primary,.o_filters_menu .btn.btn-primary,.o_favorites_menu .btn.btn-primary {border: 1.5px solid $primaryColor!important;border-radius: 4px!important;}
+    .o_control_panel .o_cp_bottom .o_cp_bottom_left .o_cp_buttons .btn.btn-primary:hover,.o_statusbar_buttons .btn.btn-primary:hover,.o_statusbar_buttons .btn-secondary:hover,.o_cp_buttons .btn-secondary:hover,.modal-footer .btn.btn-primary:hover,.modal-footer .btn-secondary:hover,.o_filters_menu .btn-secondary:hover,.o_filters_menu .btn.btn-primary:hover,.o_favorites_menu .btn.btn-primary:hover,.o_chatter .o_chatter_topbar>.btn:hover,.o_group_by_menu .btn.btn-primary:hover {background: $primary_hover;color: #fff !important;opacity: 1;}
+    .o_form_sheet .sh_full_screen_icon_div .full_form_toggle {border-radius: 0px 0px 0px 4px;}
+    .o_searchview .o_searchview_input_container .o_searchview_facet {border-radius: 4px;}
+    .o_searchview .o_searchview_input_container .o_searchview_facet .o_searchview_facet_label{border-radius: 4px 0px 0px 4px !important;}
+    .o_cp_right .o_search_options .o_dropdown .btn,.btn-group>.btn:not(:first-child),
+    .btn-group>.btn-group:not(:first-child)>.btn,.o_cp_switch_activity,.btn,.o_calendar_container .o_calendar_sidebar_container .ui-datepicker table .ui-state-default {border-radius: 4px!important;}
+    .o_control_panel .o_cp_bottom .o_cp_bottom_left .o-dropdown--menu .btn-secondary {border: 1.5px solid $primaryColor;background: #fff;border-radius: 4px!important;color: #212121;margin-bottom: 5px;}
+    .o_control_panel .o_cp_bottom .o_cp_bottom_left .o-dropdown--menu .btn-secondary:hover {background: $primary_hover;color: #fff;opacity: 1;}
+    @media (max-width: 1023px) {
+        .o_cp_bottom_left .o_cp_buttons .o_form_button_save:before,.o_control_panel .o_form_buttons_view .o_form_button_edit:before,.o_cp_bottom_left .o_cp_buttons .o-kanban-button-new:before,.o_cp_bottom_left .o_cp_buttons .o_list_button_add:before {color: #fff;}
+    }
+    .o_searchview .o_searchview_input_container .o_searchview_facet .o_facet_values{border-radius: 0px 4px 4px 0px;}
+    .o_view_controller .o_kanban_ungrouped .oe_kanban_global_click{border-radius: 4px !important;}
+    .o_kanban_renderer .o_kanban_record .o_kanban_record_has_image_fill .o_kanban_image_fill_left{border-top-left-radius: 4px !important;border-bottom-left-radius: 4px !important;}
+	.o_notification_manager .o_notification.bg-danger,
+	.o_notification_manager .o_notification.bg-info,
+	.o_notification_manager .o_notification.bg-danger .o_notification_body,
+	.o_notification_manager .o_notification.bg-info .o_notification_body{border-radius: 4px;}
+    /* TO DO */ 
+    .todo_layout .add_todo_section .input-group .sh_add_todo_input{border-radius: 4px 0px 0px 4px;}
+    .todo_layout .add_todo_section .input-group-append .btn.sh_add_todo{border-radius: 0px 4px 4px 0px !important;}
+    .todo_layout .card .card-body,.todo_layout .card,
+    .todo_layout .card .sh-card-header .sh_mark_completed_tooltip, .todo_layout .card .sh-card-header-button .sh_to_do_edit_btn .sh_mark_edit_tooltip, .todo_layout .card .sh-card-header-button .sh_to_do_remove_btn .sh_mark_remove_tooltip, .todo_layout .card .sh-card-header-button .sh_to_do_save_btn .sh_mark_save_tooltip,
+    .todo_layout .card .card-header{border-radius: 4px;}
+}
+/*--style-2--*/
+/*--style-3--*/
+@if $button_style=='style_3' {
+    .o_control_panel .o_cp_bottom_left .o_cp_buttons .btn.btn-primary{border: 1.5px solid $primaryColor;}
+    .o_control_panel .o_cp_bottom_left .o_cp_buttons .btn.btn-primary:hover { background: $primary_hover;opacity: 1;color: #fff}
+    .o_control_panel .o_cp_bottom_left .o_cp_buttons .btn-secondary,
+    .o_Discuss .o_Discuss_content .o_ThreadView .o_ChannelMemberList .btn.btn-secondary,
+    .o_calendar_container .o_calendar_view .o_cw_popover.popover .o_cw_body .card-footer .btn.btn-secondary.o_cw_popover_delete,
+    .o_control_panel .o_cp_bottom_left .o_cp_action_menus .btn-group.o_dropdown .btn.btn-secondary {border: 1.5px solid $primaryColor;background: #fff;color: #212121;}
+    .o_control_panel .o_cp_bottom_left .o_cp_buttons .btn-secondary:hover,
+    .o_Discuss .o_Discuss_content .o_ThreadView .o_ChannelMemberList .btn.btn-secondary:hover,
+    .o_control_panel .o_cp_bottom_left .o_cp_action_menus .btn-group.o_dropdown .btn.btn-secondary:hover,
+    .o_calendar_container .o_calendar_view .o_cw_popover.popover .o_cw_body .card-footer .btn.btn-secondary.o_cw_popover_delete:hover {background-color: $primary_hover !important; color: #fff;opacity: 1;}
+    .o_control_panel .o_cp_bottom_left .o_cp_buttons .btn,
+    .o_widget_Discuss .o_Discuss .o_DiscussSidebar.o_Discuss_sidebar .btn.btn-primary.rounded,
+    .o_calendar_container .o_calendar_view .o_cw_popover.popover .o_cw_body .card-footer .btn.btn-primary.o_cw_popover_edit,
+    .o_popover .popover-body .o_ChannelInvitationForm .btn.btn-primary,
+    .o_calendar_container .o_calendar_view .o_cw_popover.popover .o_cw_body .card-footer .btn.btn-secondary.o_cw_popover_delete,
+    .o_Discuss .o_Discuss_content .o_ThreadView .o_ChannelMemberList .btn.btn-secondary,
+    .o_control_panel .o_cp_bottom_left .o_cp_action_menus .btn-group.o_dropdown .btn.btn-secondary,
+    .o_control_panel .o_cp_bottom .o_cp_bottom_left .o_list_buttons .o_list_selection_box,
+    .o_x2m_control_panel .o_cp_buttons .o-kanban-button-new,
+    .o_Chatter .o_Composer .o_Composer_actionButtons .o_Composer_actionButton.o_Composer_button.btn,
+    .o_base_settings .settings .o_settings_container .o_setting_right_pane .btn.btn-primary.o_web_settings_invite,
+    .o_content .o_kanban_view .o_column_quick_create .o_quick_create_unfolded .o_kanban_header .input-group .input-group-append .btn.btn-primary.o_kanban_add,
+    .o_kanban_view .o_kanban_record .btn.btn-primary.oe_kanban_action.oe_kanban_action_button,
+    .o_control_panel .o_cp_bottom_left .btn.btn-primary,
+    .o_content .o_kanban_view .oe_module_vignette .oe_module_desc .oe_module_action .btn.btn-secondary,
+    .o_content .o_kanban_view .oe_module_vignette .oe_module_desc .oe_module_action .btn.btn-info,
+    .modal.o_technical_modal.show.o_web_editor_dialog .modal-content .modal-body .btn.btn-sm {box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.2)!important;border-radius: 0px 15px 0px 15px!important;}
+    .o_control_panel .o_cp_bottom_right .btn-group.o_cp_switch_buttons .btn,
+    .o_control_panel .o_cp_bottom_right .o_cp_pager .o_pager .btn,
+    .modal.o_technical_modal.show.o_web_editor_dialog .modal-content .modal-body input.form-control,
+    .modal.o_technical_modal.show.o_web_editor_dialog .modal-content .modal-body select,
+    .o_control_panel .o_cp_top .o_cp_bottom_right .btn.btn-light.o_form_button_save,
+    .o_control_panel .o_cp_bottom_right .o_form_button_create,
+    .o_content .o_Chatter .o_Chatter_fixedPanel .o_ChatterTopbar_button,
+    .o_control_panel .o_cp_bottom_right .o_cp_action_menus .o-dropdown > button.btn.btn-light,
+    .o_menu_systray .o_MessagingMenu .o_MessagingMenu_dropdownMenu .btn.btn-secondary,
+    .o_calendar_view .fc-view-container .o_cw_popover.popover.card .card-footer .o-calendar-attendee-status .btn.btn-secondary.dropdown-toggle,
+    .o_menu_systray .sh_language_icon .sh_user_language_list_cls img.sh_lang_flag,.o_spreadsheet_dashboard_action .o_component_with_search_panel .o-chart-container .o-scorecard,
+    .o_kanban_view .o_kanban_renderer.o_kanban_grouped .o_kanban_record,
+    body .btn.btn-primary,body .btn.btn-secondary,body .btn.btn-light:not(.oe_stat_button):not(.o_button_more),.o_kanban_view .o_kanban_record .oe_module_desc .oe_module_action .btn.btn-info.btn-sm,
+    .o_form_view .o_kanban_ungrouped .o_kanban_record .oe_kanban_global_click,.o_FormRenderer_chatterContainer .o_Chatter_fixedPanel .o_ChatterTopbar .o_ChatterTopbar_actions .o_ChatterTopbar_button,
+    .o_onboarding_main .o_onboarding_step .o_onboarding_step_content .o_onboarding_step_action,
+    .o_base_settings .o_setting_container .o_settings_container .o_setting_box .o_setting_right_pane .badge.o_enterprise_label,
+    .o_kanban_view .o_kanban_renderer.o_kanban_grouped .o_kanban_record .oe_kanban_global_click,
+    .o_kanban_view .o_kanban_record .o_payment_provider_desc .o_payment_kanban_info .badge,
+    .o_hr_attendance_kiosk_mode_container .o_hr_attendance_kiosk_mode .o_hr_attendance_sign_in_out_icon{border-radius: 0px 10px 0px 10px !important;}
+    .o_control_panel .o_cp_bottom .o_cp_bottom_left .btn,
+    .o_cp_bottom .o_cp_bottom_right .o_search_options .btn,
+    .o_searchview .o_searchview_input_container .o_searchview_facet,
+    .o_calendar_sidebar_container .o_calendar_sidebar .ui-datepicker td,
+    .o_calendar_container .o_calendar_sidebar_container .ui-datepicker table .ui-state-default,
+    .o_kanban_view .o_kanban_renderer.o_kanban_ungrouped .o_kanban_record,
+    .o_kanban_view .o_kanban_renderer.o_kanban_ungrouped .o_kanban_record .oe_kanban_global_click,
+    .o_kanban_view .o_kanban_dashboard:not(.o_legacy_kanban_view) .o_kanban_record > div{border-radius: 0px 10px 0px 10px;}
+    .o_kanban_view .o_kanban_dashboard .o_kanban_record .o_kanban_card_content .o_kanban_primary_bottom{border-radius: 0px 0px 0px 10px;}
+    .o_searchview .o_searchview_input_container .o_searchview_facet .o_facet_values{border-radius: 0px 10px 0px 0px;}
+    .o_kanban_view .o_kanban_renderer.o_kanban_ungrouped .o_kanban_record .o_kanban_image_fill_left,
+    .o_kanban_view .o_kanban_renderer.o_kanban_ungrouped .o_kanban_record .o_kanban_image_fill_left > div{border-radius: 0px 0px 0px 10px;}
+    .o_main_navbar .o_menu_systray .MessagingMenuContainer .o_MessagingMenu .o_MessagingMenu_counter.badge, .o_main_navbar .o_menu_systray .o_ActivityMenuView .o_ActivityMenuView_dropdownToggle .o_ActivityMenuView_counter.badge,
+    .o_calendar_sidebar_container .o_calendar_filter .o_calendar_filter_items_checkall .o_cw_filter_input_bg.o_beside_avatar, .o_calendar_sidebar_container .o_calendar_filter .o_calendar_filter_item .o_cw_filter_input_bg.o_beside_avatar{border-radius: 0px 5px 0px 5px;}
+    .o_searchview .o_searchview_input_container .o_searchview_facet .o_searchview_facet_label{border-radius: 0px 0px 0px 10px !important;}
+    .o_statusbar_buttons .btn {box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.2)!important;border-radius: 0px 15px 0px 15px!important;}
+    .o_statusbar_buttons .btn.btn-primary {border: 1.5px solid $primaryColor;}
+    .o_statusbar_buttons .btn-secondary {border: 1.5px solid $primaryColor;background: #fff;color: $primaryColor;}
+    .modal-footer .btn {box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.2)!important;border-radius: 0px 15px 0px 15px!important;}
+    .modal-footer .btn.btn-primary {border: 1.5px solid $primaryColor!important;}
+    .modal-footer .btn-secondary {border: 1.5px solid $primaryColor;background: #fff;color: $primaryColor;}
+    .o_chatter .o_chatter_topbar>.btn,.o_favorites_menu .btn,
+    .modal .btn.btn-secondary.o_attach {box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.2)!important;border-radius: 0px 15px 0px 15px!important;}
+    .o_favorites_menu .btn-secondary {border: 1.5px solid $primaryColor!important;background: #fff;}
+    .o_popover .popover-body .o_ChannelInvitationForm .btn.btn-secondary,
+    .o_calendar_container .o_calendar_view .o_cw_popover.popover .o_cw_body .card-footer .btn.btn-secondary.o_cw_popover_delete,
+    .o_form_view .o_form_sheet_bg .o_form_sheet [name="send_buttons"] .btn.btn-secondary ,
+    .o_form_view .o_field_many2manytags .badge-pill.badge,
+    .o_main_navbar .o_menu_systray .sh_bookmark .sh_wqm_quick_menu_submenu_list_cls .sh_bookmark_search_div .sh_bookmark_search.form-control {border-radius: 0px 15px 0px 15px !important;}
+    .o_filters_menu .btn {box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.2)!important;border-radius: 0px 15px 0px 15px!important;}
+    .o_filters_menu .btn-secondary {border: 1.5px solid $primaryColor!important;background: #fff;}
+    .o_filters_menu .btn-secondary:hover,.o_statusbar_buttons .btn.btn-primary:hover,.o_statusbar_buttons .btn-secondary:hover,.modal-footer .btn.btn-primary:hover,.modal-footer .btn-secondary:hover,.o_favorites_menu .btn.btn-primary:hover,.o_filters_menu .btn.btn-primary:hover {background: $primary_hover;opacity: 1;color: #fff}
+    .o_form_sheet .sh_full_screen_icon_div .full_form_toggle {border-radius: 0px 0px 0px 0px;}
+    //  16  // 
+    .o_control_panel .o_cp_bottom .o_cp_bottom_left .o_calendar_scale_buttons .o-dropdown--menu .btn.btn-secondary{box-shadow: none !important;}
+    .o_control_panel .o_cp_bottom .o_cp_bottom_left .o-dropdown--menu{padding: 0 !important;}
+    .o_control_panel .o_cp_bottom .o_cp_bottom_left .o-dropdown--menu .btn-secondary:hover {background: $primary_hover !important;color: #fff !important;opacity: 1;}
+    @media (max-width:1023px) {
+        .o_cp_bottom_left .o_cp_buttons .o_form_button_save:before,.o_control_panel .o_form_buttons_view .o_form_button_edit:before,.o_cp_bottom_left .o_cp_buttons .o-kanban-button-new:before,.o_cp_bottom_left .o_cp_buttons .o_list_button_add:before {color: #fff;}
+    }
+    @media only screen and (max-width: 767.98px) {
+        .o_form_statusbar .o_statusbar_buttons_dropdown.btn.btn-secondary.dropdown-toggle,
+        .o_form_statusbar .o_statusbar_buttons_dropdown.btn.btn-secondary.o_dropdown_toggler,
+        .o_form_statusbar .o_statusbar_status .btn.dropdown-toggle,
+        .o_Discuss .o_Discuss_thread .o_ThreadViewTopbar .o_ThreadViewTopbar_actions .btn.btn-secondary,
+        .o_control_panel .sh_top1 .btn.o_toggle_searchview_full,
+        .o_control_panel .o_cp_switch_buttons.show .dropdown-menu {border-radius: 0px 10px 0px 10px;}
+    }
+    // notification info btn style 3  // 
+    .o_notification_manager .o_notification.bg-warning .o_notification_body,
+    .o_notification_manager .toast.o_notification.bg-warning .toast-body,
+    .o_notification_manager .o_notification.bg-warning,.o_notification_manager .o_notification .toast-header,
+    .o_notification_manager .toast.o_notification.bg-warning .toast-body .btn-primary,
+    .o_notification_manager .o_notification.bg-warning .o_notification_body .o_notification_buttons .btn.btn-primary{border-radius: 0 15px !important;}
+    
+    .o_notification_manager .o_notification.bg-danger,
+    .o_notification_manager .o_notification.bg-info,
+    .o_notification_manager .o_notification.bg-danger .o_notification_body,
+    .o_notification_manager .o_notification.bg-info .o_notification_body{border-radius: 0 15px;}
+    /* TO DO */ 
+    .todo_layout .add_todo_section .input-group .sh_add_todo_input{border-radius: 0px 0px 0px 15px;}
+    .todo_layout .add_todo_section .input-group-append .btn.sh_add_todo{border-radius: 0px 15px 0px 0px;}
+    .todo_layout .card .card-body,.todo_layout .card,
+    .todo_layout .card .sh-card-header .sh_mark_completed_tooltip, .todo_layout .card .sh-card-header-button .sh_to_do_edit_btn .sh_mark_edit_tooltip, .todo_layout .card .sh-card-header-button .sh_to_do_remove_btn .sh_mark_remove_tooltip, .todo_layout .card .sh-card-header-button .sh_to_do_save_btn .sh_mark_save_tooltip{border-radius: 0px 15px 0px 15px;}
+    .todo_layout .card .card-header{border-radius: 0px 15px 0px 0px;}
+
+    /* Zoom in/out view */ 
+    .o_web_client .sh_zoom_view_layout button.btn.sh_zoom{border-top-right-radius: 15px !important;border-bottom-left-radius: 15px !important;}
+    .sh_zoom_view_layout .sh-zoom-panel .sh_reset,.sh_zoom_view_layout .sh-zoom-panel{border-radius: 0px 10px 0px 10px;}
+}
+
+/*--style-3--*/
+/*--style-4--*/
+@if $button_style=='style_4' {
+    .o_control_panel .o_cp_bottom_left .o_cp_buttons .btn.btn-primary,
+    .o_form_sheet .sh_full_screen_icon_div .full_form_toggle,
+    .o_widget_Discuss .o_Discuss .o_DiscussSidebar.o_Discuss_sidebar .btn.btn-primary.rounded,
+    .o_control_panel .btn.btn-primary,
+    .o_control_panel .btn.btn-secondary,
+    .o_form_view .o_form_sheet_bg .btn.btn-primary,
+    .o_form_view .o_form_sheet_bg .btn.btn-secondary,
+    .o_control_panel .o_cp_bottom_right .o_form_button_create,
+    .o_content .o_Chatter .o_Chatter_fixedPanel .o_ChatterTopbar_button,
+    .o_control_panel .o_cp_bottom_right .o_cp_action_menus .o-dropdown > button.btn.btn-light,
+    .o_control_panel .o_cp_top .o_cp_bottom_right .btn.btn-light.o_form_button_save,
+    .o_control_panel .o_searchview .o_searchview_input_container .o_searchview_facet,
+    .o_control_panel .o_searchview .o_searchview_input_container .o_searchview_facet .o_searchview_facet_label,
+    .o_control_panel .o_cp_bottom .o_cp_bottom_left .o_cp_buttons .o_list_buttons .o_list_selection_box,
+    .o_menu_systray .sh_language_icon .sh_user_language_list_cls img.sh_lang_flag,
+    .o_spreadsheet_dashboard_action .o_component_with_search_panel .o-chart-container .o-scorecard,
+    .o_main_navbar .o_menu_systray .sh_bookmark .sh_wqm_quick_menu_submenu_list_cls .sh_bookmark_search_div .sh_bookmark_search.form-control,
+    .o_kanban_view .o_kanban_renderer.o_kanban_grouped .o_kanban_record,
+    .o_kanban_view .o_kanban_renderer.o_kanban_grouped .o_kanban_record .oe_kanban_global_click,
+    .o_main_navbar .o_menu_systray .MessagingMenuContainer .o_MessagingMenu .o_MessagingMenu_counter.badge, .o_main_navbar .o_menu_systray .o_ActivityMenuView .o_ActivityMenuView_dropdownToggle .o_ActivityMenuView_counter.badge {border-radius: 0px !important;}
+    .o_filters_menu .btn-secondary,.modal-footer .btn-secondary,.o_control_panel .o_cp_bottom_left .o_cp_buttons .btn-secondary,.o_form_statusbar .o_statusbar_buttons .btn-secondary {background: transparent;box-shadow: none;border-color: transparent !important;color: $primaryColor;font-weight: 500;}
+    .o_filters_menu .btn-secondary:hover,.modal-footer .btn-secondary:hover,.o_control_panel .o_cp_bottom_left .o_cp_buttons .btn-secondary:hover,.o_form_statusbar .o_statusbar_buttons .btn-secondary:hover {background: $secondaryColor;color: #212529;opacity: 1;border-color: $secondaryColor;}
+    .o_control_panel .o_cp_bottom_left .o_cp_buttons .btn {box-shadow: none;}
+    .o_control_panel .o_cp_bottom_left .o_cp_buttons .btn.btn-primary:hover,.o_form_statusbar .o_statusbar_buttons .btn.btn-primary:hover,.modal-footer .btn.btn-primary:hover {background: $primary_hover;opacity: 1;color: #fff;}
+    .btn-secondary:not(:disabled):not(.disabled):active,.btn-secondary:not(:disabled):not(.disabled).active,.show>.btn-secondary.dropdown-toggle {border-color: transparent;background: $primary_hover;color: #fff;opacity: 1;}
+    .o_favorites_menu .btn.btn-primary:hover,.o_group_by_menu .btn.btn-primary:hover,.o_filters_menu .btn.btn-primary:hover {background: $primary_hover;opacity: 1;color: #fff;}
+    .o_chatter .o_chatter_topbar>.btn:hover {background: $primary_hover;opacity: 1;color: #fff;}
+    .o_cp_bottom_left .o_cp_buttons .btn.btn-secondary {border: 1.5px solid transparent !important;}
+    //  16  //     
+    .o_control_panel .o_cp_bottom .o_cp_bottom_left .o-dropdown--menu{padding: 0 !important;}
+    @media (max-width: 1023px) {
+        .o_cp_bottom_left .o_cp_buttons .o_form_button_save:before,.o_control_panel .o_form_buttons_view .o_form_button_edit:before,.o_cp_bottom_left .o_cp_buttons .o-kanban-button-new:before,.o_cp_bottom_left .o_cp_buttons .o_list_button_add:before {color: #fff;}
+    }
+    @media only screen and (max-width: 767.98px) {
+        .o_web_client.o_touch_device .o_action_manager .o_control_panel .o_cp_bottom .o_cp_bottom_left .o_cp_buttons .btn.btn-secondary:focus,
+        .o_web_client.o_touch_device .o_action_manager .o_control_panel .o_cp_bottom .o_cp_bottom_left .o_cp_buttons .btn.btn-secondary.active,
+        .modal .modal-dialog .modal-content .modal-footer .btn-secondary:focus,.modal .modal-dialog .modal-content .modal-footer .btn-secondary.active {background: $secondaryColor !important;color: #212529 !important;opacity: 1;border-color: $secondaryColor !important;}
+    }
+    .o_searchview .o_searchview_input_container .o_searchview_facet,.o_searchview .o_searchview_input_container .o_searchview_facet .o_searchview_facet_label {border-radius: 0px !important;}
+    // notification info btn style 0  // 
+	.o_notification_manager .o_notification.bg-warning .o_notification_body,
+	.o_notification_manager .toast.o_notification.bg-warning .toast-body,
+	.o_notification_manager .o_notification.bg-warning,.o_notification_manager .o_notification .toast-header,
+	.o_notification_manager .toast.o_notification.bg-warning .toast-body .btn-primary,.o_notification_manager .o_notification.bg-warning .o_notification_body .o_notification_buttons .btn.btn-primary{border-radius: 0px !important;}
+
+	.o_notification_manager .o_notification.bg-danger,
+	.o_notification_manager .o_notification.bg-info,
+	.o_notification_manager .o_notification.bg-danger .o_notification_body,
+	.o_notification_manager .o_notification.bg-info .o_notification_body{border-radius: 0px;}
+     /* TO DO */ 
+     .todo_layout .add_todo_section .input-group .sh_add_todo_input,
+     .todo_layout .add_todo_section .input-group-append .btn.sh_add_todo,
+     .todo_layout .card .card-body,.todo_layout .card,
+     .todo_layout .card .sh-card-header .sh_mark_completed_tooltip, .todo_layout .card .sh-card-header-button .sh_to_do_edit_btn .sh_mark_edit_tooltip, .todo_layout .card .sh-card-header-button .sh_to_do_remove_btn .sh_mark_remove_tooltip, .todo_layout .card .sh-card-header-button .sh_to_do_save_btn .sh_mark_save_tooltip,
+     .todo_layout .card .card-header{border-radius: 0px !important;}
+}
+/*--style-4--*/
+/*--style-5--*/
+@if $button_style=='style_5' {
+    .o_form_sheet .sh_full_screen_icon_div .full_form_toggle {border-radius: 0px 0px 0px 4px;}
+    .o_control_panel .o_cp_bottom_left .o_cp_buttons .btn.btn-primary {border: 1.5px solid $primaryColor;background: #fff;border-radius: 4px!important;color: #212529;text-shadow: none;}
+    .o_control_panel .o_cp_bottom_left .o_cp_buttons .btn-secondary {background: #fff;border-radius: 4px!important;border: 1.5px solid transparent;color: #212121;}
+    .o_form_view .o_content .o_statusbar_buttons .btn-secondary.btn{ border: 1.5px solid transparent !important;}
+    .o_control_panel .o_cp_bottom_left .o_cp_buttons .btn {box-shadow: none;border-radius: 4px!important;}
+    .o_control_panel .o_cp_bottom_left .o_cp_buttons .btn.btn-primary {text-shadow: none!important;}
+    .o_statusbar_buttons .btn.btn-primary,.modal-footer .btn.btn-primary,.o_chatter .o_chatter_topbar>.btn,.o_favorites_menu .btn.btn-primary,.o_group_by_menu .btn.btn-primary,.o_filters_menu .btn.btn-primary {border: 1.5px solid $primaryColor;background: #fff;border-radius: 4px!important;color: #212529;text-shadow: none;}
+    .o_statusbar_buttons .btn-secondary {background: #fff;border-radius: 4px!important;border-color: transparent;color: #212529;}
+    body.o_web_client .modal.o_technical_modal .modal-content .modal-footer button.btn-secondary{border: 0px !important;}
+    .modal-footer .btn.btn-primary:hover {background: $primary_hover;opacity: 1;color: #fff;border-radius: 4px!important;border-color: transparent!important;}
+    .modal-footer .btn-secondary {background: #fff;border-radius: 4px!important;border-color: transparent;border-color: transparent!important;color: #212529;border: 0px !important;}
+    .o_chatter .o_chatter_topbar>.btn:hover {background: $primary_hover!important;opacity: 1;color: #fff!important;border-radius: 4px!important;}
+    .btn-secondary:not(:disabled):not(.disabled):active,.btn-secondary:not(:disabled):not(.disabled).active,.show>.btn-secondary.dropdown-toggle:not(.scale_button_selection) {background: $primary_hover;color: #fff;opacity: 1;}
+    .o_filters_menu .btn-secondary {background: #fff;border-radius: 4px!important;border-color: transparent;border-color: transparent!important;}
+    .o_favorites_menu .btn.btn-primary:hover,.o_statusbar_buttons .btn.btn-primary:hover,.o_control_panel .o_cp_bottom_left .o_cp_buttons .btn.btn-primary:hover,.o_control_panel .o_cp_bottom_left .o_cp_buttons .btn-secondary:hover,.o_statusbar_buttons .btn-secondary:hover,.modal-footer .btn-secondary:hover,.o_group_by_menu .btn.btn-primary:hover,.o_filters_menu .btn.btn-primary:hover,.o_filters_menu .btn-secondary:hover {background: $primary_hover;color: #fff;opacity: 1;border-radius: 4px!important;}
+    .o_control_panel .o_form_buttons_view .o_form_button_edit:before {color: #212121;}
+    .o_cp_right .o_search_options .o_dropdown .btn,.o_control_panel .o_cp_bottom_right .o_form_button_create,.o_content .o_Chatter .o_Chatter_fixedPanel .o_ChatterTopbar_button,.o_control_panel .o_cp_bottom_right .o_cp_action_menus .o-dropdown > button.btn.btn-light,.o_control_panel .o_cp_top .o_cp_bottom_right .btn.btn-light.o_form_button_save,.o_spreadsheet_dashboard_action .o_component_with_search_panel .o-chart-container .o-scorecard,.o_main_navbar .o_menu_systray .sh_bookmark .sh_wqm_quick_menu_submenu_list_cls .sh_bookmark_search_div .sh_bookmark_search.form-control {border-radius: 4px;}
+    .btn,.o_menu_systray .sh_language_icon .sh_user_language_list_cls img.sh_lang_flag,
+    .o_kanban_view .o_kanban_renderer.o_kanban_grouped .o_kanban_record,
+    .o_kanban_view .o_kanban_renderer.o_kanban_grouped .o_kanban_record .oe_kanban_global_click,.o_calendar_sidebar_container .o_calendar_sidebar .ui-datepicker td,.o_calendar_container .o_calendar_sidebar_container .ui-datepicker table .ui-state-default,.o_main_navbar .o_menu_systray .MessagingMenuContainer .o_MessagingMenu .o_MessagingMenu_counter.badge, .o_main_navbar .o_menu_systray .o_ActivityMenuView .o_ActivityMenuView_dropdownToggle .o_ActivityMenuView_counter.badge {border-radius: 4px!important;}
+    .o_cp_switch_activity,.btn-group>.btn:not(:first-child),.btn-group>.btn-group:not(:first-child)>.btn {border-radius: 4px!important;}
+    .o_control_panel .o_cp_bottom .o_cp_bottom_left .o-dropdown--menu{padding: 0 !important;}
+    @if $mobile_icon_style=="floating" {
+        @media only screen and (max-width: 767.98px) {
+            .o_control_panel .o_list_button_add:before, .o_control_panel .o_calendar_buttons .o-calendar-button-new:before {color: #212121 !important;}
+        }
+    }
+    .o_searchview .o_searchview_input_container .o_searchview_facet .o_facet_values{border-radius: 0px 4px 4px 0px;}
+    .o_searchview .o_searchview_input_container .o_searchview_facet {border-radius: 4px;}
+    .o_searchview .o_searchview_input_container .o_searchview_facet .o_searchview_facet_label{border-radius: 4px 0px 0px 4px !important;}
+    .o_view_controller .o_kanban_ungrouped .oe_kanban_global_click{border-radius: 4px !important;}
+    .o_kanban_renderer .o_kanban_record .o_kanban_record_has_image_fill .o_kanban_image_fill_left{border-top-left-radius: 4px !important;border-bottom-left-radius: 4px !important;}
+    // notification info btn style 4  // 
+	.o_notification_manager .o_notification.bg-warning .o_notification_body,
+	.o_notification_manager .toast.o_notification.bg-warning .toast-body,
+	.o_notification_manager .o_notification.bg-warning,.o_notification_manager .o_notification .toast-header{border-radius: 4px !important;}
+	.o_notification_manager .toast.o_notification.bg-warning .toast-body .btn-primary,.o_notification_manager .o_notification.bg-warning .o_notification_body .o_notification_buttons .btn.btn-primary{border-radius: 4px !important;}
+
+	.o_notification_manager .o_notification.bg-danger,
+	.o_notification_manager .o_notification.bg-info,
+	.o_notification_manager .o_notification.bg-danger .o_notification_body,
+	.o_notification_manager .o_notification.bg-info .o_notification_body{border-radius: 4px;}
+    /* TO DO */ 
+    .todo_layout .add_todo_section .input-group .sh_add_todo_input{border-radius: 4px 0px 0px 4px;}
+    .todo_layout .add_todo_section .input-group-append .btn.sh_add_todo{border-radius: 0px 4px 4px 0px !important;}
+    .todo_layout .card .card-body,.todo_layout .card,
+    .todo_layout .card .sh-card-header .sh_mark_completed_tooltip, .todo_layout .card .sh-card-header-button .sh_to_do_edit_btn .sh_mark_edit_tooltip, .todo_layout .card .sh-card-header-button .sh_to_do_remove_btn .sh_mark_remove_tooltip, .todo_layout .card .sh-card-header-button .sh_to_do_save_btn .sh_mark_save_tooltip,
+    .todo_layout .card .card-header{border-radius: 4px;}
+}
+/*--style-5--*/
+
+
+/*----------- Button_style_6 -----------------*/
+@if $button_style=='style_6' {
+    .o_content .o_form_editable .o_form_sheet_bg .o_form_statusbar .o_statusbar_buttons .o-dropdown .o-dropdown--menu.dropdown-menu .dropdown-item > button.btn.btn-secondary,
+    .o_content .o_form_editable .o_form_sheet_bg .o_form_statusbar .o_statusbar_buttons .o-dropdown .o-dropdown--menu.dropdown-menu .dropdown-item > button.btn.btn-primary{border-radius: 0px !important;}
+    .o_action_manager .btn.btn-primary:not(.o_ChatterTopbar_button):not(.o_Activity_toolButton):not(.o_Activity_detailsButton):not(.o_list_button_save):not(.o-kanban-button-new):not(.o_form_button_save):not(.o_list_button_add),.modal-dialog .btn.btn-primary,.daterangepicker .drp-buttons .btn-primary{border-radius: 20px !important;background: $primaryColor !important;border: 1.5px solid $primaryColor !important;color: #ffffff !important;box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);}
+    .o_action_manager .btn.btn-primary:not(.o_ChatterTopbar_button):not(.o_Activity_toolButton):not(.o_Activity_detailsButton):not(.o_list_button_save):not(.o-kanban-button-new):not(.o_form_button_save):not(.o_list_button_add):hover,.modal-dialog .btn.btn-primary:hover,.daterangepicker .drp-buttons .btn-primary:hover{background: $primary_hover !important;border: 1.5px solid $primary_hover !important;box-shadow: 0 10px 10px rgba(0, 10, 10, 0.10) !important;}
+    .o_action_manager .btn.btn-primary:not(.o_ChatterTopbar_button):not(.o_Activity_toolButton):not(.o_Activity_detailsButton):not(.o_list_button_save):not(.o-kanban-button-new):not(.o_form_button_save):not(.o_list_button_add):focus,.o_action_manager .btn.btn-primary:not(.o_ChatterTopbar_button):not(.o_Activity_toolButton):not(.o_Activity_detailsButton):not(.o_list_button_save):not(.o-kanban-button-new):not(.o_form_button_save):not(.o_list_button_add):active,.o_action_manager .btn.btn-primary:not(.o_ChatterTopbar_button):not(.o_Activity_toolButton):not(.o_Activity_detailsButton):not(.o_list_button_save):not(.o-kanban-button-new):not(.o_form_button_save):not(.o_list_button_add).active,
+    .modal-dialog .btn.btn-primary:focus,.modal-dialog .btn.btn-primary:active,.modal-dialog .btn.btn-primary.active,.daterangepicker .drp-buttons .btn-primary:focus,.daterangepicker .drp-buttons .btn-primary.active{background: $primary_active !important;border: 1.5px solid $primary_active !important;box-shadow: 0 10px 10px rgba(0, 10, 10, 0.10) !important;}
+
+    .o_action_manager .btn.btn-secondary:not(.o_external_button):not(.o_select_file_button):not(.fa.fa-download):not(.o_clear_file_button):not(.breadcrumb-item):not(.o_list_button_discard):not(.o_form_button_cancel),.modal-dialog .btn.btn-secondary,.daterangepicker .drp-buttons .btn-secondary, .o_ChannelInvitationForm.o_ChatWindow_channelInvitationForm .o_ChannelInvitationForm_selectedPartners .btn.btn-secondary,
+    .o_popover .o_cw_body .card-footer .btn.btn-secondary.o_cw_popover_delete{border-radius: 20px !important;background: $secondaryColor !important;border: 1.5px solid $secondaryColor !important;color: $primaryColor !important;box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);}
+    .o_action_manager .btn.btn-secondary:not(.o_external_button):not(.o_select_file_button):not(.fa.fa-download):not(.o_clear_file_button):not(.breadcrumb-item):not(.o_list_button_discard):not(.o_form_button_cancel):hover,.modal-dialog .btn.btn-secondary:hover,.daterangepicker .drp-buttons .btn-secondary:hover,
+    .o_ChannelInvitationForm.o_ChatWindow_channelInvitationForm .o_ChannelInvitationForm_selectedPartners .btn.btn-secondary:hover{background: $secondary_hover !important;border: 1.5px solid $secondary_hover !important;box-shadow: 0 10px 10px rgba(0, 10, 10, 0.10) !important;}
+    .o_action_manager .btn.btn-secondary:not(.o_external_button):not(.o_select_file_button):not(.fa.fa-download):not(.o_clear_file_button):not(.breadcrumb-item):not(.o_list_button_discard):not(.o_form_button_cancel):focus,.o_action_manager .btn.btn-secondary:not(.o_external_button):not(.o_select_file_button):not(.fa.fa-download):not(.o_clear_file_button):not(.breadcrumb-item):not(.o_list_button_discard):not(.o_form_button_cancel):active,.o_action_manager .btn.btn-secondary:not(.o_external_button):not(.o_select_file_button):not(.fa.fa-download):not(.o_clear_file_button):not(.breadcrumb-item):not(.o_list_button_discard):not(.o_form_button_cancel).active,
+    .modal-dialog .btn.btn-secondary:focus,.modal-dialog .btn.btn-secondary:active,.modal-dialog .btn.btn-secondary.active,.daterangepicker .drp-buttons .btn-secondary:focus,.daterangepicker .drp-buttons .btn-secondary.active{background: $secondary_active !important;border: 1.5px solid $secondary_active !important;box-shadow: 0 10px 10px rgba(0, 10, 10, 0.10) !important;}
+
+    div.alert, .o_notification_manager .o_notification.bg-warning .o_notification_body,.o_notification_manager .toast.o_notification.bg-warning .toast-body,.o_notification_manager .o_notification.bg-warning,.o_notification_manager .o_notification .toast-header,.o_notification_manager .toast.o_notification.bg-warning .toast-body .btn-primary,.o_notification_manager .o_notification.bg-warning .o_notification_body .o_notification_buttons .btn.btn-primary,
+    .o_notification_manager .o_notification,.o_notification_manager .o_notification.bg-danger .o_notification_body,
+    .o_notification_manager .o_notification.bg-info .o_notification_body,
+    .o_popover .o_ActivityMarkDonePopover_buttons .btn-primary,.o_action_manager .o_control_panel .o_cp_bottom .o_cp_bottom_left .o_cp_buttons .o_list_buttons .btn.o_button_upload_expense,
+    .todo_layout .card .sh-card-header .sh_mark_completed_tooltip, .todo_layout .card .sh-card-header-button .sh_to_do_edit_btn .sh_mark_edit_tooltip, .todo_layout .card .sh-card-header-button .sh_to_do_remove_btn .sh_mark_remove_tooltip, .todo_layout .card .sh-card-header-button .sh_to_do_save_btn .sh_mark_save_tooltip,
+    .o_ChatWindow .o_ChannelMemberList .mx-2.my-1 .btn.btn-secondary,
+    .o_control_panel .o_cp_bottom_right > .o_cp_switch_buttons,
+    .o_control_panel .o_cp_bottom_right .o_form_button_create,
+    .o_content .o_Chatter .o_Chatter_fixedPanel .o_ChatterTopbar_button,
+    .o_control_panel .o_cp_bottom_right .o_cp_action_menus .o-dropdown > button.btn.btn-light,
+    .o_control_panel .o_cp_top .o_cp_bottom_right .btn.btn-light.o_form_button_save,
+    .o_control_panel .o_cp_bottom_right > .o_cp_switch_buttons > .btn.o_switch_view,
+    .o_kanban_view .o_kanban_record .btn.btn-info.btn-sm,
+    .o_action_manager .o_control_panel .o_cp_bottom .o_cp_bottom_left .o_cp_action_menus .btn{border-radius: 20px !important;}
+    .o_kanban_view .o_kanban_record .btn.btn-info.btn-sm{box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);}
+    .o_control_panel .o_cp_bottom_right > .o_cp_switch_buttons,
+    .o_control_panel .o_cp_bottom_right > .o_cp_switch_buttons > .btn.o_switch_view {background-color: $primaryColor;border-color: $primaryColor;color: #ffffff;}
+    .o_control_panel .o_cp_bottom .o_cp_bottom_right .o_search_options .o-dropdown .dropdown-toggle.btn{padding: 0.5rem 0.75rem;margin-right: 0px;}
+    .o_control_panel .o_cp_bottom_right > .o_cp_switch_buttons > .btn.o_switch_view{color: #ffffff;padding: 0.5rem 0.75rem;margin-right: 0px;}    
+    .o_cp_bottom_left .o_cp_buttons .o-kanban-button-new:before { color: #fff !important;}
+    @if $theme_style !='style_7' {
+        .o_spreadsheet_dashboard_action .o_component_with_search_panel .o-chart-container .o-scorecard,
+        .o_kanban_view .o_kanban_renderer.o_kanban_grouped .o_kanban_record,
+        .o_kanban_view .o_kanban_renderer.o_kanban_grouped .o_kanban_record .oe_kanban_global_click,
+        .btn{border-radius: 20px !important;}
+    }
+    .o_control_panel .o_cp_bottom .o_cp_bottom_left .o-dropdown--menu .btn.btn-secondary {border: 1.5px solid transparent;background: $secondaryColor !important;border-radius: 20px !important;color: #212121;margin-bottom: 5px;}
+    .o_control_panel .o_cp_bottom .o_cp_bottom_left .o-dropdown--menu{padding: 0 !important;}
+    .o_control_panel .o_cp_bottom .o_cp_bottom_left .o-dropdown--menu .btn-secondary:hover {background: $secondary_hover !important;color: #000 !important;opacity: 1;}
+    @if $theme_style=='style_8' {
+        body .btn.btn-primary,body .btn.btn-secondary{text-transform: capitalize !important;}
+        @media only screen and (min-width : 768px){
+            .o_control_panel .o_cp_bottom .o_cp_bottom_right .o_search_options .o-dropdown .dropdown-toggle.btn{background: transparent;border: 0px;}
+        }
+    }
+    @media only screen and (max-width: 767.98px){
+        .o_control_panel .o_cp_bottom .o_cp_bottom_right .o_cp_switch_buttons .btn-link{color: #ffffff !important;}
+    }
+    
+}
+
+body .o_action_manager .btn-primary.btn-link.btn:hover{box-shadow: none !important;}
+body .o_PopoverManager .o_PopoverManager_popover .o_ActivityListView .o_ActivityListView_addActivityButton.btn.btn-secondary,
+.o_control_panel .o_cp_bottom .o_cp_bottom_left .o_pivot_flip_button,
+.o_control_panel .o_cp_bottom .o_cp_bottom_left .o_pivot_expand_button,
+.o_control_panel .o_cp_bottom .o_cp_bottom_left .o_pivot_download,
+// .o_list_view .o_list_buttons [name="action_open_composer"],
+// .o_list_view .o_list_buttons [name="action_send_sms"],
+.o_content .o_form_editable .o_form_sheet_bg .o_form_statusbar .o_statusbar_buttons .o-dropdown .o-dropdown--menu.dropdown-menu{padding: 0 !important;}
+body .o_cp_searchview .btn.btn-secondary.js_website:not(:hover):not(:focus):not(:active):not(.active),
+.o_control_panel .o_cp_bottom .o_cp_bottom_left .o_form_buttons_edit .btn.btn-secondary.o_form_button_cancel{color: $primaryColor;}
+.o_action_manager .o_control_panel .o_cp_bottom .o_cp_bottom_left .o_cp_buttons .o_list_buttons .btn.btn-secondary.fa.fa-download.o_list_export_xlsx:not(:hover):not(:focus){color: $primaryColor;}
+.o_control_panel .o_cp_bottom .o_cp_bottom_left .o_cp_buttons .btn-secondary.o_button_generate_leads,
+.o_action_manager .o_control_panel .o_cp_bottom .o_cp_bottom_left .o_cp_buttons .o_list_buttons .btn.o_list_button_discard{color: $primaryColor;}

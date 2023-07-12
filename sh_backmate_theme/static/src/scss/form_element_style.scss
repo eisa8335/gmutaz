@@ -1,0 +1,69 @@
+@if $form_element_style=='style_1' {
+    .o_input,.modal .modal-content.o_export_data_dialog .o_export_search_input,.modal .modal-content.o_export_data_dialog .o_exported_lists .o_exported_lists_select {padding-right: 0 !important;padding-left: 0 !important;background-color: transparent;background-repeat: no-repeat;-webkit-background-size: 0 2px, 100% 1px;background-size: 0 2px, 100% 1px;-webkit-transition: background 0s ease-out;-o-transition: background 0s ease-out;transition: background 0s ease-out;border-bottom: 1px solid #ccc;border-left: 0px;border-right: 0px;border-top: 0px;padding: .429rem 1.072rem;border-radius: 0px;}
+    @if $body_background_type=='bg_img' {
+        .o_input,.modal .modal-content.o_export_data_dialog .o_export_search_input,.modal .modal-content.o_export_data_dialog .o_exported_lists .o_exported_lists_select{border-bottom: 1px solid #f1f1f1;}
+    }
+    .o_input {background-position: center bottom, center -webkit-calc(100% - 1px);}.o_input:focus,.o_input:focus-within,.modal .modal-content.o_export_data_dialog .o_export_search_input:focus,.modal .modal-content.o_export_data_dialog .o_exported_lists .o_exported_lists_select:focus {-webkit-background-size: 100% 2px, 100% 1px;background-size: 100% 2px, 100% 1px;outline: 0;-webkit-transition-duration: .3s;-o-transition-duration: .3s;transition-duration: .3s;float: none;background-image: -webkit-gradient(linear, left top, left bottom, from($primaryColor), to($primaryColor)), -webkit-gradient(linear, left top, left bottom, from($primaryColor), to($primaryColor));background-image: -webkit-linear-gradient($primaryColor, $primaryColor), -webkit-linear-gradient($primaryColor, $primaryColor);background-image: -o-linear-gradient($primaryColor, $primaryColor), -o-linear-gradient($primaryColor, $primaryColor);background-image: linear-gradient($primaryColor, $primaryColor), linear-gradient($primaryColor, $primaryColor);border: 0;border-radius: 0;-webkit-box-shadow: none;box-shadow: none;}
+    .o_required_modifier.o_input,.o_required_modifier .o_input,.o_field_number.o_input,.o_field_number .o_input {background: transparent !important;font-size: 14px !important;border-bottom: 2px solid $primaryColor;}
+    // v16
+    .o_spreadsheet_dashboard_action select.o_input{height: auto;padding: 0px;}
+    .o_input .o_input{border: 0px !important;box-shadow: none !important;background-image: none !important;}    
+}
+@if $form_element_style=='style_2' {
+    .o_input,.modal .modal-content.o_export_data_dialog .o_export_search_input,.modal .modal-content.o_export_data_dialog .o_exported_lists .o_exported_lists_select {border: 1.5px solid rgba(0, 0, 0, .15);transition: all .7s ease;box-shadow: none;outline: none;background: transparent;padding: 6px 10px;border-radius: 0px;position: relative;margin-bottom: 5px !important;}
+    .o_input:hover,.o_required_modifier.o_input:hover,.o_required_modifier .o_input:hover,.o_field_number.o_input:hover,.o_field_number .o_input:hover,.modal .modal-content.o_export_data_dialog .o_export_search_input:hover,.modal .modal-content.o_export_data_dialog .o_exported_lists .o_exported_lists_select:hover {border-color: rgba(0, 0, 0, .35);box-shadow: 0 0 5px rgba(0, 0, 0, .2);}
+    .o_field_widget .o_input_dropdown .o_dropdown_button {right: 16px;}
+    .o_required_modifier.o_input,.o_required_modifier .o_input,.o_field_number.o_input,.o_field_number .o_input {background: #ececec !important;font-size: 14px !important;}
+}
+@if $form_element_style=='style_3' {
+    .o_input,.modal .modal-content.o_export_data_dialog .o_export_search_input,.modal .modal-content.o_export_data_dialog .o_exported_lists .o_exported_lists_select {border: 1.5px solid rgba(0, 0, 0, .15);transition: all .7s ease;box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.2);outline: none;background: #fff;padding: 6px 10px;border-radius: 5px;position: relative;margin-bottom: 5px !important;}
+    .o_input:hover,.o_input:focus,.o_required_modifier.o_input:hover,.o_required_modifier .o_input:hover,.o_field_number.o_input:hover,.o_field_number .o_input:hover,.o_required_modifier.o_input:focus,.o_required_modifier .o_input:focus,.o_field_number.o_input:focus,.o_field_number .o_input:focus,.modal .modal-content.o_export_data_dialog .o_export_search_input:hover,.modal .modal-content.o_export_data_dialog .o_exported_lists .o_exported_lists_select:hover,.modal .modal-content.o_export_data_dialog .o_export_search_input:focus,.modal .modal-content.o_export_data_dialog .o_exported_lists .o_exported_lists_select:focus {border: 1.5px solid #999;background: #fff;border-color: $primaryColor;box-shadow: 0 5px 30px 0px rgba(0, 0, 0, 0.2);}
+    .o_field_widget .o_input_dropdown .o_dropdown_button {right: 16px;}
+    .o_required_modifier.o_input,.o_required_modifier .o_input,.o_field_number.o_input,.o_field_number .o_input {background: #ececec !important;font-size: 14px !important;}
+    // v16 
+    body.o_web_client:not(.o_touch_device) .o_field_selection:not(:hover):not(:focus-within) select:not(:hover){background: #ffffff !important;}
+}
+@if $form_element_style=='style_4' {
+    .o_input,.modal .modal-content.o_export_data_dialog .o_export_search_input,.modal .modal-content.o_export_data_dialog .o_exported_lists .o_exported_lists_select {border: 0px;border-bottom: 2px solid rgba(0, 0, 0, .2);transition: all .9s ease;box-shadow: none;outline: none;background: #fafafa;padding: 6px 10px;border-radius: 0px;position: relative;margin-bottom: 5px !important;}
+    .o_field_widget .o_input_dropdown .o_dropdown_button {right: 18px;}
+    .o_required_modifier.o_input,.o_required_modifier .o_input,.o_field_number.o_input,.o_field_number .o_input {background: #ececec !important;font-size: 14px !important;}
+    .o_input:focus,.o_input:focus-within,.modal .modal-content.o_export_data_dialog .o_export_search_input:focus,.modal .modal-content.o_export_data_dialog .o_exported_lists .o_exported_lists_select:focus {border-color: rgba(0, 0, 0, .3);box-shadow: 0 -50px 0 #ececec inset;}
+    // v16
+    .o_input .o_input{border: 0px !important;box-shadow: none !important;background-image: none !important;}
+}
+@if $form_element_style=='style_5' {
+    .o_input,.modal .modal-content.o_export_data_dialog .o_export_search_input,.modal .modal-content.o_export_data_dialog .o_exported_lists .o_exported_lists_select {border: 1.5px solid rgba(0, 0, 0, .15);transition: all .7s ease;box-shadow: none;outline: none;background: transparent;padding: 6px 10px;border-radius: 0px 15px 0px 15px !important;position: relative;margin-bottom: 5px !important;}
+    .o_input:hover,.modal .modal-content.o_export_data_dialog .o_export_search_input:hover,.modal .modal-content.o_export_data_dialog .o_exported_lists .o_exported_lists_select:hover {border: 1.5px solid $primaryColor;box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.2) !important;transition: all .7s ease;}
+    .o_field_widget .o_input_dropdown .o_dropdown_button {right: 18px;}
+    .o_required_modifier.o_input,.o_required_modifier .o_input,.o_field_number.o_input,.o_field_number .o_input {background: #ececec !important;font-size: 14px !important;}
+    .badge.badge-pill.dropdown {border-radius: 0px 15px 0px 15px !important;}
+    .o_field_widget .o_input_dropdown .o_dropdown_button, .o_field_widget .o_input_dropdown .o_datepicker_button, .o_field_widget .o_datepicker .o_dropdown_button, .o_field_widget .o_datepicker .o_datepicker_button{top: 7px;}
+}
+@if $form_element_style=='style_6' {
+    .o_input,.modal .modal-content.o_export_data_dialog .o_export_search_input,.modal .modal-content.o_export_data_dialog .o_exported_lists .o_exported_lists_select {background-color: transparent;background-color: #FFF;background-repeat: no-repeat;-webkit-background-size: 0 1px, 100% 1px;background-size: 0 1px, 100% 1px;-webkit-transition: background 0s ease-out;-o-transition: background 0s ease-out;transition: background 0s ease-out;border-bottom: 2px solid #ccc;border-left: 0px;border-right: 0px;border-top: 0px;padding: 7px 10px !important;border-radius: 0px;margin-bottom: 5px !important;}
+    .o_input {background-position: left bottom, left -webkit-calc(100% - 1px);}
+    .o_input:focus,.o_input:focus-within,.modal .modal-content.o_export_data_dialog .o_export_search_input:focus,.modal .modal-content.o_export_data_dialog .o_exported_lists .o_exported_lists_select:focus {-webkit-background-size: 100% 1px, 100% 1px !important;background-size: 100% 1px, 100% 1px !important;outline: 0;-webkit-transition-duration: .7s;-o-transition-duration: .7s;transition-duration: .7s;float: none;background-image: -webkit-gradient(linear, left top, left bottom, from($primaryColor), to($primaryColor)), -webkit-gradient(linear, left top, left bottom, from($primaryColor), to($primaryColor));background-image: -webkit-linear-gradient($primaryColor, $primaryColor), -webkit-linear-gradient($primaryColor, $primaryColor);background-image: -o-linear-gradient($primaryColor, $primaryColor), -o-linear-gradient($primaryColor, $primaryColor);background-image: linear-gradient($primaryColor, $primaryColor), linear-gradient($primaryColor, $primaryColor);border: 0;border-radius: 0;-webkit-box-shadow: none;box-shadow: none;}
+    .o_field_widget .o_input_dropdown .o_dropdown_button {right: 18px;}
+    .o_input.o_field_widget .o_input_dropdown .o_dropdown_button {right: 8px;}
+    .o_required_modifier.o_input,.o_required_modifier .o_input,.o_field_number.o_input,.o_field_number .o_input {background: #e5e5e5 !important;font-size: 14px !important;}
+    // v16
+    .o_input .o_input{border: 0px !important;box-shadow: none !important;background-image: none !important;}
+    body.o_web_client:not(.o_touch_device) .o_field_selection:not(:hover):not(:focus-within) select:not(:hover){background: #ffffff !important;}
+}
+@if $form_element_style=='style_7' {
+    .o_input,.modal .modal-content.o_export_data_dialog .o_export_search_input,.modal .modal-content.o_export_data_dialog .o_exported_lists .o_exported_lists_select {line-height: 20px;background: #fff;-webkit-border-radius: 0px;-moz-border-radius: 0px;border-radius: 0px;padding: 0 20px;color: #666;-webkit-transition: all .7s ease;-o-transition: all .7s ease;-moz-transition: all .7s ease;transition: all .7s ease;margin-bottom: 5px !important;border: 1px solid #ccc;border-top: 2px solid #ccc;}
+    .o_field_widget .o_input_dropdown .o_dropdown_button {right: 18px;}
+    .o_input:focus,.o_input:hover,.modal .modal-content.o_export_data_dialog .o_export_search_input:hover,.modal .modal-content.o_export_data_dialog .o_exported_lists .o_exported_lists_select:hover,.modal .modal-content.o_export_data_dialog .o_export_search_input:focus,.modal .modal-content.o_export_data_dialog .o_exported_lists .o_exported_lists_select:focus {border-top: 2px solid $primaryColor !important;}
+    .o_required_modifier.o_input,.o_required_modifier .o_input,.o_field_number.o_input,.o_field_number .o_input {background: #ececec !important;font-size: 14px !important;}
+}
+@if $theme_style=='style_6' AND $form_element_style=='style_6' {
+    .o_required_modifier.o_input,.o_required_modifier .o_input,.o_field_number.o_input,.o_field_number .o_input {border-bottom: 2px solid $primaryColor;}
+}
+.o_action .o_input .o_input {border: 0px !important;padding: 0px !important;margin-bottom: 0px !important;background: none;box-shadow: none !important;}
+@if $form_element_style=='style_8' {
+    .o_input,.modal .modal-content.o_export_data_dialog .o_export_search_input,.modal .modal-content.o_export_data_dialog .o_exported_lists .o_exported_lists_select {border: 1px solid transparent;transition: all .7s ease;box-shadow: none;outline: none;background: #f1f3fa;padding: 10px 10px !important;border-radius: 20px;position: relative;margin-bottom: 5px !important;margin-top: 5px !important;line-height: normal;}
+    .o_input:hover,.o_required_modifier.o_input:hover,.o_required_modifier .o_input:hover,.o_input .o_field_number.o_input:hover,.o_field_number .o_input:hover,.modal .modal-content.o_export_data_dialog .o_export_search_input:hover,.modal .modal-content.o_export_data_dialog .o_exported_lists .o_exported_lists_select:hover {border: 1px solid transparent;box-shadow: 0 5px 5px rgba(0, 6, 6, 0.10) inset !important;}
+    .o_field_widget .o_input_dropdown .o_dropdown_button {right: 16px;}
+    .o_required_modifier.o_input,.o_required_modifier .o_input{background: #f1f3fa !important;font-size: 14px !important;box-shadow: 0 5px 5px lighten($primaryColor,55%) inset !important;}
+    .o_form_sheet .o_field_widget.o_field_many2one .o_field_many2one_selection .o_input_dropdown > input{padding-right: 25px;}
+}

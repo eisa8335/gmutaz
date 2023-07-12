@@ -1,0 +1,171 @@
+.o_control_panel .o_cp_searchview .o_searchview {background-color: transparent;}
+.sh_search_container .sh_search_results .dropdown-item:hover{color: #fff;}
+.o_activity_view .o_record_selector {color: $primaryColor;}
+.modal-body .o_searchview_input_container {width: 100%;}
+.modal-body .o_control_panel {background-color: #ffffff !important;}
+.modal-body .o_control_panel .breadcrumb {background-color: #ffffff !important;}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .o_searchview_input_container {width: 18em}
+    .o_searchview {margin-bottom: 0;padding-bottom: 0}
+    .o_searchview .o_searchview_more {padding: 9px}
+    .o_searchview_input_container {width: 18em}
+    .o_main_navbar>ul>li.o_switch_company_menu a.dropdown-toggle .oe_topbar_name,.o_main_navbar>ul>li.o_user_menu a.dropdown-toggle .oe_topbar_name {display: none}
+    .o_cp_right .o_search_options {margin-top: 0px}
+}
+@media (max-width: 767.98px) {
+    /* OLD */
+    .o_main_navbar .sh_sub_menu_div .sh_sub_menu_content .o_menu_sections.show {background: lighten($header_bg_color , 10%) !important;}
+    .o_dialog_container .o_dialog .modal.o_technical_modal .modal-header .o_debug_manager .dropdown-toggle{padding: 0px;}
+    .o_main_navbar .sh_sub_menu_div .sh_sub_menu_content .o_menu_sections .o-dropdown.dropdown .dropdown-toggle {width: 100%;}
+    .o_main_navbar .sh_sub_menu_div .sh_sub_menu_content .o_menu_sections.show .o-dropdown.dropdown.show .o-dropdown--menu.dropdown-menu.d-block {position: relative;top: 0;left: 0;margin-left: 0px;width: 100%;background: transparent;border: 0px;box-shadow: none;}
+    .o_x2m_control_panel .o_cp_buttons .o-kanban-button-new {margin-left: 0 !important;border: 0px !important;box-shadow: none !important;color: $primaryColor;}
+    .o_main_navbar .sh_sub_menu_div .sh_sub_menu_content .o_menu_sections.show .o-dropdown.dropdown.show .o-dropdown--menu.dropdown-menu.d-block .dropdown-item {color: $header_font_color;}
+    .o_main_navbar .sh_sub_menu_div .sh_sub_menu_content .o-dropdown.dropdown .dropdown-menu .dropdown-menu_group.dropdown-header {background: rgba(0, 0, 0, 0.08);color: $header_font_color;}
+    .o_rtl .o_control_panel .o_cp_top_left .breadcrumb .breadcrumb-item.o_back_button {content: "\f061" !important;}
+    .o_rtl .o_control_panel .o_cp_top .o_cp_top_left .breadcrumb .breadcrumb-item.o_back_button:before {content: "\f105" !important;}
+    @if $theme_style !='style_7' AND $theme_style !='style_8' {
+        .sh_global_search .sh_search_input .usermenu_search_input {display: none;}
+        .sh_global_search .sh_search_input .input-group-text {margin-top: 6px;}
+        .sh_global_search .sh_search_input .input-group-text span.fa {font-size: 16px !important;}
+        .o_main_navbar .o_menu_systray .sh_global_search .sh_search_input .usermenu_search_input {left: 0;width: 99%;margin-left: 2px;margin-right: 2px;margin-top: 2px !important;}
+        .sh_global_search .sh_search_input .usermenu_search_input {display: none;position: absolute;top: 50px;background: white;width: 200px;border: 1px solid #a1a1a1;color: #aaa;}
+        .sh_global_search .sh_search_input .usermenu_search_input::placeholder {color: #aaa;}
+        .o_main_navbar .o_menu_systray .sh_global_search .sh_search_container .sh_search_results {left: 0px;}
+    }
+    .o_main_navbar .o_menu_systray .sh_global_search,.o_main_navbar .o_menu_systray .sh_global_search .sh_search_container .sh_search_input>.input-group {position: unset;}
+    .o_main_navbar .o_menu_systray .sh_global_search .sh_search_container .sh_search_results .dropdown-item {padding: 3px 6px;}
+    @if $theme_style =='style_7' {
+        .o_control_panel .o_cp_searchview.o_searchview_quick:not(.sh_o_cp_searchview) .o_searchview .o_searchview_input_container {position: relative;top: 0px;left: 0px;}
+    }
+    @if $mobile_icon_style=="floating" {
+        .o_control_panel .o-kanban-button-new .fa.fa-plus {display: block;color: #fff;position: absolute;right: -27px;top: 34%;}
+        .o_control_panel .o-kanban-button-new {position: fixed;right: 0.5em;bottom: 1em;z-index: 9;width: 4rem;height: 4rem;padding: 0;border-radius: 0%;text-indent: -99px;box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);color: transparent !important;}
+        .o_control_panel .btn.o_list_button_save {color: transparent !important;}
+        .o_control_panel .o_form_button_cancel{background: #fff !important;}
+        .o_control_panel .o_form_button_save,
+        .o_control_panel .o_list_button_add,
+        .o_control_panel .o_calendar_buttons .o-calendar-button-new {position: fixed;right: 0.5em;bottom: 1em;z-index: 1052;width: 4rem;height: 4rem;padding: 0;text-indent: -99px;border: 1.5px solid $primaryColor !important;font-weight: 500;}
+        .o_control_panel .o_form_button_cancel {position: fixed;right: 0.5em;bottom: 5em;z-index: 1052;width: 4rem;height: 4rem;padding: 0;text-indent: -99px;border: 1.5px solid $primaryColor !important;font-weight: 500;}
+        .o_control_panel .o_form_button_cancel:before {content: "\f00d";font-family: FontAwesome;color: #424242;font-size: 18px;position: absolute;top: 10px;left: 73px;}
+        .o_control_panel .o_form_button_save:before {content: "\f00c";font-family: FontAwesome;color: #212121;font-size: 18px;position: absolute;top: 10px;left: 73px;}
+        .o_control_panel .o_list_button_add:before,
+        .o_control_panel .o_calendar_buttons .o-calendar-button-new::before {content: "\f067";font-family: FontAwesome;color: #fff;font-size: 18px;position: absolute;top: 10px;left: 73px;}
+        .o_control_panel .o-kanban-button-new,.o_control_panel .o_form_buttons_view .o_form_button_edit,.o_control_panel .btn-secondary:hover,.o_control_panel .o_form_button_save,.o_control_panel .o_list_button_add,.o_control_panel .o_form_button_cancel,.o_control_panel .o_calendar_buttons .o-calendar-button-new {color: transparent !important;}
+
+        /*--edit-create--*/
+        .o_control_panel .o_form_buttons_view .o_form_button_edit {position: fixed;right: 0.5em;bottom: 1em;z-index: 9;width: 4rem;height: 4rem;padding: 0;border-radius: 100%;text-indent: -99px;color: #fff;box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);}
+        .o_control_panel .o_form_buttons_view .o_form_button_edit:before {content: "\f040";font-family: FontAwesome;font-size: 18px;position: absolute;top: 10px;left: 73px;}
+        .o_control_panel .o_form_buttons_view .o_form_button_create {position: fixed;right: 0.5em;bottom: 5em;z-index: 9;width: 4rem;height: 4rem;padding: 0;border-radius: 0%;text-indent: -99px;color: #fff;box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);}
+        .o_control_panel .o_form_buttons_view .o_form_button_create:before {content: "\f067";font-family: FontAwesome;color: #424242;font-size: 18px;position: absolute;top: 10px;left: 73px;}
+
+        /*--edit-create--*/
+        /*--save-cancel--*/
+        .o_control_panel .o_form_button_save {position: fixed;right: 0.5em;bottom: 1em;z-index: 9;width: 4rem;height: 4rem;padding: 0;border-radius: 100%;text-indent: -99px;color: #fff;box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);}
+        .o_control_panel .o_form_button_save:before {content: "\f00c";font-family: FontAwesome;font-size: 18px;position: absolute;top: 10px;left: 73px;}
+        .o_control_panel .o_form_button_cancel {position: fixed;right: 0.5em;bottom: 5em;z-index: 9;width: 4rem;height: 4rem;padding: 0;text-indent: -99px;color: transparent;box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);}
+
+        .o_control_panel .o_form_button_cancel:before {content: "\f00d";font-family: FontAwesome;color: #424242;font-size: 18px;position: absolute;top: 10px;left: 73px;}
+
+        /*--save-cancel--*/
+        /*--create-import--*/
+        .o_control_panel .o_list_button_add {position: fixed;right: 0.5em;bottom: 1em;z-index: 9;width: 4rem;height: 4rem;padding: 0;border-radius: 100%;text-indent: -99px;color: #fff;background: $primaryColor;box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);}
+
+        .o_control_panel .o_list_button_add:before {content: "\f067";font-family: FontAwesome;font-size: 18px;position: absolute;top: 10px;left: 73px;}
+        .o_control_panel .o_button_import {position: fixed;right: 0.5em;bottom: 5em;z-index: 9;width: 4rem;height: 4rem;padding: 0;border-radius: 100%;text-indent: -99px;color: transparent;box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);}
+        .o_control_panel .o_button_import:before {content: "\f019";font-family: FontAwesome;color: #424242;font-size: 18px;position: absolute;top: 10px;left: 73px;}
+        .o_control_panel .o-kanban-button-new {position: fixed;right: 0.5em;bottom: 1em;z-index: 9;width: 4rem;height: 4rem;padding: 0;border-radius: 100%;text-indent: -99px;box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);}
+        .o_control_panel .o-kanban-button-new:before {content: "\f067";font-family: FontAwesome;font-size: 18px;position: absolute;top: 10px;left: 73px;}
+
+        /*--create-import--*/
+        .o_control_panel .o_list_button_discard {position: fixed;right: 0.5em;bottom: 5em;z-index: 9;width: 4rem;height: 4rem;padding: 0;text-indent: -99px;border: 1.5px solid $primaryColor !important;font-weight: 500;color: transparent !important;}
+        .o_control_panel .o_list_button_discard:before {content: "\f00d";font-family: FontAwesome;color: #424242;font-size: 18px;position: absolute;top: 10px;left: 73px;}
+        .o_control_panel .o_list_button_save {position: fixed;right: 0.5em;bottom: 1em;z-index: 9;width: 4rem;height: 4rem;padding: 0;text-indent: -99px;border: 1.5px solid $primaryColor !important;font-weight: 500;}
+        .o_control_panel .o_list_button_save:before {content: "\f00c";font-family: FontAwesome;color: #212121;font-size: 18px;position: absolute;top: 10px;left: 73px;}
+    }   
+    @if $mobile_icon_style=="default" {
+        @if $theme_style !='style_7' {
+            .o_control_panel .o_cp_bottom .o_cp_bottom_left .btn {padding-left: 5px !important;padding-right: 5px !important;}
+        }
+        .o_web_client .o_action_manager .o_control_panel .o_cp_bottom .o_cp_bottom_left .o_cp_action_menus .btn {padding: 0.5rem 0.35rem !important;}
+    }   
+    /* OLD */ 
+    
+    .o_main_navbar>ul>li>a {padding: 0 8px;}
+    .o_web_client .o_mobile_search .o_mobile_search_content .o_searchview_input_container .o_searchview_autocomplete{left: 2px !important;}
+    .o_web_client .o_mobile_search .o_mobile_search_content .o_searchview_input_container .o_searchview_input{padding-right: 15px !important;}
+    .o_mobile_search .o_mobile_search_content .o_searchview_icon{top: 20px; right: 20px; z-index: 99;}
+    
+    .o_form_view .o_field_widget.o_input_6ch input{width: auto !important;}
+        
+}
+
+// 16  // 
+@media only screen and (max-width: 767.98px) {
+    .o_form_view button.btn.o_external_button.fa{padding-right: 10px !important;}
+    .o_field_radio .o_horizontal{display: block !important;}
+    .todo_layout .theme_header{padding: 12px 20px !important;}
+    .o_web_client .o_action_manager .o_action .o_content{overflow: auto !important;}
+    .o_kanban_view .o_kanban_renderer.o_wvisitor_kanban.o_kanban_ungrouped .o_kanban_record{margin: 0 !important;}
+    .o_main_navbar .o_menu_systray .o_night_mode > span{line-height: 46px !important;} 
+    .o_action_manager .o_action .o_content .o_expense_container .o_expense_card:nth-of-type(even) {padding: 1rem 0px !important;}
+    .o_form_view .o_recurrent_weekdays > .table.table-responsive{height: auto !important;}
+    .o_form_view .o_recurrent_weekdays > .table.table-responsive .o-checkbox .form-check-label::before{left: 0px !important;}
+    @if $theme_style != 'style_7' {        
+        .o_main_navbar .sh_backmate_theme_appmenu_div.show div.o-dropdown--menu.dropdown-menu.d-block{left: 0 !important; top: 48px !important;}
+    }
+    @if $sidebar_style=='style_4' {
+        .o_main_navbar .o_navbar_apps_menu.sh_backmate_theme_appmenu_div.show div.o-dropdown--menu.dropdown-menu.d-block {width: 65px !important;}
+    }
+    .o_ActivityMenuView_dropdownMenu .o_ActivityMenuView_activityGroup{align-items: center !important;}
+    .o_ActivityMenuView_dropdownMenu .o_ActivityMenuView_activityGroups .o_ActivityMenuView_activityGroupFilterButton{padding: 0px !important;}
+    body .o_burger_menu .o_burger_menu_topbar .bg-view{background: $header_bg_color !important;}
+    .o_DiscussContainer .o_Discuss .o_DiscussMobileMailboxSelection .o_DiscussMobileMailboxSelectionItem:not(.o-active),.o_mobile_search_content .o_search_options .btn.btn-secondary.o_add_condition,.o_control_panel .breadcrumb > li.o_back_button:before,.o_DiscussContainer .o_Discuss .o_Discuss_mobileNewChatButton,.MessagingMenuContainer .o_MessagingMenu_dropdownMenu .o_MessagingMenu_dropdownMenuHeader .o_MessagingMenu_newMessageButton,.o_DiscussContainer .o_Discuss .o_Discuss_mobileNewChannelButton,
+    .o_kanban_view .o_kanban_record .oe_kanban_details .o_kanban_record_bottom .oe_kanban_bottom_left a.oe_kanban_action.oe_kanban_action_a,
+    .o_kanban_view .o_kanban_record .oe_kanban_card.o_kanban_gamification.oe_kanban_global_click .o_kanban_content .o_kanban_record_subtitle .oe_kanban_action.oe_kanban_action_a,
+    .o_kanban_view .o_kanban_record .o_kanban_card_content .col-6.o_kanban_primary_right .oe_kanban_action.oe_kanban_action_a{color: $primaryColor;}
+    @if $mobile_icon_style=='floating' {
+        .o_control_panel .o_form_button_save{background: $primaryColor;color: #ffffff;}
+    }
+    .btn-outline-secondary, .btn-light, .o_form_view .o_statusbar_status .o_arrow_button:not(.disabled) {color: #495057;}
+    .o-settings-form-view .o_form_view_container .o_control_panel .o_cp_top{flex-flow: row;}
+    .o-settings-form-view .o_form_view_container .o_control_panel .o_cp_top .breadcrumb + .o_enable_searchview{padding-right: 0px;}
+    .o_field_widget.o_field_html #toolbar.oe-toolbar.oe-floating{display: block;}
+    .o_form_view .o_form_sheet .o_notebook_content .o_inner_group.grid.col-6.col-lg-6{width: 100%;}
+    .o_form_view.o_xxs_form_view .o_group .o_form_label{color: #8f8f8f;}
+    @if $body_background_type=='bg_img' {
+        .o_field_highlight .o_field_widget .o_input, .o_field_highlight.o_field_widget .o_input{border-color: #f1f1f1;}
+        .o_searchview .o_searchview_input_container .o_searchview_input{background: transparent;}
+    }
+    .o_form_view .o_form_view_container .o_form_sheet .o_field_radio[name="mobile_icon_style"], 
+    .o_form_view .o_form_view_container .o_form_sheet .o_field_radio[name="festival_style"],
+    .o_form_view .o_form_view_container .o_form_sheet [name="button_style"], .o_form_view .o_form_view_container .o_form_sheet [name="separator_style"], .o_form_view .o_form_view_container .o_form_sheet [name="sidebar_style"], .o_form_view .o_form_view_container .o_form_sheet [name="login_page_style"], .o_form_view .o_form_view_container .o_form_sheet [name="loading_style"], .o_form_view .o_form_view_container .o_form_sheet [name="form_element_style"], .o_form_view .o_form_view_container .o_form_sheet [name="horizontal_tab_style"], .o_form_view .o_form_view_container .o_form_sheet [name="breadcrumb_style"], .o_form_view .o_form_view_container .o_form_sheet [name="vertical_tab_style"], .o_form_view .o_form_view_container .o_form_sheet [name="predefined_list_view_style"]{width: 100% !important;}
+    .o_field_highlight .o_field_widget.o_required_modifier .o_input, .o_field_highlight.o_field_widget .o_required_modifier .o_input{border-color: $primaryColor;}
+    .o_control_panel .o_cp_bottom_left .o_cp_buttons .btn-secondary.o_button_upload_bill,
+    .o_control_panel .o_cp_bottom .o_cp_bottom_right .o_search_options .o-dropdown.dropdown.btn-group.o-dropdown--no-caret .dropdown-toggle.btn{color: $primaryColor;}
+    @if $horizontal_tab_style=='style_3' {
+        .o_notebook .nav.nav-tabs .nav-item {overflow: unset;}
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    @if $body_background_type=='bg_img' {
+        html .o_form_view .o_form_statusbar .o_statusbar_status .o_arrow_button.disabled:not(:first-child):not(.o_arrow_button_current):after{border-left: 11px solid #ffffff !important;}
+    }
+    .o_content > .o_calendar_container{display: flex !important;}
+   .todo_layout .theme_header{padding: 12px 20px !important;}
+   .o_Message .o_Message_actionListContainer{position: absolute !important;}
+   .o_ActivityMenuView_dropdownMenu .o_ActivityMenuView_activityGroup{align-items: center !important;}
+   .o_ActivityMenuView_dropdownMenu .o_ActivityMenuView_activityGroups .o_ActivityMenuView_activityGroupFilterButton{padding: 0px !important;}
+    @if $theme_style != 'style_7' {   
+        .o_main_navbar .sh_backmate_theme_appmenu_div.show div.o-dropdown--menu.dropdown-menu.d-block{top: 46px !important; left: 0 !important;}
+    }
+   // V // 
+   .o_calendar_container .o_calendar_sidebar_container .ui-datepicker table .ui-state-default {padding: 4px;}
+   .o_calendar_sidebar_container .ui-datepicker td a, .o_calendar_sidebar_container .ui-datepicker td span{width: auto !important;}
+   .o_web_client.o_touch_device .o_control_panel .btn{padding: 5px 10px !important;}
+   .o_form_view .o_form_editable .oe_title{width: 75% !important;}
+   .o_notebook .nav.nav-tabs .nav-item .nav-link{text-transform: capitalize !important; padding: 10px !important; font-size: 13px !important;}
+   .o_content > .o_calendar_container .o_calendar_sidebar_container{margin-top: 0px;margin-left: 0px;}
+   .o_content .o_form_sheet_bg .o_form_sheet .o_notebook .o_notebook_content.tab-content .o_field_widget{width: 100%;}
+  
+}

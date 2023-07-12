@@ -1,0 +1,250 @@
+@if $theme_style=='style_8' {
+    @media only screen and (max-width: 992px){
+        @if $button_style=='style_6' {
+            .o_control_panel .o_cp_bottom_right > .o_cp_switch_buttons:not(:empty){background: transparent;padding: 0px;}
+            .o_control_panel .o_cp_bottom_right > .o_cp_switch_buttons > .btn:first-child,.o_control_panel .o_cp_bottom_right > .o_cp_switch_buttons .dropdown-menu{border-radius: 20px;}
+            .o_control_panel .o_cp_bottom_right > .o_cp_switch_buttons .dropdown-menu .btn-light:not(:disabled):not(.disabled).active{background: transparent;border-color: transparent;border-radius: 20px;color: $extra_color;}
+            .o_control_panel .o_cp_bottom_right > .o_cp_switch_buttons .dropdown-menu{background: $primaryColor;}
+            .o_control_panel .o_cp_bottom_right > .o_cp_switch_buttons .dropdown-menu .o_switch_view{background: transparent;color: #ffffff;border: 0px;border-radius: 20px;}
+        }
+        .o_control_panel .o_cp_searchview .o_searchview{width: 100%;}
+        .o_form_view .o_group .o_group_col_6{width: 100%;}
+        .o_action_manager{margin: 0px 10px 10px !important;padding: 8px 6px !important;}
+        .o_form_view .o_form_sheet_bg{background: transparent;}
+        .o_content .o_form_view .o_form_sheet_bg > .o_form_sheet .oe_title .custom-checkbox:not(.o_field_boolean.o_boolean_toggle.o_field_widget.custom-control.custom-checkbox) + .o_form_label{vertical-align: bottom;}
+        .o_main_navbar .o_menu_sections .o_more_dropdown_section_group.bg-100{background: transparent !important;}
+        
+        /* APP DRAWER */
+        .app_drawer_layout{width: 95vw !important;}
+        .sh_overlay_app_drawer .app_drawer_layout.sh_theme_model{top: 5% !important;height: 94vh !important;}
+        .app_drawer_layout .sh_profile_part .sh_user_profile_div img.o_user_avatar{height: 80px !important;top: -45px !important;}
+        .app_drawer_layout .sh_apps_div .pinned_app_div .pinned_div #pinned_app_drawer_menu span.dropdown-item.o_app, .app_drawer_layout .app_div #app_drawer_menu span.dropdown-item.o_app{width: 20% !important;}
+        .app_drawer_layout .sh_app_drawer_search .sh_global_search .sh_search_container .sh_search_input{width: 80% !important;}
+        .app_drawer_layout .sh_app_drawer_search .sh_global_search .sh_search_container .sh_search_results{width: 80% !important;left: 10% !important;}
+        .app_drawer_layout .sh_apps_div{height: calc(85vh - 20vh) !important;}
+        /* Modal */ 
+        .modal.o_technical_modal .modal-dialog .modal-content .modal-body{background: transparent;padding: 0px !important;margin: 0px !important;}
+        .modal.o_technical_modal .modal-dialog .modal-content .modal-body .o_content .o_form_view .o_form_sheet_bg .o_form_statusbar{box-shadow: none;}
+        .modal .modal-content .o_command_palette.modal-content{border-radius: 20px !important;}
+        .modal .modal-content .o_command_palette.modal-content .o_command_palette_listbox .o_command_default, .modal .modal-content .o_command_palette.modal-content .o_command_palette_listbox .o_command_hotkey,.modal .modal-content .o_command_palette.modal-content .o_command_palette_listbox .o_command{border-radius: 20px;}
+        ::-webkit-scrollbar{width: 0px !important;height: 0px !important;}
+        .o_content .o_form_view .o_form_sheet_bg .o_form_sheet [name="options"] .custom-checkbox.o_field_boolean.o_field_widget:not(.o_boolean_toggle) + label.o_form_label{vertical-align: bottom;}
+        .o_form_view .oe_button_box + .oe_title, .o_form_view .oe_button_box + .oe_avatar + .oe_title{width: 100%;}
+        .o_web_client.o_fullscreen .o_action_manager{margin-top: 10px !important;}
+        .o_calendar_container .o_calendar_sidebar_container .o_timeoff_legend{padding-left: 15px;}
+        .o_content .o_form_view .o_form_sheet_bg .o_form_sheet .o_hr_holidays_hierarchy{margin-bottom: 0px !important;}
+        .o_form_view .o_form_sheet_bg > .o_form_sheet .oe_form_field.oe_form_field_html.o_field_widget .illustration_border{width: 100%;}
+        .o_field_widget .o_external_button.fa-external-link:before{padding: 0px;}
+    }
+    @media only screen and (max-width: 767.98px){
+        .o_main_navbar #app_toggle{padding: 12px;}
+        .app_drawer_layout .sh_apps_div{padding: 10px 15px !important;}
+        .app_drawer_layout .sh_apps_div .pinned_app_div .pinned_div #pinned_app_drawer_menu span.dropdown-item.o_app, .app_drawer_layout .app_div #app_drawer_menu span.dropdown-item.o_app{width: 33% !important;}
+        .app_drawer_layout .sh_app_drawer_search .sh_global_search .sh_search_container .sh_search_input{width: 100% !important;}
+        .app_drawer_layout .sh_app_drawer_search .sh_global_search .sh_search_container .sh_search_results{width: 100% !important;left: 0 !important;}
+        .o_MessagingMenu_newMessageButton,.o_Discuss_mobileAddItemHeaderInput,.o_Discuss,.o_Discuss .o_NotificationList .o_NotificationListItem,.o_Discuss .o_MobileMessagingNavbar,.o_Composer_buttons .o_Composer_actionButtons .o_Composer_actionButton{border-radius: 20px;}
+        .o_discuss .o_MobileMessagingNavbar{border-radius: 20px;}
+        .o_discuss .o_MobileMessagingNavbar .o_MobileMessagingNavbar_tab:last-child{box-shadow: 0px 0 0 #ced4da;}
+        .o_content .o_form_view .o_form_sheet_bg .o_form_statusbar{display: flex;}
+        .o_control_panel .o_cp_top_right .o_cp_searchview:not(.o_searchview_quick) .sh_mobile_search_icon{top: 70px;right: 20px;}
+        .o_control_panel .o_cp_bottom .o_cp_bottom_right .o_search_options .o-dropdown .dropdown-toggle.btn .o_dropdown_title{font-size: 15px !important;padding-left: 10px !important;}
+        .o_action_manager .o_control_panel .o_cp_searchview.o_searchview_quick.sh_o_cp_searchview .o_searchview .o_searchview_input_container .o_searchview_input{margin: 0px 0px 15px 0px;padding: 0.8em 1em;}
+        .o_ChatWindowManager .o_ChatWindow .o_ChannelInvitationForm.o_ChatWindow_channelInvitationForm input{border: 1px solid #e4e8f7;padding: 5px;border-radius: 20px;}
+        .o_ChatWindowManager .o_ChatWindow .o_ChannelInvitationForm.o_ChatWindow_channelInvitationForm .o_ChannelInvitationForm_inviteButton,.o_ChatWindowManager .o_ChatWindow .o_ChannelInvitationForm.o_ChatWindow_channelInvitationForm .o_ChannelInvitationForm_selectedPartners .btn.btn-secondary{border-radius: 20px;}
+        .o_Discuss .o_Discuss_mobileNewChannelButton.btn.btn-secondary,.o_Discuss .o_Discuss_mobileNewChatButton.btn.btn-secondary{margin-bottom: 10px;margin-top: 10px;}
+        .o_Message.sh_right_chat .o_Message_core .o_Message_content .o_Message_prettyBody .o_mail_notification{color: #cccccc;}
+        .o_Message.sh_right_chat .o_Message_core .o_Message_content .o_Message_prettyBody .o_mail_notification .o_channel_redirect{color: #ffffff;}
+        .o_Discuss .o_DiscussMobileMailboxSelection{padding: 10px;}
+        .o_Discuss .o_ThreadView .o_ThreadViewTopbar{background: $secondaryColor;border-radius: 20px;}
+        .o_Message .o_Message_core .o_Message_content .o_Message_prettyBody > table{background-color: $secondaryColor !important;border-radius: 20px;}
+        .o_action_manager .o_control_panel .o_cp_top, .o_action_manager .o_control_panel .o_cp_bottom{margin: 0px;}
+        .o_control_panel{padding-left: 10px;}
+        .o_control_panel .o_cp_bottom_right > .o_cp_switch_buttons .btn-link.btn-sm:first-child{margin-right: 0px !important;}
+        .o_control_panel .o_cp_bottom .o_cp_bottom_left, .o_control_panel .o_cp_bottom .o_cp_bottom_right{margin: 6px 0px;}
+        .o_action_manager .o_control_panel .o_cp_top{margin-top: 6px;}
+        .o_calendar_buttons .o_calendar_scale_buttons .dropdown.btn-group .dropdown-menu .btn.btn-secondary.active{color: $primaryColor !important;}
+        .modal.o_technical_modal .modal-dialog .modal-content .modal-header{border-top-left-radius: 15px;border-top-right-radius: 15px;}
+        .o_calendar_container .o_calendar_view{margin-right: 0px;}
+        .o_control_panel .o_cp_searchview.o_searchview_quick:not(.sh_o_cp_searchview) .o_searchview .o_searchview_input_container .o_searchview_input{background: transparent;padding: 0.6em 0em;margin: 0px;}
+        .o_control_panel .o_cp_bottom .o_cp_bottom_right .btn-group.o_search_options{background: transparent;}
+        .o-dropdown.dropdown .o-dropdown--menu.dropdown-menu.d-block.o-popper-position--bs.o-popper-position, .o_menu_systray .sh_calc_util .sh_calc_results .calculator, .o_main_navbar .o_menu_systray .sh_language_icon .dropdown-menu.sh_user_language_list_cls, .o_main_navbar .o_menu_systray .sh_bookmark.show .dropdown-menu.dropdown-menu-right.sh_wqm_quick_menu_submenu_list_cls, .o_main_navbar .o_menu_systray .o_user_menu .dropdown-menu.d-block, .o_main_navbar .o_menu_systray .o_switch_company_menu .dropdown-menu.d-block, .o_main_navbar .o_menu_systray .o_mail_systray_item.dropdown .o_mail_systray_dropdown, .o_main_navbar .o_menu_systray .o_MessagingMenu.dropdown .o_MessagingMenu_dropdownMenu, .o_kanban_view .o_kanban_record .o_dropdown_kanban.dropdown .dropdown-menu, .o_control_panel .o_cp_bottom_left > .o_cp_action_menus .dropdown-menu, .ui-widget.ui-widget-content{animation-name: unset !important;}
+        .o_control_panel .o_cp_bottom .o_cp_bottom_right .btn-group.o_search_options .btn-group.show .o_dropdown_title,.o_control_panel .o_cp_bottom .o_cp_bottom_right .btn-group.o_search_options .btn-group:hover .o_dropdown_title{color: $extra_color !important;}
+        .o_form_view .oe_form_field.oe_form_field_html.o_field_widget .oe-toolbar.oe-floating{overflow: auto;display: grid;}
+        .oe-toolbar.oe-floating #font-size .dropdown-menu.show{right: 0;left: auto;}
+        .oe-toolbar.oe-floating .dropdown-menu.show{max-height: 200px !important;overflow: auto;top: 0;}
+        .oe-toolbar.oe-floating .colorpicker-group .o_we_colorpicker_switch_panel button.o_we_colorpicker_switch_pane_btn{color: $primaryColor !important;border-bottom: 1px solid $primaryColor !important;}
+        .modal.o_technical_modal.o_web_editor_dialog .modal-dialog .modal-content .modal-body{padding: 10px;}
+        .modal.o_technical_modal .modal-dialog .o_control_panel .o_cp_searchview.sh_o_cp_searchview .o_searchview .o_searchview_input_container .o_searchview_input{background: $secondaryColor;padding: 0.8em 1em;}
+        .o_control_panel .sh_o_cp_top .o_searchview .o_searchview_input_container .o_searchview_facet{overflow: unset;}
+        .o_control_panel .sh_o_cp_top .o_searchview .o_searchview_input_container .o_searchview_facet .o_facet_values,.o_searchview .o_searchview_input_container .o_searchview_facet .o_facet_values{overflow: auto;}
+        .o_control_panel .o_cp_searchview .o_searchview{border: 0px !important;box-shadow: none !important;}
+        .modal.o_technical_modal .modal-dialog .o_control_panel .o_cp_searchview .o_searchview:hover{box-shadow: none !important;}
+        .o_control_panel .o_cp_top_right .o_cp_searchview:not(.o_searchview_quick) .sh_mobile_search_icon{position: absolute;top: 0px;right: 0px;}
+        @if $mobile_icon_style=='floating' {
+            html .o_control_panel .o_cp_bottom .o_cp_bottom_left .o_form_button_cancel,
+            html .o_action_manager .o_control_panel .o_cp_bottom .o_cp_bottom_left .o_cp_buttons .o_list_buttons .btn.o_list_button_add,
+            html .o_control_panel .o_form_view .o_form_view_container button.btn.o_form_button_create,
+            html .o_control_panel button.btn.o_form_button_edit,
+            html .o_control_panel button.btn.o_form_button_save,
+            html body div.o_control_panel .o_list_buttons button.btn.o_list_button_discard,
+            html body div.o_control_panel .o-kanban-button-new{color: transparent !important;}
+            @if $button_style=='style_6' {
+                .o_action_manager .o_control_panel .o_cp_bottom .o_cp_bottom_left .btn.btn-primary::before,
+                .o_control_panel .o_cp_bottom .o_cp_bottom_left .sh_refresh i.fa-refresh::before{color: #ffffff !important;}
+            }
+            .o_action_manager .o_control_panel .o_cp_bottom .o_cp_bottom_left .o_cp_buttons button.btn.btn-secondary::before{color: $extra_color !important;}
+        }
+        @if $button_style=='style_6' {
+            // .o_form_view .o_form_statusbar > .o_statusbar_status > .dropdown-menu{}
+            // .o_form_view .o_form_statusbar > .o_statusbar_status > .dropdown-menu .dropdown-item.btn,.o_field_widget.o_field_image .o_form_image_controls > button.fa,.o_form_statusbar .o_statusbar_buttons .btn.btn-primary{border-radius: 20px !important;}
+            .o_control_panel .o_search_options .o-dropdown .dropdown-toggle.btn,.o_web_client .o_mobile_search .o_mobile_search_content .o_mobile_search_filter .dropdown:not(.show),.o_web_client .o_mobile_search .o_mobile_search_content .o_mobile_search_filter .dropdown-menu{border-radius: 20px;}
+            .o_searchview .o_searchview_input_container .o_searchview_facet .o_facet_values{border-radius: 0px 15px 15px 0px;}
+            .o_history_container .o_history_kanban_container .o_history_kanban_sub_container .oe_module_vignette{border-radius: 20px;}
+        }
+        /* Sub menu div */
+        .o_main_navbar .sh_sub_menu_div .sh_sub_menu_content .o_menu_sections.show{background: transparent !important;}
+        .sh_sub_menu_div .sh_sub_menu_content .o_menu_sections .dropdown-item.o_nav_entry{color: $primaryColor;font-weight: bold;}
+        .o_main_navbar .sh_sub_menu_div .sh_sub_menu_content .o_menu_sections .o-dropdown.dropdown .dropdown-toggle,
+        .o_main_navbar .sh_sub_menu_div .sh_sub_menu_content .o-dropdown.dropdown .dropdown-menu .dropdown-menu_group.dropdown-header{background: $secondaryColor;border-radius: 20px;color: #6c757d;}
+        .o_main_navbar .sh_sub_menu_div .sh_sub_menu_content .o_menu_sections.show .o-dropdown.dropdown.show .o-dropdown--menu.dropdown-menu.d-block .dropdown-item{color: #495057;}
+        .o_main_navbar .sh_sub_menu_div .sh_sub_menu_content .o_menu_sections .o-dropdown.dropdown.o-dropdown--no-caret > .dropdown-toggle{position: relative;}
+        .o_main_navbar .sh_sub_menu_div .sh_sub_menu_content .o_menu_sections .o-dropdown.dropdown.o-dropdown--no-caret > .dropdown-toggle::after{position: absolute;top: 10px;right: 15px;content: '\f107';font-family: 'fontAwesome';color: #495057;transition: all .5s;font-size: 18px;border: 0px;}
+        .o_main_navbar .sh_sub_menu_div .sh_sub_menu_content .o_menu_sections .o-dropdown.dropdown.o-dropdown--no-caret.show > .dropdown-toggle::after{transform: rotate(180deg);}
+        .o_main_navbar .sh_sub_menu_div .sh_sub_menu_content .o_menu_sections.show .o-dropdown.dropdown.show .o-dropdown--menu.dropdown-menu.d-block .dropdown-item:hover,.o_main_navbar .sh_sub_menu_div .sh_sub_menu_content .o_menu_sections.show .o-dropdown.dropdown.show .o-dropdown--menu.dropdown-menu.d-block .dropdown-item.active{color: $primaryColor;}
+        .o_main_navbar .sh_sub_menu_div .sh_sub_menu_content .o_menu_sections.show{padding: 10px;}
+        .o_main_navbar .sh_sub_menu_div .sh_sub_menu_content .o_menu_sections .o-dropdown.dropdown.o-dropdown--no-caret{margin-bottom: 5px;}
+        .o_main_navbar .sh_sub_menu_div .sh_sub_menu_content .o_menu_sections .o-dropdown.dropdown.show .dropdown-toggle{color: $primaryColor;}
+        .o_main_navbar .sh_sub_menu_div .sh_sub_menu_content .o_menu_sections.show .o-dropdown.dropdown.show .o-dropdown--menu.dropdown-menu.d-block{max-height: 58vh;}
+        .o_action_manager .o_FormRenderer_chatterContainer{padding: 2rem 1.5rem 3rem;}
+        .o_content .o_form_view .o_form_sheet_bg .o_form_sheet .ribbon{margin-top: -7px;}
+        .o_searchview .o_searchview_input_container .o_searchview_facet .o_facet_values{line-height: 2.5em;}
+        .o_form_statusbar .o_statusbar_buttons .btn,.o_form_view .o_form_statusbar > .o_statusbar_status > .dropdown-menu .dropdown-item.btn{margin-bottom: 5px !important;}
+        html .o_web_client > .o_action_manager > .o_action > .o_content{margin-top: 0px;padding: 0px 4px 0px 4px;}
+        .o_form_view .o_form_sheet .oe_title .o_field_widget.o_field_radio.o_horizontal .custom-control.custom-radio.o_radio_item{padding-left: 0px;}
+        .o_content .o_kanban_view .o_kanban_record{margin: 8px 0px !important;}
+        body .o_kanban_view{padding: 0px !important;}
+        .o_FollowerListMenu_followers .o_Follower .o_Follower_details{padding-left: 0px;padding-right: 0px;}
+        .o_FormRenderer_chatterContainer .o_Chatter .o_ChatterTopbar_rightSection .o_ChatterTopbar_button.o_FollowerListMenu .o_FollowerListMenu_followers .o_FollowerListMenu_dropdown .o_Follower.dropdown-item{padding: 5px;}
+        .o_FormRenderer_chatterContainer .o_Chatter .o_ChatterTopbar_rightSection .o_ChatterTopbar_button.o_FollowerListMenu .o_FollowerListMenu_followers .o_FollowerListMenu_dropdown{left: 0;right: auto;}
+        .o_content .o_kanban_view .o_kanban_record .o_kanban_card_content .o_kanban_card_upper_content .o_kanban_primary_right .row .col-8{flex: 0 0 60.666667%;max-width: 60.666667%;}
+        .modal.o_technical_modal .modal-dialog .modal-content .modal-header .close{color: #ffffff;}
+        .o_field_widget.o_field_selection_badge .o_selection_badge{border-radius: 20px;}
+        /* setting tab container */ 
+        .o_base_settings .o_setting_container .settings_tab .tab{margin: 0px;}
+        .o_base_settings .o_setting_container .settings_tab{margin-right: 0px;margin-bottom: 10px;}
+        .o_base_settings .o_setting_container .settings{margin-left: 0px;}
+        .o_base_settings .o_setting_container{margin-top: 5px;}
+        .o_base_settings .o_setting_container .settings_tab .tab.current{color: $extra_color;background: transparent;border-radius: 20px;box-shadow: none !important;}
+        .o_base_settings .o_setting_container .settings_tab .tab:after{background: $extra_color;}
+        .o_settings_container .o_setting_box .o_setting_right_pane{margin-left: 30px;padding-left: 8px;}
+        .o_settings_container .o_setting_box .o_setting_right_pane .o_field_widget{width: 100%;}
+        .o_form_view .o_form_sheet .o_group.col.o_group_col_6 .o_group.o_inner_group .o_field_float.o_field_number.o_field_widget{margin-left: 10px !important;}
+        @if $tab_style_mobile=='vertical' {
+            @if $vertical_tab_style=='style_8' {
+                .o_notebook .accordion .card-header [data-toggle="collapse"]{margin-left: 0px;margin-right: 0px;}
+            }
+        }
+        @if $radio_style == 'custom'{
+            .o_content .custom-radio input[type='radio']:not(:checked) + label.custom-control-label.o_form_label, .o_content .custom-radio input[type='radio']:checked + label.custom-control-label.o_form_label{height: unset;line-height: unset;}
+        }
+        .o_content .o_kanban_view .oe_kanban_global_click.o_kanban_record .o_kanban_record_top img{border-radius: 20px;}
+        .o_view_controller .o_kanban_ungrouped .oe_kanban_global_click.o_kanban_record_has_image_fill .o_kanban_record_bottom{padding: 10px 6px 5px 6px;}
+
+        .o_kanban_view.o_event_attendee_kanban_view .o_kanban_record.o_event_registration_kanban .oe_kanban_content{padding: 10px;}
+        .o_field_widget.o_field_domain.o_inline_mode.o_edit_mode > .o_field_domain_panel{position: unset;}
+        .o_form_view .o_notebook .col-6{max-width: 100%;flex: 0 0 100%;width: 100%;}
+
+        .o_purchase_dashboard .table{border-spacing: 2px 2px;}
+        .o_purchase_dashboard .col-sm-5,.o_purchase_dashboard .col-sm-7{padding-left: 5px;padding-right: 5px;}
+        .o_content .o_form_view .o_form_sheet_bg > .o_form_sheet .o_group [name="reminder"] span{padding-left: 10px;vertical-align: bottom;}
+        .o_form_view.o_xxs_form_view .o_group.o_inner_group > tbody > tr > td .o_field_integer.o_field_number.o_field_widget[name="reminder_date_before_receipt"] + [name="send_reminder_preview"]{padding: 0px !important;}
+
+        .o_content .o_form_view .oe_button_box .btn.oe_stat_button .o_field_widget.o_stat_info{text-overflow: ellipsis;white-space: nowrap;overflow: hidden;}
+        .container.o_mrp_bom_report_page .row .col-lg-12 .mt16{overflow: auto;}
+        .o_domain_node.o_domain_tree > .o_domain_node_children_container{padding-left: 5px;}
+        .o_domain_node.o_domain_leaf > .o_domain_leaf_edition > *:first-child{flex: 0 1 38%;}
+        .o_domain_node.o_domain_leaf > .o_domain_leaf_edition > *:last-child{flex: 1 1 8%;}
+        .o_kanban_record .o_mail_activity div.o_activity{margin-left: 16px;}
+        .o_form_view .oe_button_box .btn.oe_stat_button > .o_stat_info .o_stat_value .o_field_date.o_field_widget, .o_form_view .oe_button_box .btn.oe_stat_button > .o_stat_info .o_stat_value .o_field_char.o_field_widget{vertical-align: middle;}
+        .modal.o_technical_modal .modal-dialog .modal-content .modal-body,.modal.o_technical_modal .modal-dialog .modal-content .modal-body .o_list_view .o_list_table{padding: 10px !important;}
+        .modal .modal-dialog .o_content .o_form_view .o_form_sheet_bg > .o_form_sheet{padding-left: 0px;padding-right: 0px;}
+
+        .o_calendar_view .o_calendar_widget .fc-dayGridYear-view > .fc-month-container{width: 100%;}
+        .o_control_panel .o_cp_bottom .o_cp_bottom_left .o_cp_buttons{white-space: initial;}
+        .o_form_view .o_field_widget.o_hr_holidays_plan_level_container.o_field_one2many.o_field_x2many.o_hr_holidays_plan_level_hierarchy .o_kanban_view.o_kanban_ungrouped .o_kanban_record{box-shadow: none !important;}
+        .o_form_view .o_form_sheet_bg .o_form_sheet .o_notebook .oe_form_field.oe_form_field_html.o_field_widget{overflow: auto;}
+        .o_form_view .o_form_sheet_bg .o_form_sheet .o_notebook .oe_form_field.oe_form_field_html.o_field_widget .note-editable.odoo-editor-editable > table{background: $secondaryColor !important;border-radius: 20px;}
+        .o_form_view .oe_button_box .btn.oe_stat_button > span{white-space: nowrap;}
+        .o_field_domain.o_field_widget .o_domain_node.o_domain_tree.o_domain_selector .o_domain_node_children_container .o_domain_node.o_domain_leaf > .o_domain_leaf_info > .o_field_selector{float: unset;}
+        .o_field_domain.o_field_widget .o_domain_node.o_domain_tree.o_domain_selector .o_domain_node.o_domain_tree .o_domain_node_children_container .o_domain_node.o_domain_leaf > .o_domain_leaf_info > .o_field_selector{float: left !important;}
+        .o_domain_node.o_domain_leaf > .o_domain_leaf_info > .o_field_selector .o_field_selector_value{display: grid;}
+        .o_content .o_form_view .o_form_sheet_bg > .o_form_sheet .o_field_binary_file.o_field_widget .btn.btn-secondary.fa.fa-pencil.o_select_file_button,.o_content .o_form_view .o_form_sheet_bg > .o_form_sheet .o_field_binary_file.o_field_widget .btn.btn-secondary.fa.fa-trash-o.o_clear_file_button{background: transparent !important;box-shadow: none !important;border: 0px !important;padding: 2px !important;}
+        .o_content .o_form_view .o_form_sheet_bg > .o_form_sheet .o_field_char.o_field_widget{word-break: break-word;}
+        .o_MessagingMenu_dropdownMenu .o_MessagingMenu_dropdownMenuHeader .o_AutocompleteInput.o_MessagingMenu_mobileNewMessageInput{border-radius: 20px;}
+        .o_form_view.o_mass_mailing_mailing_form.o_mass_mailing_form_full_width .oe_button_box{margin-top: 48px;}
+        .o_form_view.o_mass_mailing_mailing_form.o_mass_mailing_form_full_width .oe_button_box > .o_dropdown_more{width: 97%;}
+        .o_content .o_form_view.o_mass_mailing_mailing_form.o_mass_mailing_form_full_width .o_form_statusbar{margin-left: 0px;margin-right: 0px;}
+        .o_ThreadView.o_ChatWindow_thread .o_ThreadView_bottomPart .o_ThreadView_core .o_MessageList.o_ThreadView_messageList .o_Message.sh_left_chat.o_MessageList_item.o_MessageList_message .o_Message_core, .o_Discuss .o_ThreadView .o_ThreadView_core .o_MessageList.o_ThreadView_messageList .o_Message.sh_left_chat.o_MessageList_item.o_MessageList_message .o_Message_core,
+        .o_ThreadView.o_ChatWindow_thread .o_ThreadView_bottomPart .o_ThreadView_core .o_MessageList.o_ThreadView_messageList .o_Message.sh_right_chat.o_MessageList_item.o_MessageList_message .o_Message_core, .o_Discuss .o_ThreadView .o_ThreadView_core .o_MessageList.o_ThreadView_messageList .o_Message.sh_right_chat.o_MessageList_item.o_MessageList_message .o_Message_core{width: 75%;}
+        .o_action_manager .o_Discuss{margin: 10px 5px;}
+        .o_ThreadView .o_MessageList .o_Message .o_Message_core .o_Message_content ul.o_Message_trackingValues{padding-left: 0px;}
+        .o_Discuss .o_NotificationList .o_NotificationListItem{margin-bottom: 5px;}
+        .o_Discuss .o_NotificationList.o_Discuss_notificationList .o_NotificationList_separator{border: 0px;}
+        html .o_web_client > .o_action_manager > .o_action > .o_control_panel{margin-bottom: 10px;}
+        .o_form_view.o_xxs_form_view.o_form_editable .o_form_sheet_bg .o_form_sheet .oe_title .o_row.no-gutters.align-items-end{flex-direction: column;}
+        .o_form_view.o_xxs_form_view.o_form_editable .o_form_sheet_bg .o_form_sheet .oe_title .o_row.no-gutters.align-items-end .col{width: 100% !important;}
+        .o_crm_team_kanban.o_kanban_ungrouped.o_kanban_view .o_kanban_record .container.o_kanban_card_content .col-12.o_kanban_primary_bottom.bottom_block{ flex: 0 0 93%;max-width: 95%;margin-left: 13px;}
+        .o_form_view .o_notebook .card-body .o_group .o_group_col_6{padding-left: 0px;padding-right: 0px;}
+        .o_control_panel .o_cp_top .o_cp_top_right .o_cp_searchview .btn.o_enable_searchview{padding-right: 0px;}
+        .o_action_manager .o_FormRenderer_chatterContainer{overflow: auto;}
+        .o_control_panel .o_cp_bottom .o_cp_bottom_left .o-dropdown.dropdown.o-dropdown--no-caret.show .o-dropdown--menu.dropdown-menu.d-block{position: absolute;}
+        .app_drawer_layout .sh_profile_part .sh_user_logout{top: 15px;right: 15px;}
+        .o_content .o_form_view .o_form_sheet_bg > .o_form_sheet{margin-bottom: 15px !important;}
+        .o_form_view.o_xxs_form_view.o_form_readonly .o_form_label{vertical-align: bottom;}
+        .o_form_view .o_horizontal_separator{width: 100% !important;}
+        .o_kanban_view.o_hr_department_kanban .o_kanban_record .container.o_kanban_card_content .row.o_kanban_primary_bottom.bottom_block{margin-left: 0px;margin-right: 0px;}
+        .o_hr_attendance_kiosk_mode .o_hr_attendance_user_badge{background: transparent !important;box-shadow: none !important;}
+        .o_hr_attendance_kiosk_mode .o_hr_attendance_pin_pad .btn-warning.o_hr_attendance_pin_pad_button_C{border-radius: 20px;}
+        .o_kanban_view.o_kanban_dashboard .o_kanban_record .o_kanban_card_header_title .o_primary{padding-left: 5px;}
+        .o_kanban_view.o_kanban_dashboard .o_kanban_record .o_kanban_card_header + .container.o_kanban_card_content .o_kanban_primary_bottom.bottom_block.o_recruitment_kanban_box .o_field_boolean.o_boolean_toggle.o_field_widget.custom-control.custom-checkbox{margin-left: 2px !important;}
+        .o_domain_node.o_domain_leaf > .o_domain_leaf_edition{display: block !important;}
+        html .o_web_client .sh_sub_menu_div .sh_sub_menu_content .o_menu_sections .dropdown-item.o_nav_entry{padding-top: 8px;padding-bottom: 8px;}
+        .modal .modal-dialog .modal-content .modal-body.o_act_window .o_control_panel{margin-bottom: 12px;}
+        @if $discuss_chatter_style == 'style_2'{
+            .o_Discuss .o_ThreadView .o_ThreadView_core .o_MessageList.o_ThreadView_messageList .o_Message.sh_right_chat.o_MessageList_item.o_MessageList_message .o_Message_core{background: linear-gradient(136deg, $primaryColor 40%, $gradient_color) !important;}
+        }
+        // v16 // 
+        .o_form_view .o_field_widget .o_input_dropdown .o_dropdown_button{top: 16px;}
+        .o_control_panel .o_cp_searchview .o_searchview .o_searchview_input_container .o_searchview_input{margin: 0.4em 0em;padding: 5px 2px;}
+        .o_notebook .o_notebook_content .tab-pane .o_kanban_renderer.o_kanban_ungrouped .o_kanban_record{margin-bottom: 10px;}
+        .o_statusbar_buttons .dropdown-item.o_statusbar_button_dropdown_item{padding: 0px;}
+        // .o_kanban_renderer.o_kanban_ungrouped .o_kanban_record{flex-basis: unset;}
+        .o_form_sheet_bg .o_form_sheet .o_kanban_renderer.o_kanban_ungrouped .o_kanban_record{margin-bottom: 10px;}
+        body .o_control_panel{width: 98%;}
+        .o_control_panel .btn.o_enable_searchview.btn-link.oi.oi-search{padding-left: 0.75rem;padding-right: 0.75rem;}
+        .o_content .o_stock_reports_page.o_stock_reports_no_print{overflow: auto;}
+        @if $breadcrumb_style=='style_3' {
+            .o_control_panel .breadcrumb .breadcrumb-item + .breadcrumb-item::before{top: 0px;}
+        }
+        .o_form_view .o_form_sheet_bg > .o_form_sheet, .o_action_manager .o_FormRenderer_chatterContainer{max-width: 98%;}
+        .o_history_container .o_history_kanban_container .o_history_kanban_sub_container .oe_module_vignette{margin-bottom: 10px;}
+    }
+}
+
+@media only screen and (max-width: 767.98px){
+    .o_night_mode #moon_button, .o_night_mode #sun_button,.o_main_navbar .o_menu_systray .o-dropdown.dropdown.o_switch_company_menu .fa.fa-building-o::before{font-size: 18px !important;}
+}
+@media only screen and (max-width: 992px){
+    .o_content > .o_calendar_container{display: block;}
+    .o_content > .o_calendar_container .o_calendar_view{margin-bottom: 10px;margin-right: 0px;}
+    .o_content > .o_calendar_container .o_calendar_sidebar_container{margin-top: 10px;margin-left: 0px;}
+    .o_content > .o_calendar_container .o_calendar_sidebar_container .o_calendar_sidebar{margin: 0px auto;}
+}
+@media only screen and (min-device-width : 768px) and (max-device-width : 1300px) and (orientation : landscape){
+    .o_action_manager .o_control_panel .o_cp_top_right .o_cp_searchview .o_searchview{display: flex;justify-content: space-between;width: 100%;}
+    .o_action_manager .o_control_panel .o_cp_top_right .o_cp_searchview .o_searchview .sh_mobile_search_icon{order: 2;}
+    @if $theme_style=='style_8' {
+        .o_action_manager .o_control_panel .o_cp_bottom_right > .o_cp_switch_buttons > .btn{background: $primaryColor;border: 0px;border-radius: 20px;margin-right: 0px;color: #ffffff;}
+    }
+    .o_action_manager .o_control_panel .o_cp_bottom_right > .o_cp_switch_buttons ul.dropdown-menu li{display: inline-block;}
+}

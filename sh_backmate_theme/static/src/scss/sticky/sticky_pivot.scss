@@ -1,0 +1,17 @@
+// Sticky Header & Footer in List View
+@if $is_sticky_pivot == "True"{
+    .o_pivot_view .o_pivot.table-responsive {overflow-x: unset;}
+    .o_pivot_view .o_pivot.table-responsive table.table thead{position: sticky;top: 0;background: #ffffff;z-index: 10;}
+    .o_pivot_view .o_pivot.table-responsive table.table thead th{background: #ffffff;box-shadow: none !important;outline: 1px solid #dee2e6;border: 0px;outline-offset: -1px;position: sticky !important;}
+    .o_pivot_view .o_pivot.table-responsive table.table tbody tr th{box-shadow: none !important;background: #fff !important;position: sticky;left: 0;outline: 1px solid #dee2e6;border: 0px;outline-offset: -1px;}
+    .o_pivot_view .o_pivot.table-responsive table.table thead tr:first-child th:first-child{background: #fff !important;box-shadow: none !important;z-index: 1;left: 0;}
+    .sh_pivot.o_pivot.table-responsive table.table thead{z-index: 0;}
+    .sh_pivot.o_pivot.table-responsive table.table thead th,.sh_pivot.o_pivot.table-responsive table.table tbody tr th{position: unset !important;}
+    .o_pivot.table-responsive table.table tbody tr th:hover{background: #E0E2E6 !important;}
+
+    @media only screen and (max-width: 767.98px){
+        html .o_web_client > .o_action_manager > .o_action.o_pivot_view .o_content{overflow: auto;}
+        .o_pivot.table-responsive table.table thead tr:first-child th:first-child,.o_pivot.table-responsive table.table tbody tr th{position: unset !important;}
+        .o_pivot.table-responsive table.table thead th{left: auto;}
+    }
+}

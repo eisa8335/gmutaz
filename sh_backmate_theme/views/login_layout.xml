@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+<template id="sh_backmate_theme_web_login_layout" inherit_id="web.login_layout" name="Backmate Login Layout">
+	
+		<xpath expr="//div[hasclass('container')]" position="replace">
+			
+			
+            <t t-set="theme_config" t-value="request.env['sh.back.theme.config.settings'].search([('id','=',1)],limit = 1)" />			
+		
+			<!-- SIDE BY SIDE IMAGE AND LOGIN START HERE STYLE 2-->	
+            <div class="container-fluid" t-if="theme_config.login_page_style == 'style_2'">
+            
+	            	<div class="row">
+	            	<div class="sh_backmate_th_login_left_img_st_2 col-lg-6 col-md-6 col-sm-6 col-12">
+
+					</div>
+	                <div t-attf-class="card border-0 mx-auto bg-100 {{login_card_classes}} o_database_list col-lg-6 col-md-6 col-sm-6 col-12" style="max-width: 350px;height: 100vh;">
+	                    
+	                    
+	                    <div class="card-body">
+	                        <div t-attf-class="text-center pb-3 border-bottom {{'mb-3' if form_small else 'mb-4'}}">
+	                            <img t-attf-src="/web/binary/company_logo{{ '?dbname='+db if db else '' }}" alt="Logo" style="max-height:120px; max-width: 100%; width:auto"/>
+	                        </div>
+	                        <t t-raw="0"/>
+	                        <div class="text-center small mt-4 pt-3 border-top" t-if="not disable_footer">
+	                            <t t-if="not disable_database_manager">
+	                                <a class="border-right pr-2 mr-1" href="/web/database/manager">Manage Databases</a>
+	                            </t>
+	                            <a href="https://www.odoo.com?utm_source=db&amp;utm_medium=auth" target="_blank">Powered by <span>Odoo</span></a>
+	                        </div>
+	                    </div>
+	                </div>
+				</div>
+            </div>	
+			<!-- SIDE BY SIDE IMAGE AND LOGIN ENDS HERE STYLE 2 -->            
+
+            <div class="container mb-5 pb-5" t-if="theme_config.login_page_style not in ['style_2','style_4']">
+                <div t-attf-class="card border-0 mx-auto mt-5 bg-100 {{login_card_classes}} o_database_list" style="max-width: 300px;">
+                    <div class="card-body">
+                        <div t-attf-class="text-center pb-3 border-bottom {{'mb-3' if form_small else 'mb-4'}}">
+                            <img t-attf-src="/web/binary/company_logo{{ '?dbname='+db if db else '' }}" alt="Logo" style="max-height:120px; max-width: 100%; width:auto"/>
+                        </div>
+                        <t t-raw="0"/>
+                        <div class="text-center small mt-4 pt-3 border-top" t-if="not disable_footer">
+                            <t t-if="not disable_database_manager">
+                                <a class="border-right pr-2 mr-1" href="/web/database/manager">Manage Databases</a>
+                            </t>
+                            <a href="https://www.odoo.com?utm_source=db&amp;utm_medium=auth" target="_blank">Powered by <span>Odoo</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>	
+
+			<!-- style_4 structure -->
+			<div class="container-fluid" t-if="theme_config.login_page_style == 'style_4'">
+            
+				<div class="row">
+				
+				<div t-attf-class="card border-0 mx-auto mt-2 mb-2 {{login_card_classes}} o_database_list col-lg-4 col-md-6 col-sm-12 col-12 p-0" style="max-width: 350px;">
+					
+					
+					<div class="card-body sh_left_form_section">
+						<div t-attf-class="text-center pb-3 border-bottom {{'mb-3' if form_small else 'mb-4'}}">
+							<img t-attf-src="/web/binary/company_logo{{ '?dbname='+db if db else '' }}" alt="Logo" style="max-height:120px; max-width: 100%; width:auto"/>
+						</div>
+						<div class="text-center mb-5"><h5 class="mb-0 sh_welcome_text_h5">Welcome Back !</h5><p class="text-muted mt-2">Sign in to continue to Odoo Theme.</p></div>
+						<t t-raw="0"/>
+						<div class="text-center small mt-4 pt-3 border-top" t-if="not disable_footer">
+							<t t-if="not disable_database_manager">
+								<a class="border-right pr-2 mr-1" href="/web/database/manager">Manage Databases</a>
+							</t>
+							<a href="https://www.odoo.com?utm_source=db&amp;utm_medium=auth" target="_blank">Powered by <span>Odoo</span></a>
+						</div>
+					</div>
+				</div>
+				<div class=" col-lg-8 col-md-6 col-sm-12 col-12 p-0">
+				
+						
+					<section class="testimonial sh_right_testimonial_section text-center" style="height: 100vh;">
+						<div class="bg-overlay bg-primary sh_overlay_div"></div>
+						<ul class="sh_bubble_shape"><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul>
+						<div class="container">
+							<div id="testimonial4" class="carousel slide testimonial4_indicators testimonial4_control_button thumb_scroll_x swipe_x"  data-keyboard="false" data-ride="carousel" data-pause="hover" data-interval="1000" data-duration="2000">
+								<ul class="carousel-indicators">
+										<t t-set="count" t-value="0"/>
+										<t t-as="login_testimonial" t-foreach="request.env['sh.login.testimonial'].search([])" >		
+											<t t-if="count ==0">
+												<li data-target="#testimonial4" data-slide-to="0" class="active"></li>
+												<t t-set="count" t-value="1"/>
+											</t>
+											<t t-else="">
+												<li data-target="#testimonial4" t-att-data-slide-to="count"></li>
+												<t t-set="count" t-value="count+1"/>
+											</t>
+										</t>
+										
+										
+									  </ul>
+								<div class="carousel-inner" role="listbox">
+									<t t-set="count" t-value="0"/>
+									<t t-as="login_testimonial" t-foreach="request.env['sh.login.testimonial'].search([])" >		
+										<t t-if="count ==0">
+											<div class="carousel-item active">
+												<div class="testimonial4_slide">
+													<span class="fa fa-quote-left"></span>
+													<p class="quote_content"><span class="fa fa-quote-left"></span><t t-esc="login_testimonial.description"/><span class="fa fa-quote-right"></span></p>
+													<div class="mt-4 pt-3 pb-4">
+														<div class="d-flex align-items-center">
+															<div class="flex-shrink-0">
+																<img t-attf-src="/web/image?model=sh.login.testimonial&amp;field=client_image&amp;id=#{login_testimonial.id}" class="avatar-md img-fluid rounded-circle img-circle img-responsive" alt="..." />
+															</div>
+															<div class="flex-grow-1 ml-3 mb-0">
+																<h5 class="font-size-18 text-white font-weight-bold mb-0"><t t-esc="login_testimonial.name"/></h5>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<t t-set="count" t-value="1"/>
+										</t>
+										<t t-else="">
+											<div class="carousel-item">
+												<div class="testimonial4_slide">
+													<span class="fa fa-quote-left"></span>
+													<p class="quote_content"><span class="fa fa-quote-left"></span><t t-esc="login_testimonial.description"/><span class="fa fa-quote-right"></span></p>
+													<div class="mt-4 pt-3 pb-4">
+														<div class="d-flex align-items-center">
+															<div class="flex-shrink-0">
+																<img t-attf-src="/web/image?model=sh.login.testimonial&amp;field=client_image&amp;id=#{login_testimonial.id}" class="avatar-md img-fluid rounded-circle img-circle img-responsive" alt="..." />
+															</div>
+															<div class="flex-grow-1 ml-3 mb-0">
+																<h5 class="font-size-18 text-white font-weight-bold mb-0"><t t-esc="login_testimonial.name"/></h5>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+
+										</t>	
+										
+									</t>	
+								</div>
+								<a class="carousel-control-prev d-none" href="#testimonial4" data-slide="prev">
+									<span class="carousel-control-prev-icon"></span>
+								</a>
+								<a class="carousel-control-next d-none" href="#testimonial4" data-slide="next">
+									<span class="carousel-control-next-icon"></span>
+								</a>
+							</div>
+						</div>
+					</section>
+
+						
+
+				</div>
+			</div>
+		</div>
+
+		
+		</xpath>
+			
+    </template>
+    
+    	
+
+</odoo>

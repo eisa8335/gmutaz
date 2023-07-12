@@ -1,0 +1,63 @@
+/*--body-background-img--*/
+@if $body_background_type=='bg_img' {
+    .o_mail_thread .o_thread_message.o_mail_not_discussion,.o_mail_activity .o_thread_message.o_mail_not_discussion {background-color: rgba(255, 255, 255, 0) !important;}
+    .o_action_manager{background: rgba(235,235,235,0.85);}
+    .o_no_thread_window .o_mail_thread .a_right .o_thread_message_core .o_mail_info,.o_no_thread_window .o_mail_activity .a_right .o_thread_message_core .o_mail_info {color: #000000!important}
+    .o_thread_window .o_mail_thread .a_right .o_thread_message_core .o_mail_info,.o_thread_window .o_mail_activity .a_right .o_thread_message_core .o_mail_info,.o_mail_thread .a_left .o_thread_message_core .o_mail_info,.o_mail_activity .a_left .o_thread_message_core .o_mail_info,.o_mail_thread .o_thread_message .o_thread_message_core .o_mail_info,.o_mail_activity .o_thread_message .o_thread_message_core .o_mail_info {color: #000000!important;}
+    html body div.o_control_panel, html body .o_control_panel .o_cp_top_left .breadcrumb {background-color: transparent !important;}
+    .o_kanban_view.o_kanban_grouped {background-color: transparent;}
+    .o_graph .o_graph_container .o_graph_svg_container svg {background: #ffffffc7;}
+    .o_searchview {padding: 1px 25px 2px 5px;border-bottom: none;}
+    .o_form_view .o_form_sheet_bg>.o_form_sheet {background: transparent;}
+    html .o_web_client>.o_main .o_main_content .o_content {background-color: transparent;}
+    .o_field_number.o_input,.o_field_number .o_input {background-color: transparent!important;}
+    .o_required_modifier.o_input,.o_required_modifier .o_input {background-color: transparent!important;}
+    .nav-tabs .nav-link.active,.nav-tabs .nav-item.show .nav-link {background-color: transparent!important;}
+    .o_mail_discuss .o_mail_discuss_content {background-color: transparent!important;}
+    .o_base_settings .o_setting_container .settings {background-color: #ebebebd9;}
+    .o_web_settings_dashboard {background: transparent!important;}
+    .o_main_navbar {background-color: transparent;}
+    .o_list_view thead,.table-striped tbody tr:nth-of-type(odd) {background-color: #ebebebd9;}
+    .ui-sortable tr,.o_action {background-color: transparent;}
+    .o_mail_thread .o_thread_message.o_mail_not_discussion,.o_mail_activity .o_thread_message.o_mail_not_discussion {border-bottom: 1px solid #9c9c9c;}
+    .o_mail_thread .o_thread_date_separator,.o_mail_activity .o_thread_date_separator {border-bottom: 1px solid #9c9c9c;}
+    .o_form_view:not(.modal-content) {background-color: transparent;}
+    .o_form_view .o_form_sheet_bg {background: transparent !important;}
+    .o_form_view .o_form_statusbar {background-color: #ebebeb;}
+    .o_web_client {background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/web/image?model=sh.back.theme.config.settings&id=1&field=body_background_image');background-repeat: no-repeat;background-size: cover;color: $body_font_color;font-family: $body_font_family!important;}
+    .o_control_panel {font-family: $body_font_family!important;}
+    .breadcrumb {background-color: transparent!important;font-family: $body_font_family!important;}
+
+    .o_form_view .o_ChatterContainer .o_Chatter , .o_form_view .o_ChatterContainer .o_Chatter .o_ThreadView.o_Chatter_thread .o_MessageList,
+    .o_form_view .o_ChatterContainer .o_Chatter .o_ThreadView.o_Chatter_thread,
+    .o_form_view .o_ChatterContainer .o_Chatter .o_ThreadView.o_Chatter_thread .o_Message{background: transparent !important;}
+    @media only screen and (max-width: 767.98px) {
+        .o_control_panel .btn.o_enable_searchview {background: transparent;color: #ffff;}
+        .o_control_panel>.o_cp_right>.o_cp_pager .o_pager_counter {color: #ffff;}
+        .o_form_view .o_form_sheet_bg {background: transparent;border-bottom: 0px;}
+    }
+
+    body .o_content .o_kanban_group.bg-100,.o_control_panel .o_cp_top_right .o_cp_searchview .o_searchview .o_searchview_input_container .o_searchview_input{background: transparent !important;}
+    // v16 //
+    .o_control_panel .o_cp_bottom .o_cp_bottom_right .o_search_options .dropdown:not(.show) .dropdown-toggle.btn.btn-light:not(:hover):not(:focus),
+    .o_control_panel .o_cp_bottom .o_cp_bottom_right .o_cp_switch_buttons .o_switch_view.btn.btn-light:not(:hover):not(:focus):not(.active),
+    .btn-secondary:not(:hover):not(:focus):not(:active):not(.oe_kanban_action):not(.o_hr_attendance_back_button):not(.o_DiscussMobileMailboxSelectionItem),
+    .o_control_panel .o_cp_bottom_right .o_cp_action_menus .dropdown:not(.show) .dropdown-toggle.btn.btn-light:not(:hover):not(:focus),
+    .o_control_panel .o_cp_bottom .o_cp_bottom_left .o_graph_button:not(:hover):not(:focus),
+    .o_list_view .o_content.o_component_with_search_panel  .o_search_panel{background: transparent !important;border-color: transparent !important;}
+    body .o_notebook .nav,.o_spreadsheet_dashboard_action,.o_spreadsheet_dashboard_action .o_renderer .o-spreadsheet .o-grid,
+    .o_spreadsheet_dashboard_action .o_component_with_search_panel .o_spreadsheet_dashboard_search_panel,.o_kanban_view .o_component_with_search_panel .o_search_panel,
+    .o_component_with_search_panel .o_search_panel .o_search_panel_section.o_search_panel_filter .o_search_panel_field .o_search_panel_filter_value.list-group-item,
+    .o_component_with_search_panel .o_lunch_content .o_lunch_banner{background: transparent !important;}
+    .o_FormRenderer_chatterContainer .o_Chatter_fixedPanel .o_ChatterTopbar .o_ChatterTopbar_actions .o_ChatterTopbar_tools .o_ChatterTopbar_rightSection .o_ChatterTopbar_button:not(:hover):not(:focus), .o_FormRenderer_chatterContainer .o_Chatter_fixedPanel .o_ChatterTopbar .o_ChatterTopbar_actions .o_ChatterTopbar_tools .o_ChatterTopbar_rightSection .o_FollowButton .o_FollowButton_follow.o_ChatterTopbar_button:not(:hover):not(:focus){background: transparent !important;border-color: transparent !important;}
+    .o_form_view .o_field_statusbar > .o_statusbar_status > .o_arrow_button.o_arrow_button_current.disabled{background: $primaryColor !important;}
+    @if $mobile_icon_style !='floating' {
+        .o_cp_bottom_right .o_form_status_indicator .o_form_status_indicator_buttons .btn.btn-light:not(:hover):not(:focus){background-color: transparent !important;border-color: transparent !important;}
+        .o_control_panel .o_cp_top .o_cp_bottom_right .btn.btn-light.o_form_button_save,.o_control_panel .o_cp_top .o_cp_bottom_right .btn.btn-light.o_form_button_cancel{background-color: transparent;border-color: transparent;}
+    }
+    @if $is_sticky_chatter==True {
+        .o_FormRenderer_chatterContainer .o_Chatter_fixedPanel{background: transparent !important;}
+    }
+}
+/*--body-background-img--*/
+// .o_field_statusbar > .o_statusbar_status > .o_arrow_button:not(:first-child):before

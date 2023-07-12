@@ -1,0 +1,109 @@
+/*--------------
+top-navbar
+--------------*/
+
+.o_main_navbar {position: relative;border-bottom: 1px solid $header_bg_color;background-color: $header_bg_color;color: $header_font_color;box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);}
+.o_main_navbar>ul>li>a,.o_main_navbar>ul>li>label {line-height: 48px;height: 48px;}
+.o_main_navbar>.o_menu_brand {line-height: 48px;}
+.o_main_navbar>a,.o_main_navbar>button {height: 48px;}
+@if $body_background_type=="bg_img" {
+    .o_main_navbar>ul>li>a,.o_main_navbar>ul>li>label {line-height: 52px;height: 52px;}
+    .o_main_navbar>.o_menu_brand,.o_main_navbar>ul>li.sh_global_search .sh_search_container #topbar_search_icon {line-height: 52px;}
+    .o_main_navbar>a,.o_main_navbar>button {height: 52px;}
+}
+.o_mail_systray_item.o_no_notification>a {opacity: 1;}
+/*-------------
+top-navbar
+--------------*/
+.o_main_navbar>ul>li>a,.o_main_navbar>ul>li>label,.o_main_navbar .o_navbar_apps_menu.dropdown .o_dropdown_toggler a.full,.o_main_navbar .dropdown .dropdown-toggle, .o_main_navbar .o_menu_sections .dropdown .dropdown-toggle, .o_main_navbar .o_menu_systray .dropdown .dropdown-toggle, .o_main_navbar .o_nav_entry, .o_main_navbar .o_menu_sections .o_nav_entry, .o_main_navbar .o_menu_systray .o_nav_entry, .o_main_navbar > .o_menu_sections > div, .o_main_navbar > .o_menu_sections > div > a, .o_main_navbar .o_menu_systray > div, .o_main_navbar .o_menu_systray > div > a, .o_main_navbar .o_menu_toggle, .o_main_navbar .o_navbar_apps_menu, .o_main_navbar .o_menu_brand,.o_main_navbar .o_menu_systray .sh_bookmark .o_user_bookmark_menu a {color: $header_font_color;}
+.o_main_navbar .o_navbar_apps_menu.dropdown .o_dropdown_toggler>span {margin-top: 5px;}   
+.o_main_navbar .o_menu_systray .sh_calc_util .open_calc:hover{background-color: rgba(0, 0, 0, 0.08) ;}
+.o_main_navbar .o_menu_systray .o-dropdown--menu.dropdown-menu.d-block .dropdown-item:hover,
+.o_main_navbar .o_menu_systray .o-dropdown--menu.dropdown-menu.d-block .dropdown-item:focus,
+.o_main_navbar .o_menu_systray .o-dropdown--menu.dropdown-menu.d-block .dropdown-item .o_debug_profiling_item:hover,
+.o_main_navbar .o_menu_systray .o-dropdown--menu.dropdown-menu.d-block .dropdown-item .o_debug_profiling_item:focus,
+.o_main_navbar .o_menu_systray .o-dropdown--menu.dropdown-menu.d-block .dropdown-item .o_debug_profiling_item .o_profiling_switch:hover,
+.o_main_navbar .o_menu_systray .o-dropdown--menu.dropdown-menu.d-block .dropdown-item .o_debug_profiling_item .o_profiling_switch:focus,
+.o_main_navbar .o_menu_systray .o-dropdown--menu.dropdown-menu.d-block .dropdown-item .o_debug_profiling_item .o_profiling_switch .custom-control-label:hover{color: #212529 !important;}
+.o_main_navbar .o_menu_sections .o-dropdown.dropdown:focus .dropdown-toggle,.o_main_navbar .o_menu_sections .o-dropdown.dropdown.show .dropdown-toggle,
+.o_main_navbar .o_menu_systray .o-dropdown.dropdown.show .dropdown-toggle,
+.o_main_navbar .o_menu_systray .o_MessagingMenu.dropdown.show > .o_MessagingMenu_toggler.dropdown-toggle,
+.o_main_navbar .o_menu_systray .o_mail_systray_item.dropdown.show > .dropdown-toggle{color: $header_active_color;}
+.o_main_navbar .o_menu_systray .sh_calc_util.active{background-color: rgba(0, 0, 0, 0.08);}
+
+.o_main_navbar .o_dropdown.o_navbar_apps_menu.sh_backmate_theme_appmenu_div button.o_dropdown_toggler {padding: 0px 16px !important;}
+.o_main_navbar .o_menu_systray .o_night_mode:hover,.o_main_navbar .o_menu_systray .sh_bookmark:hover,.o_main_navbar .o_menu_systray .sh_bookmark.show {background: rgba(0, 0, 0, 0.08);}
+.o_main_navbar .o_menu_systray .o_night_mode{padding: 0 0.75rem;cursor: pointer; z-index: 9;}
+
+@media only screen and (min-width: 993px){
+    .o_main_navbar .o_menu_systray .o_switch_company_menu.o-dropdown.dropdown .dropdown-toggle,
+    .o_main_navbar .o_menu_systray .o_user_menu.o-dropdown.dropdown .dropdown-toggle{padding: 0 0.75rem;}
+}
+@if $body_background_type=='bg_img' {
+    .o_main_navbar>ul.o_menu_systray>li.o_night_mode,.o_main_navbar>ul.o_menu_systray>li,.o_main_navbar>ul.o_menu_systray .o_switch_company_menu .o_dropdown_toggler,.o_main_navbar .o_menu_brand,.o_main_navbar .o_menu_sections .o_dropdown .o_dropdown_toggler,.o_main_navbar .o_menu_sections .o_dropdown,.o_main_navbar .o_menu_sections li.o_dropdown_item.o_nav_entry {height: 52px;}
+    .o_main_navbar>ul.o_menu_systray .o_switch_company_menu .o_dropdown_toggler:hover,
+    .o_main_navbar .o_menu_sections .o_dropdown .o_dropdown_toggler:hover {background: $header_hover_color;}
+    .o_main_navbar .o_dropdown.o_navbar_apps_menu.sh_backmate_theme_appmenu_div .o_dropdown_menu.o-popper-position {top: 52px !important;}
+    .o_main_navbar .o_dropdown.o_navbar_apps_menu.sh_backmate_theme_appmenu_div button.o_dropdown_toggler {height: 53px;}
+    @media only screen and (max-width: 767.98px) {
+        .o_main_navbar .o_dropdown.o_navbar_apps_menu.sh_backmate_theme_appmenu_div button.o_dropdown_toggler,
+        .o_main_navbar .o_menu_systray .sh_global_search {height: 50px;}
+        .o_web_client .o_form_view .oe_button_box .btn.oe_stat_button{background: #fff;}
+    }
+}
+@if $theme_style=='style_6' and $body_background_type=='bg_img' {
+    .o_main_navbar .o_menu_sections .dropdown.o-dropdown:hover,.o_main_navbar .o_menu_sections .dropdown:focus,
+    .o_main_navbar .o_menu_sections .dropdown.o-dropdown.show,
+    .o_main_navbar .o_menu_systray .o-dropdown.dropdown.show,
+    .o_main_navbar .o_menu_systray .o-dropdown.dropdown:hover,.o_main_navbar .o_menu_systray .o-dropdown.dropdown:focus,
+    .o_main_navbar .o_menu_systray .dropdown:hover,
+    .o_main_navbar .o_menu_systray .sh_calc_util:hover,.o_main_navbar .o_menu_systray .sh_calc_util:focus,
+    .o_main_navbar .o_menu_systray .sh_bookmark_menu_list:hover,.o_main_navbar .o_menu_systray .sh_bookmark_menu_list:focus,
+    .o_main_navbar .o_menu_systray .todo:hover,.o_main_navbar .o_menu_systray .todo:focus,
+    .o_main_navbar .o_menu_systray .sh_bookmark_menu_list.show,
+    .o_main_navbar .o_menu_systray .o_user_bookmark_menu:hover,.o_main_navbar .o_menu_systray .o_user_bookmark_menu:focus,
+    .o_main_navbar .o_menu_systray .o_full_screen:hover,.o_main_navbar .o_menu_systray .o_full_screen:focus,
+    .o_main_navbar .o_menu_systray .o_night_mode:hover{background: $primaryColor;}
+    .o_main_navbar .o_menu_systray .sh_language_icon.show > a,
+    .o_main_navbar .o_menu_systray .sh_language_icon:hover > a{background-color: $primaryColor !important;}
+}
+/* ---- language selector menu -----*/ 
+.o_main_navbar .o_menu_systray .sh_language_icon svg{width: 15px;}
+.o_menu_systray .sh_language_icon .sh_user_language_list_cls .dropdown-item.active:not(.dropdown-item_active_noarrow):before, .o_menu_systray .sh_language_icon .sh_user_language_list_cls .dropdown-item.selected:not(.dropdown-item_active_noarrow):before{display: none;}
+.o_menu_systray .sh_language_icon .sh_user_language_list_cls .dropdown-item.active:focus, .o_menu_systray .sh_language_icon .sh_user_language_list_cls .dropdown-item.active:hover, .o_menu_systray .sh_language_icon .sh_user_language_list_cls .dropdown-item.selected:focus, .o_menu_systray .sh_language_icon .sh_user_language_list_cls .dropdown-item.selected:hover,.o_menu_systray .sh_language_icon .sh_user_language_list_cls .dropdown-item.active{background-color: rgba(0, 0, 0, 0.08);}
+.o_menu_systray .sh_language_icon .sh_user_language_list_cls img.sh_lang_flag{height: 25px;width: 25px;object-fit: cover;margin-right: 5px;}
+
+//  16  // 
+.o_main_navbar .o_menu_systray .sh_bookmark .o_user_bookmark_menu a > span,
+.o_main_navbar .o_menu_systray .o_night_mode > span,
+.o_main_navbar .o_menu_systray .o_switch_company_menu.o-dropdown.dropdown .dropdown-toggle::before,
+.o_main_navbar > .o_menu_brand,
+.sh_global_search .sh_search_input .sh_search_input .input-group-text,
+.o_main_navbar .o_menu_systray .sh_global_search .sh_search_container .input-group{line-height: 40px !important;}
+.o_main_navbar .o_menu_systray .sh_global_search .sh_search_container .input-group{height: 40px !important; align-items: center !important;}
+
+.o_main_navbar .dropdown .dropdown-toggle:hover, .o_main_navbar .o_nav_entry:hover, .o_main_navbar > .o_menu_sections > div:hover, .o_main_navbar > .o_menu_sections > div > a:hover, .o_main_navbar .o_menu_systray > div:hover, .o_main_navbar .o_menu_systray > div > a:hover, .o_main_navbar .o_menu_toggle:hover, .o_main_navbar .o_navbar_apps_menu:hover,.o_main_navbar .o_menu_systray .sh_bookmark:hover,
+.o_navbar .o_main_navbar .o_switch_company_menu:hover .dropdown-toggle::before,
+.o_main_navbar .sh_bookmark:hover .o_user_bookmark_menu > a,
+.o_main_navbar .MessagingMenuContainer .o_MessagingMenu:hover .o_MessagingMenu_toggler{color: $header_hover_color !important;}
+.o_main_navbar .o_user_menu.show .dropdown-toggle,
+.o_navbar .o_main_navbar .o_switch_company_menu.show .dropdown-toggle::before,
+.o_main_navbar .sh_bookmark:focus .o_user_bookmark_menu > a,
+.o_main_navbar .sh_language_icon a.openDropdownLanguage:focus,
+.o_main_navbar .sh_calc_util.active .open_calc,
+.o_main_navbar .todo a:focus,
+.o_main_navbar .o_ActivityMenuView .o_ActivityMenuView_dropdownToggle[aria-expanded="true"],
+.o_main_navbar .MessagingMenuContainer .o_MessagingMenu.show .o_MessagingMenu_toggler{color: $header_active_color !important;}
+.o_main_navbar .o_menu_systray .MessagingMenuContainer .o_MessagingMenu .o_MessagingMenu_counter.badge,
+.o_main_navbar .o_menu_systray .o_ActivityMenuView .o_ActivityMenuView_dropdownToggle .o_ActivityMenuView_counter.badge{background: darken($primaryColor, 15%);color: #ffffff;}
+
+.o_main_navbar .o_menu_systray .o_switch_company_menu .toggle_company .text-primary{color: $primaryColor !important;}
+.o_main_navbar .o_menu_systray .o_switch_company_menu .alert-primary{background: lighten($primaryColor, 25%);}
+.o_main_navbar .o_menu_systray .sh_language_icon,
+.o_main_navbar .o_menu_systray .sh_calc_util{position: relative;}
+.o_main_navbar .o_menu_systray .sh_language_icon .sh_user_language_list_cls,
+.o_main_navbar .o_menu_systray .sh_calc_util .sh_calc_results{left: auto;right: 0;}
+
+.o_main_navbar .o_menu_systray .todo .fa,.o_main_navbar .o_menu_systray .o_night_mode .fa,
+.o_main_navbar .o_menu_systray .sh_calc_util .fa,.o_main_navbar .o_menu_systray .sh_language_icon .fa,
+.o_main_navbar .o_menu_systray .sh_bookmark .fa,.o_main_navbar .o_menu_systray .o_full_screen .fa{font-size: 15px;}

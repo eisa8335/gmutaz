@@ -1,0 +1,34 @@
+/*
+=======================================================================
+				Chatter Sticky Start
+=======================================================================
+*/
+
+@if $is_sticky_chatter==True {
+    @if $is_sticky_form==True {
+        .o_Chatter_fixedPanel {position: sticky;top: 0px;z-index: 1;background-color: #fff !important;}
+        @if $theme_style=="style_7"{
+            .o_Chatter_fixedPanel{background: #fff ;}
+        }
+        @if $theme_style=='style_8' {
+            .o_Chatter_fixedPanel {top: 0px;}
+        }
+    }
+    @else {
+        .o_Chatter_fixedPanel {position: sticky;top: 0px !important;z-index: 1;}
+        @if $theme_style=="style_7"{
+            .o_Chatter_fixedPanel{background: #fff;}
+        }
+        @if $theme_style=='style_8' {
+            .o_Chatter_fixedPanel {top: 8px !important;}
+        }
+    }
+    .o_form_view .o_FormRenderer_chatterContainer.oe_chatter .o_ChatterContainer.overflow-auto{overflow: unset !important;}
+}
+
+
+/*
+=======================================================================
+				Chatter Sticky End
+=======================================================================
+*/

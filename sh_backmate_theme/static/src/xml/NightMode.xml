@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+
+    <t t-name="NightModeTemplate">
+		<div class="o_night_mode">
+			<span class="fa fa-moon-o" id="moon_button"></span>
+			<span class="fa fa-sun-o" id="sun_button" style="display: none;"></span>
+			<input type="checkbox" id="night_checkbox" style="display:none;"/>
+        </div>
+	</t>
+</templates>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+    <t t-name="appDrawer">
+        <div class="app_drawer_overlay_background">
+            <div class="app_drawer_layout" id="app_drawer_layout">
+                <!-- <div class="sh_menu_header">
+      			<h3>Apps</h3>
+      			<i class="fa fa-close close_app_drawer"></i>
+      		</div> -->
+                <div class="sh_profile_part">
+                    <div class="sh_user_profile_div">
+                        <img t-att-src="'/web/image?model=res.users&amp;field=avatar_128&amp;id='+widget.user_id" alt="User"
+                            class="rounded-circle o_user_avatar" />
+                        <span class="sh_login_username">
+                            <t t-esc="widget.username" />
+                        </span>
+                    </div>
+                    <a href="/web/session/logout" class="sh_user_logout" data-menu="logout" title="Logout">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-power mr-50">
+                            <path d="M18.36 6.64a9 9 0 1 1-12.73 0"></path>
+                            <line x1="12" y1="2" x2="12" y2="12"></line>
+                        </svg>
+                    </a>
+                </div>
+
+
+                <div class="sh_app_drawer_search"></div>
+                <div class="sh_apps_div">
+                    <div class="pinned_app_div">
+
+                        <span class="pinned_menu">
+                            <svg class="mr-3" xmlns="http://www.w3.org/2000/svg" width="28px" height="28px" version="1.1" viewBox="0 0 752 752">
+                                <path d="m587.19 322.67c-28.441 14.223-52.621 18.488-76.797 9.957l-54.043 54.043c1.4219 32.711 1.4219 93.863-8.5312 113.77-21.332 45.508-82.484 19.91-135.11-29.867l-143.64 122.3c-2.8438 1.4219-7.1094 2.8438-8.5312 0-2.8438-2.8438-2.8438-7.1094 0-8.5312l122.3-143.64c-51.199-54.043-75.375-115.2-31.289-136.53 19.91-9.957 81.062-9.957 113.77-8.5312l54.043-54.043c-7.1094-22.754-4.2656-46.93 9.957-76.797 21.332-42.664 200.52 136.53 157.86 157.86z" fill="#ffffff" fill-rule="evenodd" />
+                            </svg>
+                            <span class="sh_pinned_lbl">Pinned</span>
+                        </span>
+                        <div class="pinned_div">
+                            <!-- <div class="new_app_div"/> -->
+
+                            <div id="pinned_app_drawer_menu" />
+                        </div>
+
+                    </div>
+                    <!-- <br/><br/> -->
+                    <div class="app_div">
+                        <span class="app_menu">
+                            <svg class="mr-3" xmlns="http://www.w3.org/2000/svg" width="28px" height="28px" version="1.1" viewBox="0 0 752 752">
+                                <g fill="#fff">
+                                    <path d="m331.91 141.69h-161.93c-15.438 0-27.992 12.555-27.992 27.992v161.93c0 15.445 12.555 28 27.992 28h161.93c15.438 0 28-12.555 28-28v-161.92c0-15.441-12.555-28-28-28z" fill="#ffffff" />
+                                    <path d="m421.43 359.62h161.94c15.438 0 27.992-12.555 27.992-28v-161.93c0-15.438-12.555-27.992-27.992-27.992l-161.94-0.003906c-15.434 0-27.992 12.555-27.992 27.992v161.93c-0.003906 15.449 12.555 28.004 27.992 28.004z" fill="#ffffff" />
+                                    <path d="m331.91 393.14h-161.93c-15.438 0-27.992 12.559-27.992 27.992v161.94c0 15.438 12.555 27.992 27.992 27.992h161.93c15.438 0 28-12.555 28-27.992v-161.94c0-15.434-12.555-27.992-28-27.992z" fill="#ffffff" />
+                                    <path d="m583.37 393.14h-161.93c-15.434 0-27.992 12.559-27.992 27.992v161.94c0 15.438 12.559 27.992 27.992 27.992h161.94c15.438 0 27.992-12.555 27.992-27.992v-161.94c0-15.434-12.555-27.992-27.996-27.992zm-22.703 118.68h-48.551v48.551c0 5.3594-4.3516 9.7148-9.7188 9.7148-5.3594 0-9.707-4.3516-9.707-9.7148v-48.551h-48.547c-5.3672 0-9.7148-4.3555-9.7148-9.7188 0-5.3594 4.3477-9.707 9.7148-9.707h48.551v-48.551c0-5.3672 4.3477-9.7148 9.707-9.7148 5.3672 0 9.7188 4.3477 9.7188 9.7148v48.551h48.551c5.3594 0 9.7148 4.3477 9.7148 9.707 0 5.3594-4.3555 9.7188-9.7188 9.7188z" fill="#ffffff" />
+                                </g>
+                            </svg>
+                            <span class="sh_all_apps_lbl">My Apps</span>
+                        </span>
+                        <div id="app_drawer_menu" />
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </t>
+    <!-- <t t-name="newAppMenu">
+        <div class="newAppDiv">
+            <img class="o_app_icon rounded" src="sh_backmate_theme/static/src/img/default_icon_app.png"/>
+            <span>New App </span>
+        </div>
+    </t> -->
+    <t t-name="pinned_app_drawer_menu">
+
+
+        <t t-set="app_id" t-value="app.id" />
+        <t t-set="app_icon_style" t-value="widget.getIconStyle()" />
+
+
+        <span class="dropdown-item o_app">
+            <a class="sh_app" t-att-href="href" t-on-click.prevent="" t-att-menu_id="app_id">
+                <span class="sh_app_item">
+                    <t t-if="app_icon_style  == 'style_1'">
+                        <img class="img" t-attf-src="/web/image?model=ir.ui.menu&amp;field=web_icon_data&amp;id={{app_id}}" t-att-title="app.name" t-att-alt="app.name" />
+                    </t>
+                    <t t-elif="app_icon_style  == 'style_2'">
+                        <span t-attf-class="sh-{{app_icon}} sh_fa_icon"></span>
+                    </t>
+                    <t t-elif="app_icon_style  == 'style_3'">
+
+
+                        <img class="img app_img" t-attf-src="sh_backmate_theme/static/src/app_icon/{{app_icon}}.png" t-att-title="app.name" t-att-alt="app.name" style="height: 55px;width: 55px;" />
+                    </t>
+                    <t t-elif="app_icon_style  == 'style_4'">
+                        <span t-attf-class="sh-{{app_icon}}-dt sh_fa_icon">
+                            <span class="path1"></span>
+                            <span class="path2"></span>
+                        </span>
+                    </t>
+                    <span class="sh_app_name" t-att-title="app.name">
+                        <t t-esc="app.name" />
+                    </span>
+                </span>
+                <div class="sh_remove_icon">
+                    <!-- <img src="sh_backmate_theme/static/src/img/remove.jpg" class="" alt=""/> -->
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 1792 1792" xml:space="preserve" style="width: 12px;fill: #e5e518;">
+                        <path d="M1082.2,896.6l410.2-410c51.5-51.5,51.5-134.6,0-186.1s-134.6-51.5-186.1,0l-410.2,410L486,300.4  c-51.5-51.5-134.6-51.5-186.1,0s-51.5,134.6,0,186.1l410.2,410l-410.2,410c-51.5,51.5-51.5,134.6,0,186.1  c51.6,51.5,135,51.5,186.1,0l410.2-410l410.2,410c51.5,51.5,134.6,51.5,186.1,0c51.1-51.5,51.1-134.6-0.5-186.2L1082.2,896.6z" />
+                    </svg>
+                </div>
+
+
+            </a>
+        </span>
+
+    </t>
+
+    <t t-name="appDrawerMenu">
+
+        <t t-set="app_id" t-value="app.id" />
+        <t t-set="app_icon_style" t-value="widget.getIconStyle()" />
+        <span class="dropdown-item o_app">
+            <a class="sh_app" t-att-href="href" t-on-click.prevent="" t-att-menu_id="app_id">
+                <span class="sh_app_item" t-att-title="app.name">
+                    <t t-if="app_icon_style  == 'style_1'">
+                        <img class="img" t-attf-src="/web/image?model=ir.ui.menu&amp;field=web_icon_data&amp;id={{app_id}}" t-att-title="app.name" t-att-alt="app.name" />
+                    </t>
+                    <t t-elif="app_icon_style  == 'style_2'">
+                        <span t-attf-class="sh-{{app_icon}} sh_fa_icon"></span>
+                    </t>
+                    <t t-elif="app_icon_style  == 'style_3'">
+
+
+                        <img class="img app_img" t-attf-src="sh_backmate_theme/static/src/app_icon/{{app_icon}}.png" t-att-title="app.name" t-att-alt="app.name" style="height: 55px;width: 55px;" />
+                    </t>
+                    <t t-elif="app_icon_style  == 'style_4'">
+                        <span t-attf-class="sh-{{app_icon}}-dt sh_fa_icon">
+                            <span class="path1"></span>
+                            <span class="path2"></span>
+                        </span>
+                    </t>
+                    <span class="app_name" t-att-title="app.name">
+                        <t t-esc="app.name" />
+                    </span>
+                </span>
+                <t t-if="!pinned">
+                    <div class="sh_fav_icon_div">
+
+                        <svg class="sh_fav_icon" style="fill: #e5e518;" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" version="1.2" baseProfile="tiny">
+                            <path d="M16.729 4.271c-.389-.391-1.021-.393-1.414-.004-.104.104-.176.227-.225.355-.832 1.736-1.748 2.715-2.904 3.293-1.297.64-2.786 1.085-5.186 1.085-.13 0-.26.025-.382.076-.245.102-.439.297-.541.541-.101.244-.101.52 0 .764.051.123.124.234.217.326l3.243 3.243-4.537 6.05 6.05-4.537 3.242 3.242c.092.094.203.166.326.217.122.051.252.078.382.078s.26-.027.382-.078c.245-.102.44-.295.541-.541.051-.121.077-.252.077-.381 0-2.4.444-3.889 1.083-5.166.577-1.156 1.556-2.072 3.293-2.904.129-.049.251-.121.354-.225.389-.393.387-1.025-.004-1.414l-3.997-4.02z" />
+                        </svg>
+
+
+                    </div>
+                </t>
+
+            </a>
+        </span>
+
+    </t>
+
+</template>

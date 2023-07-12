@@ -1,0 +1,214 @@
+/*====TO USE GOOGLE FONT======*/
+
+@if $is_used_google_font==True {
+    @import url("https://fonts.googleapis.com/css?family=#{unquote($body_google_font_family)}");
+    $body_font_family: $body_google_font_family;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus {-webkit-box-shadow: 0 0 0px 40rem $login_page_box_color inset !important;}
+
+
+/*====TO USE GOOGLE FONT======*/
+
+@if $login_page_style=='style_1' {
+    body.bg-100,body.bg-100 .card {font-family: $body_font_family!important;}
+    @if $login_page_background_type=='bg_color' {
+        body.bg-100 .card input {padding-left: 0;background-color: transparent;background-repeat: no-repeat;background-position: center bottom, center calc(100% - 1px);background-size: 0 2px, 100% 1px;transition: background 0s ease-out;border-bottom: 1px solid #ccc;border-left: 0px;border-right: 0px;border-top: 0px;padding: .429rem 1.072rem;border-radius: 0px;}
+        body.bg-100 .card input:focus {-webkit-background-size: 100% 2px, 100% 1px;background-size: 100% 2px, 100% 1px;outline: 0;-webkit-transition-duration: .3s;-o-transition-duration: .3s;transition-duration: .3s;float: none;background-image: linear-gradient($primaryColor, $primaryColor), linear-gradient($primaryColor, $primaryColor);border: 0;border-radius: 0;-webkit-box-shadow: none;box-shadow: none;}
+        body.bg-100 .justify-content-between.mt-2.d-flex.small {justify-content: center !important;}
+        body.bg-100 .justify-content-between.mt-2.d-flex.small a {color: $header_bg_color;}
+        body.bg-100 .btn.btn-link.btn-sm,body.bg-100 .btn-group-sm>.btn.btn-link body.bg-100 {color: $header_bg_color!important;}
+        .bg-100 {color: $header_bg_color!important}
+        body.bg-100 .text-center.small.mt-4.pt-3.border-top {margin-top: .5rem !important}
+        body.bg-100 .text-center.small.mt-4.pt-3.border-top a {color: $header_bg_color}
+        body.bg-100 .btn.btn-link.btn-sm {color: $header_bg_color;padding-top: 15px}
+        body.bg-100 .o_database_list {position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);background-color: $login_page_background_color !important;}
+        .bg-100 {background-color: $login_page_background_color !important;}
+        body.bg-100 .container .bg-100 {background-color: $login_page_box_color !important}
+        body.bg-100 .container.pb-5 {padding-top: 2rem}
+        body.bg-100 .container.mb-5 {margin-bottom: 0rem !important}
+        body.bg-100 .container.pb-5 .mt-5 {margin-top: 0rem !important}
+        body.bg-100 .o_database_list {width: 390px;max-width: 100%!important;border-radius: 10px;overflow: hidden;box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);padding: 0px 25px;}
+        body.bg-100 .container .bg-100 {background-color: $login_page_box_color !important;color: #212529;}
+        body.bg-100 .card .form-control:focus {box-shadow: none;}
+        body.bg-100 .btn-secondary {background-color: $primaryColor;border-color: $primaryColor;}
+        body.bg-100 .container input[type=text] {background-color: transparent !important;border: none;color: #0d0d0d;text-align: left;text-decoration: none;display: inline-block;font-size: 16px;-webkit-transition: all 0.5s ease-in-out;-moz-transition: all 0.5s ease-in-out;-ms-transition: all 0.5s ease-in-out;-o-transition: all 0.5s ease-in-out;transition: all 0.5s ease-in-out;-webkit-border-radius: 5px 5px 5px 5px;border-radius: 5px 5px 5px 5px;padding: 15px 25px 15px 0px;border-bottom: 1px solid #dcdcdc;border-radius: 0px;}
+        body.bg-100 .container input[type=password] {background-color: transparent;border: none;color: #0d0d0d;text-align: left;text-decoration: none;display: inline-block;font-size: 16px;-webkit-transition: all 0.5s ease-in-out;-moz-transition: all 0.5s ease-in-out;-ms-transition: all 0.5s ease-in-out;-o-transition: all 0.5s ease-in-out;transition: all 0.5s ease-in-out;-webkit-border-radius: 5px 5px 5px 5px;border-radius: 5px 5px 5px 5px;padding: 15px 25px 15px 0px;border-bottom: 1px solid #dcdcdc;border-radius: 0px;}
+        body.bg-100 .container .btn-primary {border: none;color: white;padding: 15px 80px;text-align: center;text-decoration: none;display: inline-block;text-transform: uppercase;font-size: 13px;box-shadow: none;-webkit-border-radius: 5px 5px 5px 5px;border-radius: 5px 5px 5px 5px;-webkit-transition: all 0.3s ease-in-out;-moz-transition: all 0.3s ease-in-out;-ms-transition: all 0.3s ease-in-out;-o-transition: all 0.3s ease-in-out;transition: all 0.3s ease-in-out;background-color: $primaryColor;}
+        body.bg-100 .container .oe_login_form .justify-content-between.mt-2 {margin-top: 1rem !important;}
+    }
+    @if $login_page_background_type=='bg_img' {
+        body.bg-100 .card input {padding-left: 0;background-color: transparent;background-repeat: no-repeat;background-position: center bottom, center calc(100% - 1px);background-size: 0 2px, 100% 1px;transition: background 0s ease-out;border-bottom: 1px solid #ccc;border-left: 0px;border-right: 0px;border-top: 0px;padding: .429rem 1.072rem;border-radius: 0px;}
+        body.bg-100 .card input:focus {-webkit-background-size: 100% 2px, 100% 1px;background-size: 100% 2px, 100% 1px;outline: 0;-webkit-transition-duration: .3s;-o-transition-duration: .3s;transition-duration: .3s;float: none;background-image: linear-gradient($primaryColor, $primaryColor), linear-gradient($primaryColor, $primaryColor);border: 0;border-radius: 0;-webkit-box-shadow: none;box-shadow: none;}
+        body.bg-100 .o_database_list {position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);}   
+        body.bg-100 .btn.btn-link.btn-sm,
+        body.bg-100 .btn-group-sm>.btn.btn-link body.bg-100 {color: $header_bg_color!important}
+        .bg-100 {color: $header_bg_color!important}
+        body.bg-100 .text-center.small.mt-4.pt-3.border-top {margin-top: .5rem !important}
+        body.bg-100 .text-center.small.mt-4.pt-3.border-top a {color: $header_bg_color}
+        body.bg-100 .btn.btn-link.btn-sm {color: $header_bg_color;padding-top: 15px}
+        body.bg-100 .justify-content-between.mt-2.d-flex.small a {color: $header_bg_color;padding-top: 15px}
+        body.bg-100 .justify-content-between.mt-2.d-flex.small {justify-content: center!important}
+        body.bg-100 .o_database_list {position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);}
+        body.bg-100 {background: linear-gradient( rgba(0, 0, 0, 0.33), rgba(0, 0, 0, 0.5)), url('/web/image?model=sh.back.theme.config.settings&id=1&field=login_page_background_image');background-repeat: no-repeat;background-size: cover;color: $header_bg_color;font-family: $body_font_family!important;}
+        body.bg-100 .container.pb-5 {padding-top: 2rem}
+        body.bg-100 .container.pb-5 {padding-bottom: 0px!important}
+        body.bg-100 .container.pb-5 .mt-5 {margin-top: 0rem !important}
+        body.bg-100 .container.mb-5 {margin-bottom: 0rem !important}
+        body.bg-100 .o_database_list {width: 390px;max-width: 100%!important;border-radius: 10px;overflow: hidden;box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);padding: 0px 25px;}
+        body.bg-100 .container .bg-100 {background-color: $login_page_box_color !important;color: #212529;}
+        body.bg-100 .card.form-control:focus {box-shadow: none;}
+        body.bg-100 .container input[type=text] {background-color: transparent !important;border: none;color: #0d0d0d;text-align: left;text-decoration: none;display: inline-block;font-size: 16px;-webkit-transition: all 0.5s ease-in-out;-moz-transition: all 0.5s ease-in-out;-ms-transition: all 0.5s ease-in-out;-o-transition: all 0.5s ease-in-out;transition: all 0.5s ease-in-out;-webkit-border-radius: 5px 5px 5px 5px;border-radius: 5px 5px 5px 5px;padding: 15px 25px 15px 0px;border-bottom: 1px solid #dcdcdc;border-radius: 0px;}
+        body.bg-100 .container input[type=password] {background-color: transparent;border: none;color: #0d0d0d;text-align: left;text-decoration: none;display: inline-block;font-size: 16px;-webkit-transition: all 0.5s ease-in-out;-moz-transition: all 0.5s ease-in-out;-ms-transition: all 0.5s ease-in-out;-o-transition: all 0.5s ease-in-out;transition: all 0.5s ease-in-out;-webkit-border-radius: 5px 5px 5px 5px;border-radius: 5px 5px 5px 5px;padding: 15px 25px 15px 0px;border-bottom: 1px solid #dcdcdc;border-radius: 0px;}
+        body.bg-100 .btn-secondary {background-color: $primaryColor;border-color: $primaryColor;}
+        body.bg-100 .container .btn-primary {border: none;color: white;padding: 15px 80px;text-align: center;text-decoration: none;display: inline-block;text-transform: uppercase;font-size: 13px;box-shadow: none;-webkit-border-radius: 5px 5px 5px 5px;border-radius: 5px 5px 5px 5px;-webkit-transition: all 0.3s ease-in-out;-moz-transition: all 0.3s ease-in-out;-ms-transition: all 0.3s ease-in-out;-o-transition: all 0.3s ease-in-out;transition: all 0.3s ease-in-out;background-color: $primaryColor;border-color: $primaryColor;}
+        body.bg-100 .container .oe_login_form .justify-content-between.mt-2 {margin-top: 1rem !important;}
+    }
+    @media only screen and (max-width: 992px) and (min-width: 768px) {
+        body.bg-100 .o_database_list {top: 50%;}
+    }
+    @media only screen and (max-width: 767.98px) {
+        body.bg-100 .o_database_list {top: 50%;}
+        body.bg-100 .o_database_list {max-width: 325px !important;}
+    }
+}
+
+@if $login_page_style=='style_2' {
+    body.bg-100,body.bg-100 .card {font-family: $body_font_family!important;}
+    body.bg-100 .justify-content-between.mt-2.d-flex.small {justify-content: center !important;}
+    body.bg-100 .justify-content-between.mt-2.d-flex.small a {color: $header_bg_color;padding-top: 15px;}
+    body.bg-100 .card input {padding-left: 0;background-color: transparent;background-repeat: no-repeat;background-position: center bottom, center calc(100% - 1px);background-size: 0 2px, 100% 1px;transition: background 0s ease-out;border-bottom: 1px solid #ccc;border-left: 0px;border-right: 0px;border-top: 0px;padding: .429rem 1.072rem;border-radius: 0px;}
+    body.bg-100 .card input:focus {-webkit-background-size: 100% 2px, 100% 1px;background-size: 100% 2px, 100% 1px;outline: 0;-webkit-transition-duration: .3s;-o-transition-duration: .3s;transition-duration: .3s;float: none;background-image: linear-gradient($primaryColor, $primaryColor), linear-gradient($primaryColor, $primaryColor);border: 0;border-radius: 0;-webkit-box-shadow: none;box-shadow: none;}
+    body.bg-100 .btn.btn-link.btn-sm,body.bg-100 .btn-group-sm>.btn.btn-link body.bg-100 {color: $header_bg_color!important;}
+    .bg-100 {color: $header_bg_color!important;}
+    body.bg-100 .text-center.small.mt-4.pt-3.border-top {margin-top: .5rem !important;}
+    body.bg-100 .text-center.small.mt-4.pt-3.border-top a {color: $header_bg_color;}
+    body.bg-100 .btn.btn-link.btn-sm {color: $header_bg_color;padding-top: 15px;}
+    body.bg-100 .sh_backmate_th_login_left_img_st_2::after {content: "";position: absolute;top: 0;left: 0;width: 100%;height: 100%;}
+    body.bg-100 .sh_backmate_th_login_left_img_st_2 {background: url('/web/image?model=sh.back.theme.config.settings&id=1&field=login_page_banner_image');background-repeat: no-repeat;background-size: cover;min-height: 100vh;background-position-x: center;}
+    body.bg-100 .mt-5 {margin-top: 0rem !important;}
+    body.bg-100 .sh_backmate_th_login_left_img_st_2.col-lg-6 {padding: 0px}
+    body.bg-100 .sh_backmate_th_login_left_img_st_2 img {width: 100}
+    body.bg-100 .container-fluid.pb-5 {padding-bottom: 0rem !important}
+    body.bg-100 .container-fluid.mb-5 {margin-bottom: 0rem !important}
+    body.bg-100 .o_database_list {max-width: 100%!important;border-radius: 0px;overflow: hidden;padding: 0px 25px;}
+    body.bg-100 .container .bg-100 {background-color: $login_page_box_color !important;color: #212529;}
+    body.bg-100 {background-color: $login_page_box_color !important;}
+    body.bg-100 .card .form-control:focus {box-shadow: none;}
+    body.bg-100 .card input[type=text] {background-color: transparent;border: none;color: #0d0d0d;text-align: left;text-decoration: none;display: inline-block;font-size: 16px;-webkit-transition: all 0.5s ease-in-out;-moz-transition: all 0.5s ease-in-out;-ms-transition: all 0.5s ease-in-out;-o-transition: all 0.5s ease-in-out;transition: all 0.5s ease-in-out;-webkit-border-radius: 5px 5px 5px 5px;border-radius: 5px 5px 5px 5px;padding: 13px 5px;background: #efefefcc;border-left: 5px solid $header_bg_color;border-radius: 0px;}
+    body.bg-100 .card input[type=password] {background-color: transparent;border: none;color: #0d0d0d;text-align: left;text-decoration: none;display: inline-block;font-size: 16px;-webkit-transition: all 0.5s ease-in-out;-moz-transition: all 0.5s ease-in-out;-ms-transition: all 0.5s ease-in-out;-o-transition: all 0.5s ease-in-out;transition: all 0.5s ease-in-out;-webkit-border-radius: 5px 5px 5px 5px;border-radius: 5px 5px 5px 5px;padding: 13px 5px;background: #efefefcc;border-left: 5px solid $header_bg_color;border-radius: 0px;}
+    body.bg-100 .card .btn-primary {border: none;color: white;padding: 15px 80px;text-align: center;text-decoration: none;display: inline-block;text-transform: uppercase;font-size: 13px;box-shadow: none;-webkit-border-radius: 5px 5px 5px 5px;border-radius: 5px 5px 5px 5px;-webkit-transition: all 0.3s ease-in-out;-moz-transition: all 0.3s ease-in-out;-ms-transition: all 0.3s ease-in-out;-o-transition: all 0.3s ease-in-out;transition: all 0.3s ease-in-out;background-color: $primaryColor;border-color: $primaryColor;}
+    body.bg-100 .card .btn-secondary {background-color: $primaryColor;border-color: $primaryColor;}
+    body.bg-100 .btn-primary:not(:disabled):not(.disabled):active,
+    body.bg-100 .btn-primary:not(:disabled):not(.disabled).active,
+    body.bg-100 .show>.btn-primary.dropdown-toggle {background-color: $primaryColor;border-color: $primaryColor}
+    body.bg-100 .oe_login_buttons a.btn {padding-top: 25px}
+    body.bg-100 .container .oe_login_form .justify-content-between.mt-2 {margin-top: 1rem !important}
+    body.bg-100 .container .bg-100 {background-color: $login_page_box_color !important}
+    body.bg-100 .o_database_list {background-color: $login_page_box_color !important}
+    @media (min-width:575px) {
+        body.bg-100 .card .card-body {border-radius: 10px;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);}
+    }
+    @media (max-width: 574px) {
+        body.bg-100 .sh_backmate_th_login_left_img_st_2 {display: none;}
+        body.bg-100 .o_database_list {box-shadow: none}
+    }
+    body.bg-100 .btn-primary {background-color: $primaryColor;border-color: $primaryColor;}
+    body.bg-100 .btn-secondary:not(:disabled):not(.disabled):active,
+    body.bg-100 .btn-secondary:not(:disabled):not(.disabled).active,
+    body.bg-100 .show>.btn-secondary.dropdown-toggle {background-color: $primaryColor;border-color: $primaryColor;}
+    @media only screen and (max-width: 992px) {
+        body.bg-100 .card-body {top: 50%;}
+        body.bg-100 .container-fluid.mb-5.pb-5 {display: flex;justify-content: center;align-items: center;height: 100%;}
+    }
+}
+
+body.bg-100 .alert-danger {color: #c70015;border-color: #c70015;background: transparent}
+body.bg-100 .card .card-body input::placeholder {color: transparent!important;}
+body.bg-100 .o_database_list .card-body {background: transparent !important;color: unset;}
+
+@media only screen and (min-width: 991px) and (max-width: 1200px) {
+    body.bg-100 .o_database_list.col-sm-6 .card-body {width: 65%;}
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    body.bg-100 .o_database_list.col-sm-6 .card-body {width: 75%;}
+}
+@media only screen and (max-width: 768px) {
+    body.bg-100 .sh_backmate_th_login_left_img_st_2 {display: none;}
+    body.bg-100 .o_database_list.col-sm-6 {display: contents;}
+}
+@media only screen and (max-width: 400px) {
+    body.bg-100 .o_database_list {max-width: 325px !important;}
+}
+
+@if $login_page_style=='style_3' {
+    body.bg-100,body.bg-100 .card {font-family: $body_font_family!important;}
+    body.bg-100 {background-color: #917878 !important;background-image: radial-gradient(at 100% 0%, rgba(59, 44, 63, 0.6) 0px, transparent 50%), radial-gradient(at 7% 13%, rgba(119, 114, 126, 0.42) 0px, transparent 50%), radial-gradient(at 96% 94%, rgba(117, 111, 123, 0.51) 0px, transparent 50%), radial-gradient(at 3% 96%, rgba(59, 44, 63, 0.41) 0px, transparent 50%), url("/sh_backmate_theme/static/src/img/shape-1.svg");background-size: cover;}
+    body.bg-100 .card.o_database_list {border-radius: 0px;}
+    body.bg-100 .card-body .oe_login_form .field-db .input-group .input-group-append .btn.btn-secondary {background: $primaryColor;}
+    @media only screen and (max-width: 1024px) {
+        body.bg-100 .container.mb-5.pb-5 {display: flex;justify-content: center;align-items: center;height: 100%;}
+    }
+}
+@if $login_page_style=='style_4' {
+    body.bg-100{background: #ffffff !important;}
+    .sh_right_testimonial_section {position: relative;background: url(/sh_backmate_theme/static/src/img/login_4.webp);background-position: center;background-size: cover;display: flex;align-items: center;}
+    .sh_right_testimonial_section #testimonial4 .carousel-inner .item{overflow: hidden;}
+    .sh_right_testimonial_section .testimonial4_indicators .carousel-indicators::-webkit-scrollbar{height: 3px;}
+    .sh_right_testimonial_section .testimonial4_indicators .carousel-indicators::-webkit-scrollbar-thumb{background: #eeeeee;-webkit-border-radius: 0;border-radius: 0;}
+    .sh_right_testimonial_section .testimonial4_control_button .carousel-control{top: 175px;opacity: 1;width: 40px;bottom: auto;height: 40px;font-size: 10px;cursor: pointer;font-weight: 700;overflow: hidden;line-height: 38px;text-shadow: none;text-align: center;position: absolute;background: transparent;border: 2px solid #ffffff;text-transform: uppercase;-webkit-border-radius: 100%;border-radius: 100%;-webkit-box-shadow: none;box-shadow: none;-webkit-transition: all 0.6s cubic-bezier(0.3,1,0,1);transition: all 0.6s cubic-bezier(0.3,1,0,1);}
+    .sh_right_testimonial_section .testimonial4_slide{top: 0;left: 0;right: 0;bottom: 0;width: 70%;margin: auto;padding: 20px;position: relative;text-align: left;}
+    .sh_right_testimonial_section .testimonial4_slide .fa.fa-quote-left{font-size: 35px;color: $extra_color;}
+    .sh_right_testimonial_section .testimonial4_slide img {width: 3rem;height: 3rem;box-shadow: -6px 6px 6px rgba(0, 0, 0, 0.23);-moz-box-shadow: -6px 6px 6px rgba(0, 0, 0, 0.23);-o-box-shadow: -6px 6px 6px rgba(0, 0, 0, 0.23);-webkit-box-shadow: -6px 6px 6px rgba(0, 0, 0, 0.23);}
+    .sh_right_testimonial_section .testimonial4_slide p.quote_content {color: #ffffff;font-size: 20px;line-height: 1.4;margin: 40px 0 20px 0;font-weight: 600;font-family: $body_font_family!important;}
+    .sh_right_testimonial_section .testimonial4_slide h4 {color: #ffffff;font-size: 22px;}
+    .sh_right_testimonial_section .testimonial4_slide p.quote_content .fa.fa-quote-left,
+    .sh_right_testimonial_section .testimonial4_slide p.quote_content .fa.fa-quote-right{font-size: 12px;vertical-align: super;margin: 0px 2px;color: #ffffff;}
+    .card-body.sh_left_form_section{display: flex;align-items: center;justify-content: center;flex-direction: column;}
+    .card-body.sh_left_form_section form{width: 100%;}
+
+    .sh_right_testimonial_section .sh_overlay_div{background-color: $primaryColor !important;bottom: 0;height: 100vh;left: 0;position: absolute;right: 0;top: 0;width: 100%;opacity: .84;}
+    .sh_right_testimonial_section .sh_bubble_shape{height: 100%;left: 0;overflow: hidden;position: absolute;top: 0;width: 100%;}
+    .sh_right_testimonial_section .sh_bubble_shape li{animation: square 20s infinite;background-color: hsla(0,0%,100%,.1);border-radius: 30px;bottom: -50px;display: block;height: 40px;list-style: none;position: absolute;transition-timing-function: linear;width: 40px;}
+    .sh_bubble_shape li:first-child{left: 10%;}
+    .sh_bubble_shape li:nth-child(2) {animation-delay: 2s;animation-duration: 17s;height: 120px;left: 20%;width: 120px;}
+    .sh_bubble_shape li:nth-child(3) {animation-delay: 4s;left: 25%;}
+    .sh_bubble_shape li:nth-child(4) {animation-duration: 22s;height: 80px;left: 40%;width: 80px;}
+    .sh_bubble_shape li:nth-child(5) {height: 90px;left: 70%;width: 90px;}
+    .sh_bubble_shape li:nth-child(6) {animation-delay: 3s;height: 120px;left: 70%;width: 120px;}
+    .sh_bubble_shape li:nth-child(7) {animation-delay: 7s;height: 150px;left: 32%;width: 150px;}
+    .sh_bubble_shape li:nth-child(8) {animation-delay: 15s;animation-duration: 40s;height: 80px;left: 55%;width: 80px;}
+    .sh_bubble_shape li:nth-child(9) {animation-delay: 2s;animation-duration: 40s;height: 50px;left: 25%;width: 50px;}
+    .sh_bubble_shape li:nth-child(10) {animation-delay: 11s;height: 140px;left: 90%;width: 140px;}
+    @keyframes square {
+        0%{-webkit-transform: translateY(0);transform: translateY(0);}
+        100%{ -webkit-transform: translateY(-1000px) rotate(600deg);transform: translateY(-1000px) rotate(600deg);}
+    }
+    .sh_right_testimonial_section .carousel-indicators [data-bs-target] {background-clip: padding-box;background-color: #fff;border: 0;border-bottom: 10px solid transparent;border-top: 10px solid transparent;box-sizing: content-box;cursor: pointer;flex: 0 1 auto;height: 3px;margin-left: 3px;margin-right: 3px;opacity: .5;padding: 0;text-indent: -999px;transition: opacity .6s ease;width: 30px;font-size: 0;}
+    .sh_right_testimonial_section .carousel-indicators .active{opacity: 1;}
+    .card-body.sh_left_form_section form,.card-body.sh_left_form_section .text-center p.text-muted.mt-2,.sh_right_testimonial_section .testimonial4_slide{font-family: $body_font_family!important;}
+    .card-body.sh_left_form_section .field-login label,.card-body.sh_left_form_section label[for="password"],.card-body.sh_left_form_section .field-db label{font-weight: 500;color: #495057;}
+    .card-body.sh_left_form_section .oe_login_buttons .btn.btn-primary{background: $primaryColor;box-shadow: 0 2px 6px 0 lighten($primaryColor, 50%);border-color: $primaryColor;box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24) !important;border-radius: 20px;outline: none;}
+    .card-body.sh_left_form_section .oe_login_buttons .justify-content-between.mt-2.d-flex.small a,.card-body.sh_left_form_section .oe_login_buttons .btn.btn-link.btn-sm[type="submit"],.card-body.sh_left_form_section .text-center.small.mt-4.pt-3.border-top a{color: $primaryColor;font-family: $body_font_family!important;}
+    .card-body.sh_left_form_section .sh_welcome_text_h5{font-weight: 600;color: #495057;font-family: $body_font_family!important;}
+    .card-body.sh_left_form_section .form-control{border: 1px solid transparent;transition: all .7s ease;box-shadow: none;outline: none;background: #f1f3fa;padding: 8px 10px;border-radius: 20px;position: relative;}
+    .card-body.sh_left_form_section .field-login .form-control:focus,
+    .card-body.sh_left_form_section .form-control:focus,
+    .card-body.sh_left_form_section .field-login .form-control:hover,
+    .card-body.sh_left_form_section .field-password .form-control:hover{outline: none;box-shadow: none;border: 1px solid transparent;box-shadow: 0 5px 5px rgba(0, 6, 6, 0.10) inset !important;}
+    .card-body.sh_left_form_section .oe_login_buttons .btn.btn-primary:hover,.card-body.sh_left_form_section .oe_login_buttons .btn.btn-primary:focus{box-shadow: 0 10px 10px rgba(0, 10, 10, 0.10) !important;}
+
+    .card-body.sh_left_form_section .field-db .form-control{border-top-right-radius: 0px;border-bottom-right-radius: 0px;}
+    .card-body.sh_left_form_section .field-db .input-group-append a.btn.btn-secondary{border-top-right-radius: 20px;border-bottom-right-radius: 20px;background: $primaryColor;}
+    body.bg-100 .sh_left_form_section .alert-danger{border-radius: 20px;}
+
+    .card .sh_left_form_section #db + .btn.btn-secondary{border-top-right-radius: 20px !important;border-bottom-right-radius: 20px !important;background: $primaryColor !important;}
+    @media only screen and (max-width: 992px){
+        .sh_right_testimonial_section .testimonial4_slide{width: 90% !important;}
+    }
+    @media only screen and (max-width: 767.98px){
+        .sh_right_testimonial_section .sh_overlay_div,.sh_right_testimonial_section{height: 65vh !important;}
+    }
+}
+/* ------testimonial  close-------*/

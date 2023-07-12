@@ -1,0 +1,33 @@
+@if $theme_style !='style_8' {
+    .o_form_sheet.sh_full_form {min-width: 98% !important;max-width: 98% !important;}
+}
+.o_form_sheet .sh_full_screen_icon_div svg {width: 16px;fill: $primaryColor;}
+.o_form_sheet .sh_full_screen_icon_div .full_form_toggle {border: 1px solid rgb(204, 204, 204);padding: 5px 5px;background: transparent;border-top: 0px;border-right: 0px;position: absolute;top: -1px;right: 0px;}
+.o_form_sheet .sh_full_screen_icon_div {position: absolute;top: 0px;right: 0px;z-index: 1;}
+.o_form_sheet .sh_full_screen_icon_div {height: 0px;line-height: 16px;cursor: pointer;}
+@media only screen and (max-width: 992px) {
+    .o_form_sheet .sh_full_screen_icon_div {display: none;}
+}
+@if $theme_style=='style_6' {
+    .o_form_sheet .sh_full_screen_icon_div .full_form_toggle {border: 1px solid #b8b8b8;border-top: 0px;border-right: 0px;}
+}
+@if $theme_style=='style_7' {
+    .o_form_sheet .sh_full_screen_icon_div .full_form_toggle {padding: 2px 2px;}
+    @media only screen and (min-width: 1420px) {
+        .o_form_view .o_content .oe_button_box {margin-left: -32px;margin-right: -32px;}
+    }
+}
+.modal .modal-dialog .o_form_sheet .sh_full_screen_icon_div {display: none;}
+
+// 16 // 
+.o_content .o_note_form_view .o_form_sheet_bg .o_form_sheet{ margin: 12px auto; border: 1px solid #dee2e6 !important;}
+.o_action_manager.sh_full_content .o_form_view.o_xxl_form_view{flex-flow: column nowrap !important;overflow: auto !important;}
+.o_action_manager.sh_full_content .o_form_view.o_xxl_form_view .o_form_view_container{width: 100%;}
+.o_action_manager.sh_full_content .o_form_view.o_xxl_form_view .o_FormRenderer_chatterContainer{width: 99%;}
+.o_action_manager.sh_full_content .o_form_view.o_xxl_form_view .o_form_sheet_bg > .o_form_sheet{max-width: 100%;width: 100%;}
+.o_action_manager.sh_full_content .o_form_view.o_xxl_form_view .o_FormRenderer_chatterContainer.o-aside{border-left: 0px;}
+.o_action_manager.sh_full_content .o_form_view.o_xxl_form_view .o_form_sheet_bg{border-bottom: 1px solid #dee2e6;}
+.o_action_manager.sh_full_content .o_form_view.o_xxl_form_view .o_control_panel{position: sticky;top: 0;z-index: 99;}
+@if $theme_style=='style_8' {
+    .o_action_manager.sh_full_content .o_form_view.o_xxl_form_view .o_form_sheet_bg > .o_form_sheet{margin: 0px;}
+}

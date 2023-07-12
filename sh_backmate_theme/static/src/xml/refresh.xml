@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="web.KanbanView.Buttons" t-inherit="web.KanbanView.Buttons" t-inherit-mode="extension">
+        <xpath expr="//div" position="inside">
+            <button name="sh_refresh" class="btn btn-primary sh_refresh" t-on-click="_onClickRefreshView">
+				<i class="fa fa-refresh"></i>
+			</button>
+        </xpath>
+    </t>
+
+    <t t-name="web.CalendarController.controlButtons" t-inherit="web.CalendarController.controlButtons" t-inherit-mode="extension">
+        <xpath expr="//div" position="inside">
+            <button name="sh_refresh" class="btn btn-primary sh_refresh" t-on-click="_onClickRefreshView">
+				<i class="fa fa-refresh"></i>
+			</button>
+        </xpath>
+    </t>
+
+    <t t-name="web.ListView.Buttons" t-inherit="web.ListView.Buttons" t-inherit-mode="extension">
+        <xpath expr="//div" position="inside">
+            <button name="sh_refresh" class="btn btn-primary sh_refresh" t-on-click="_onClickRefreshView">
+				<i class="fa fa-refresh"></i>
+			</button>
+        </xpath>
+    </t>
+
+
+</templates>

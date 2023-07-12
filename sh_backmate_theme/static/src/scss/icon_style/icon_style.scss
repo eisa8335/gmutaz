@@ -1,0 +1,336 @@
+// style 2 // 
+@if $sidebar_style == "style_1" {
+    .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app .sh_fa_icon{display: none !important;}
+}
+@if  $app_icon_style == "style_2"{
+    .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block .dropdown-item.o_app .sh_app_name{max-width: 100%;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+    @if $sidebar_style == "style_1" {
+        .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app a .sh_fa_icon{display: none;}
+    }
+    @if $sidebar_style == "style_2" {
+        .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app a .sh_fa_icon {font-size: 24px !important;margin-right: 25px;text-align: center;color: $sidebar_font_color;}
+        .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block .dropdown-item.o_app.focus .sh_fa_icon{color: $sidebar_font_hover_color !important;}
+        .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app a{display: flex !important; justify-content: initial; align-items: center;}
+    }
+    @if $sidebar_style == "style_3" {
+        .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app a .sh_fa_icon {font-size: 32px !important;    margin-bottom: 10px;text-align: center;color: $sidebar_font_color;}
+        .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block .dropdown-item.o_app.focus .sh_fa_icon,
+        .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block .dropdown-item.o_app.focus .sh_app_name{color: $sidebar_font_hover_color !important;}
+        .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app a{display: flex !important; flex-direction: column;align-items: center; text-align: center;}
+    }
+    @if $sidebar_style == "style_4" {
+        .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app a .sh_fa_icon {font-size: 24px !important;margin-right: 25px;color: $sidebar_font_color;}
+        .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block .dropdown-item.o_app.focus .sh_fa_icon{color: $sidebar_font_hover_color;}
+        .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app a{display: flex !important; justify-content: initial; align-items: center;}
+    }
+    @if $sidebar_style == "style_5" {
+        .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app a .sh_fa_icon {font-size: 24px !important;margin-right: 25px;text-align: center;color: $sidebar_font_color;}
+        .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block .dropdown-item.o_app.focus .sh_fa_icon{color: $sidebar_font_hover_color;}
+        .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app a{display: flex !important; justify-content: initial; align-items: center;}
+    }
+    @if $sidebar_style == "style_6" {
+        .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app a .sh_fa_icon {font-size: 32px !important;    margin-bottom: 10px;text-align: center;color: $sidebar_font_color;}
+        .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block .dropdown-item.o_app.focus .sh_fa_icon,
+        .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block .dropdown-item.o_app.focus .sh_app_name{color: $sidebar_font_hover_color !important;}
+        .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app a{display: flex !important; flex-direction: column;align-items: center; text-align: center;}
+    }
+    @if $sidebar_style == "style_7" {
+        .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app a .sh_fa_icon {font-size: 24px !important;margin-right: 25px;text-align: center;color: $sidebar_font_color;}
+        .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app a{display: flex !important; justify-content: initial; align-items: center;}
+        .o_main_navbar .sh_backmate_theme_appmenu_div.show div.o-dropdown--menu.dropdown-menu.d-block{top: 40px !important;}
+        .sh_backmate_theme_appmenu_div {top: 0px !important;display: unset !important;}
+        .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app.focus a,
+        .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app.focus a .sh_fa_icon{color: $primaryColor;}
+        .sh_night_mode .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block .dropdown-item.o_app.focus {box-shadow: inset 0.5rem 0 0 #4c84ff;}
+    }
+    @if $sidebar_style == "style_8" {
+        .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app a .sh_fa_icon {font-size: 24px !important;margin-right: 25px;text-align: center;color: $sidebar_font_color;}
+        .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block .dropdown-item.o_app.focus .sh_fa_icon,
+        .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block .dropdown-item.o_app.focus .sh_app_name{color: $sidebar_font_hover_color !important;}
+        .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app a{display: flex !important; justify-content: initial; align-items: center;}
+        .o_main_navbar .sh_backmate_theme_appmenu_div.show div.o-dropdown--menu.dropdown-menu.d-block{top: 40px !important;}
+        .sh_backmate_theme_appmenu_div {top: 0px !important;display: unset !important;}
+    }
+}
+
+
+@if $app_icon_style == "style_3" {
+    .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block .dropdown-item.o_app.focus .sh_app_name{color: $sidebar_font_hover_color !important;}
+    @if $sidebar_style == "style_3" {
+        .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block .dropdown-item.o_app img {height: 70px !important;width: 70px !important;max-height: 70px;max-width: 70px;}
+    }
+    @if $sidebar_style == "style_6" {
+        .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block .dropdown-item.o_app img {height: 70px !important;width: 70px !important;max-height: 70px;max-width: 70px;}
+    }
+    @if $sidebar_style == "style_7" {
+        .o_main_navbar .sh_backmate_theme_appmenu_div.show div.o-dropdown--menu.dropdown-menu.d-block{top: 40px !important;}
+        .sh_backmate_theme_appmenu_div {top: 0px !important;display: unset !important;}
+    }
+    @if $sidebar_style == "style_8" {
+        .o_main_navbar .sh_backmate_theme_appmenu_div.show div.o-dropdown--menu.dropdown-menu.d-block{top: 40px !important;}
+        .sh_backmate_theme_appmenu_div {top: 0px !important;display: unset !important;}
+    }
+    // v16
+    @if $sidebar_style == "style_1" {
+        .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block .dropdown-item.o_app a, .sh_backmate_theme_appmenu_div div.o-dropdown--menu.d-block.o-dropdown-menu .dropdown-item.o_app a{display: flex;}
+    }
+}
+
+@if $app_icon_style == "style_1" {
+    .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block .dropdown-item.o_app.focus .sh_app_name{color: $sidebar_font_hover_color !important;}
+    @if $sidebar_style == "style_3" {
+        .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block .dropdown-item.o_app img {height: 70px !important;width: 70px !important;max-height: 70px;max-width: 70px;}
+    }
+    @if $sidebar_style == "style_6" {
+        .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block .dropdown-item.o_app img {height: 70px !important;width: 70px !important;max-height: 70px;max-width: 70px;}
+    }
+    @if $sidebar_style == "style_7" {
+        .o_main_navbar .sh_backmate_theme_appmenu_div.show div.o-dropdown--menu.dropdown-menu.d-block{top: 40px !important;}
+        .sh_backmate_theme_appmenu_div {top: 0px !important;display: unset !important;}
+    }
+    @if $sidebar_style == "style_8" {
+        .o_main_navbar .sh_backmate_theme_appmenu_div.show div.o-dropdown--menu.dropdown-menu.d-block{top: 40px !important;}
+        .sh_backmate_theme_appmenu_div { top: 0px !important;display: unset !important;}
+    }
+}
+@if $theme_style == "style_7" {
+    @if $app_icon_style == "style_2" {
+        .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app{text-shadow: none !important;}
+        .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app.focus .sh_fa_icon,
+        .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block .dropdown-item.o_app.focus .sh_app_name{color: $primaryColor !important;}
+    }
+    @if $app_icon_style == "style_3" {
+        .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app{text-shadow: none !important;}
+        .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app.focus img{box-shadow: none !important;transform: translateY(-4px);}          
+    }
+    @if $app_icon_style == "style_4" {
+        .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app{text-shadow: none !important;}
+        .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app.focus a .sh_fa_icon span.path1:before,
+        .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app.focus a .sh_fa_icon span.path2:before{box-shadow: none !important;transform: translateY(-4px) !important;}
+        .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app a .sh_fa_icon{transition: all .4s;}
+        .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app:hover .sh_fa_icon{transform: translateY(-1px) !important;}    
+    }
+}
+@media only screen and (min-width: 1400px){
+    @if $app_icon_style == "style_1" {        
+        @if $sidebar_style == "style_2" {
+            .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app img {width: 35px !important;}
+        }
+        @if $sidebar_style == "style_3" {
+            .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block .dropdown-item.o_app img {height: 70px !important;width: 70px !important;max-height: 70px;max-width: 70px;}
+            .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block .dropdown-item.o_app .sh_app_name{font-size: 17px !important;text-shadow: none !important;}
+        }
+        @if $sidebar_style == "style_4" {
+            .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app img {width: 35px !important;}
+            .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app{padding-left: 15px !important;}
+        }
+        @if $sidebar_style == "style_5" {
+            .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app img {width: 35px;}
+        }
+        @if $sidebar_style == "style_6" {
+            .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block .dropdown-item.o_app img {height: 70px !important;width: 70px !important;max-height: 70px;max-width: 70px;}
+            .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block .dropdown-item.o_app .sh_app_name{font-size: 17px !important;text-shadow: none !important;}
+        }
+        @if $sidebar_style == "style_7" {
+            .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app img {width: 35px !important;}
+        }
+        @if $sidebar_style == "style_8" {
+            .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app img {width: 35px !important;}
+        }
+    }
+    @if $app_icon_style == "style_2" {
+        @if $sidebar_style == "style_2" {
+            .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app a .sh_fa_icon{font-size: 30px !important;}
+            .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block .dropdown-item.o_app .sh_app_name{font-size: 16px !important}
+        }
+        @if $sidebar_style == "style_3" {
+            .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app a .sh_fa_icon{font-size: 40px !important;} 
+            .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block .dropdown-item.o_app .sh_app_name{font-size: 17px !important;}
+        }
+        @if $sidebar_style == "style_4" {
+             .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app a .sh_fa_icon{font-size: 30px !important;}
+            .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block .dropdown-item.o_app .sh_app_name{font-size: 16px !important}
+            .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app{padding-left: 15px !important;}
+        }
+        @if $sidebar_style == "style_5" {
+            .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app a .sh_fa_icon{font-size: 30px !important;}
+            .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block .dropdown-item.o_app .sh_app_name{font-size: 16px !important}
+        }
+        @if $sidebar_style == "style_6" {
+            .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app a .sh_fa_icon{font-size: 40px !important;} 
+            .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block .dropdown-item.o_app .sh_app_name{font-size: 17px !important;}
+        }
+        @if $sidebar_style == "style_7" {
+            .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app a .sh_fa_icon{font-size: 30px !important;}
+            .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block .dropdown-item.o_app .sh_app_name{font-size: 16px !important}
+        }
+        @if $sidebar_style == "style_8" {
+            .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app a .sh_fa_icon{font-size: 30px !important;}
+            .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block .dropdown-item.o_app .sh_app_name{font-size: 16px !important}
+        }
+    } 
+    @if $app_icon_style == "style_3" {
+        @if $sidebar_style == "style_2" {
+            .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app img {width: 35px !important;}
+        }
+        @if $sidebar_style == "style_3" {
+            .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block .dropdown-item.o_app img {height: 70px !important;width: 70px !important;max-height: 70px;max-width: 70px;}
+            .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block .dropdown-item.o_app .sh_app_name{font-size: 17px !important;}
+        }
+        @if $sidebar_style == "style_4" {
+            .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app img {width: 35px !important;}
+            .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app{padding-left: 15px !important;text-shadow: none !important;}
+        }
+        @if $sidebar_style == "style_5" {
+            .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app img {width: 35px;}
+        }
+        @if $sidebar_style == "style_6" {
+            .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block .dropdown-item.o_app img {height: 70px !important;width: 70px !important;max-height: 70px;max-width: 70px;}
+            .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block .dropdown-item.o_app .sh_app_name{font-size: 17px !important;text-shadow: none !important;}
+        }
+        @if $sidebar_style == "style_7" {
+            .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app img {width: 35px !important;}
+        }
+        @if $sidebar_style == "style_8" {
+            .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app img {width: 35px !important;}
+        }
+    }   
+    @if $app_icon_style == "style_4" {
+        @if $sidebar_style == "style_2" {
+            .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app a .sh_fa_icon{font-size: 30px !important;}
+            .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block .dropdown-item.o_app .sh_app_name{font-size: 16px !important}
+        }
+        @if $sidebar_style == "style_3" {
+            .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app a .sh_fa_icon{font-size: 40px !important;} 
+            .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block .dropdown-item.o_app .sh_app_name{font-size: 17px !important;}
+        }
+        @if $sidebar_style == "style_4" {
+             .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app a .sh_fa_icon{font-size: 30px !important;}
+            .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block .dropdown-item.o_app .sh_app_name{font-size: 16px !important}
+            .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app{padding-left: 15px !important;}
+        }
+        @if $sidebar_style == "style_5" {
+            .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app a .sh_fa_icon{font-size: 30px !important;}
+            .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block .dropdown-item.o_app .sh_app_name{font-size: 16px !important}
+        }
+        @if $sidebar_style == "style_6" {
+            .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app a .sh_fa_icon{font-size: 40px !important;} 
+            .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block .dropdown-item.o_app .sh_app_name{font-size: 17px !important;}
+        }
+        @if $sidebar_style == "style_7" {
+            .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app a .sh_fa_icon{font-size: 30px !important;}
+            .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block .dropdown-item.o_app .sh_app_name{font-size: 16px !important}
+        }
+        @if $sidebar_style == "style_8" {
+            .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app a .sh_fa_icon{font-size: 30px !important;}
+            .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block .dropdown-item.o_app .sh_app_name{font-size: 16px !important}
+        }
+    }  
+}
+@if $app_icon_style == "style_4" {
+    .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block .dropdown-item.o_app .sh_app_name{max-width: 100%;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+
+    @if $sidebar_style == "style_2" {
+        .o_web_client .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app a .sh_fa_icon span{font-family: 'icomoon' !important;}
+        .o_web_client .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app a .sh_fa_icon {font-size: 24px !important;margin-right: 25px;text-align: center;}
+        .o_web_client:not(.sh_night_mode) .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app:not(:hover):not(.focus) a .sh_fa_icon span.path1:before{color: $dual_tone_icon_color_1;opacity: 1;}
+        .o_web_client:not(.sh_night_mode) .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app:not(:hover):not(.focus) a .sh_fa_icon span.path2:before{color: $dual_tone_icon_color_2;opacity: 1;}
+        .o_web_client:not(.sh_night_mode) .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app.focus a .sh_fa_icon span.path1:before,
+        .o_web_client:not(.sh_night_mode) .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app.focus a .sh_fa_icon span.path2:before{color: $sidebar_font_hover_color !important;}
+        .o_web_client.sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app a{display: flex !important; justify-content: initial;}
+    }
+    @if $sidebar_style == "style_3" {
+        .o_web_client .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app a .sh_fa_icon span{font-family: 'icomoon' !important;}
+        .o_web_client .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app a .sh_fa_icon {font-size: 32px !important;margin-bottom: 10px;text-align: center;}
+        .o_web_client:not(.sh_night_mode) .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app:not(:hover):not(.focus) a .sh_fa_icon span.path1:before{color: $dual_tone_icon_color_1;opacity: 1;}
+        .o_web_client:not(.sh_night_mode) .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app:not(:hover):not(.focus) a .sh_fa_icon span.path2:before{color: $dual_tone_icon_color_2;opacity: 1;}
+        .o_web_client:not(.sh_night_mode) .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block .dropdown-item.o_app.focus a,
+        .o_web_client:not(.sh_night_mode) .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app.focus a .sh_fa_icon span.path1:before,
+        .o_web_client:not(.sh_night_mode) .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app.focus a .sh_fa_icon span.path2:before{color: $sidebar_font_hover_color !important;}
+        .o_web_client .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app a{display: flex !important; flex-direction: column;align-items: center; text-align: center;}
+    }
+    @if $sidebar_style == "style_4" {
+        .o_web_client .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app a .sh_fa_icon span{font-family: 'icomoon' !important;}
+        .o_web_client .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app a .sh_fa_icon {font-size: 24px !important;margin-right: 25px;}
+        .o_web_client .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app a{display: flex !important; justify-content: initial;}
+        .o_web_client:not(.sh_night_mode) .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app:not(:hover):not(.focus) a .sh_fa_icon span.path1:before{color: $dual_tone_icon_color_1;opacity: 1;}
+        .o_web_client:not(.sh_night_mode) .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app:not(:hover):not(.focus) a .sh_fa_icon span.path2:before{color: $dual_tone_icon_color_2;opacity: 1;}
+        .o_web_client .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app.focus a .sh_fa_icon span.path1:before,
+        .o_web_client .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app.focus a .sh_fa_icon span.path2:before{color: $sidebar_font_hover_color;}
+    }
+    @if $sidebar_style == "style_5" {
+        .o_web_client .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app a .sh_fa_icon span{font-family: 'icomoon' !important;}
+        .o_web_client .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app a .sh_fa_icon {font-size: 24px !important;margin-right: 25px;text-align: center;}
+        .o_web_client .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app a{display: flex !important; justify-content: initial;align-items: center;}
+        .o_web_client .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app.focus a .sh_fa_icon span.path1:before,
+        .o_web_client .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app.focus a .sh_fa_icon span.path2:before{color: $sidebar_font_hover_color;}
+        .o_web_client:not(.sh_night_mode) .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app:not(:hover):not(.focus) a .sh_fa_icon span.path1:before{color: $dual_tone_icon_color_1;opacity: 1;}
+        .o_web_client:not(.sh_night_mode) .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app:not(:hover):not(.focus) a .sh_fa_icon span.path2:before{color: $dual_tone_icon_color_2;opacity: 1;}
+    }
+    @if $sidebar_style == "style_6" {
+        .o_web_client .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app a .sh_fa_icon span{font-family: 'icomoon' !important;}
+        .o_web_client .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app a .sh_fa_icon {font-size: 32px !important;margin-bottom: 10px;text-align: center;}
+        .o_web_client:not(.sh_night_mode) .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app:not(:hover):not(.focus) a .sh_fa_icon span.path1:before{color: $dual_tone_icon_color_1;opacity: 1;}
+        .o_web_client:not(.sh_night_mode) .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app:not(:hover):not(.focus) a .sh_fa_icon span.path2:before{color: $dual_tone_icon_color_2;opacity: 1;}
+        .o_web_client .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app.focus a,
+        .o_web_client .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app.focus a .sh_fa_icon span.path1:before,
+        .o_web_client .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app.focus a .sh_fa_icon span.path2:before{color: $sidebar_font_hover_color !important;}
+        .o_web_client .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app a{display: flex !important; flex-direction: column;align-items: center; text-align: center;}
+    }
+    @if $sidebar_style == "style_7" {
+        .o_web_client .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app a .sh_fa_icon span{font-family: 'icomoon' !important;}
+        .o_web_client .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app a .sh_fa_icon {font-size: 24px !important;margin-right: 25px;text-align: center;}
+        .o_web_client:not(.sh_night_mode) .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app:not(:hover):not(.focus) a .sh_fa_icon span.path1:before{color: $dual_tone_icon_color_1;opacity: 1;}
+        .o_web_client:not(.sh_night_mode) .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app:not(:hover):not(.focus) a .sh_fa_icon span.path2:before{color: $dual_tone_icon_color_2;opacity: 1;}
+        .o_web_client .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app.focus a .sh_fa_icon span.path1:before,
+        .o_web_client .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app.focus a .sh_fa_icon span.path2:before{color: $primaryColor !important;}
+        .o_web_client .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app a{display: flex !important; justify-content: initial;}
+        .o_web_client .o_main_navbar .sh_backmate_theme_appmenu_div.show div.o-dropdown--menu.dropdown-menu.d-block{top: 40px !important;}
+        .o_web_client .sh_backmate_theme_appmenu_div {top: 0px !important;display: unset !important;}
+        .o_web_client .sh_night_mode .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block .dropdown-item.o_app.focus{box-shadow: inset 0.5rem 0 0 #4c84ff;}
+    }
+    @if $sidebar_style == "style_8" {
+        .o_web_client .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app a .sh_fa_icon span{font-family: 'icomoon' !important;}
+        .o_web_client .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app a .sh_fa_icon {font-size: 24px !important;margin-right: 25px;text-align: center;}
+        .o_web_client:not(.sh_night_mode) .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app:not(:hover):not(.focus) a .sh_fa_icon span.path1:before{color: $dual_tone_icon_color_1;opacity: 1;}
+        .o_web_client:not(.sh_night_mode) .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app:not(:hover):not(.focus) a .sh_fa_icon span.path2:before{color: $dual_tone_icon_color_2;opacity: 1;}
+        .o_web_client .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block .dropdown-item.o_app.focus a,
+        .o_web_client .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app.focus a .sh_fa_icon span.path1:before,
+        .o_web_client .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app.focus a .sh_fa_icon span.path2:before{color: $sidebar_font_hover_color !important;}
+        .o_web_client .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app a{display: flex !important; justify-content: initial;}
+        .o_web_client .o_main_navbar .sh_backmate_theme_appmenu_div.show div.o-dropdown--menu.dropdown-menu.d-block{top: 40px !important;}
+        .o_web_client .sh_backmate_theme_appmenu_div {top: 0px !important;display: unset !important;}
+    }
+    
+}
+// night mode scss // 
+
+.sh_night_mode .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app:hover .sh_fa_icon{color: #fff;}
+.sh_night_mode .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block .dropdown-item.o_app a,
+.sh_night_mode .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app a .sh_fa_icon,
+.sh_night_mode .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block .dropdown-item.o_app .sh_fa_icon{color: #dce1ff !important;}
+
+.sh_night_mode .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block .dropdown-item.o_app.focus .sh_fa_icon,
+.sh_night_mode .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block .dropdown-item.o_app.focus a,
+.sh_night_mode .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block .dropdown-item.o_app:hover .sh_app_name,
+.sh_night_mode .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block .dropdown-item.o_app.focus .sh_app_name,
+.sh_night_mode .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app.focus .sh_fa_icon,
+.sh_night_mode .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app.focus .sh_fa_icon,
+.sh_night_mode .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block .dropdown-item.o_app.focus .sh_fa_icon,
+.sh_night_mode .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block .dropdown-item.o_app.focus:hover .sh_fa_icon{color: #4c84ff !important;}
+
+.sh_night_mode .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app a .sh_fa_icon span.path1:before,
+.sh_night_mode .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app a .sh_fa_icon span.path2:before{color: #dce1ff;}
+.sh_night_mode .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app.focus a .sh_fa_icon span.path1:before,
+.sh_night_mode .sh_backmate_theme_appmenu_div div.o-dropdown--menu.dropdown-menu.d-block span.dropdown-item.o_app.focus a .sh_fa_icon span.path2:before{color: #4c84ff !important;}
+/* systray icon of header */
+@media only screen and (min-width: 768px){
+    .o_main_navbar .o_menu_systray .o_switch_company_menu.o-dropdown.dropdown .dropdown-toggle{position: relative;width: 30px;}
+    .o_main_navbar .o_menu_systray .o_switch_company_menu.o-dropdown.dropdown .dropdown-toggle .oe_topbar_name{font-size: 0px;}
+}
+@media only screen and (min-width: 993px){
+    .o_main_navbar .o_menu_systray .o_switch_company_menu.o-dropdown.dropdown .dropdown-toggle::before{position: absolute;top: 0px;font-size: 16px;content: '\f1ad' !important;font-family: 'icomoon' !important;color: $header_font_color;left: 7px;}
+}
+.o_menu_systray .o_debug_manager .fa.fa-bug::before,.o_menu_systray .o_MessagingMenu .o_MessagingMenu_icon:before,.o_menu_systray .o_mail_systray_item .dropdown-toggle .fa.fa-clock-o::before{font-size: 16px;}
+
+.o_menu_systray .o_switch_company_menu{width: 30px;}

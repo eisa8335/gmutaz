@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="LanguageTemplate">
+        <div class="sh_language_icon">
+            <a href="#" class="openDropdownLanguage" title="Open Language" aria-label="Open Language" data-toggle="dropdown" aria-expanded="false" tabindex="-1" data-display="static">
+                <span class="fa fa-language"></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right sh_user_language_list_cls" role="menu">
+                <t t-call="LanguageTemplate.list" />
+            </div>
+        </div>
+
+    </t>
+
+    <t t-name="LanguageTemplate.list">
+        <t t-if="languages_list">
+            <t t-foreach="languages_list" t-as="language">
+                <a href="#" t-att-data-language="language[0]" t-att-class="language[0]==selected_lang ? 'sh_user_lang dropdown-item active' : 'sh_user_lang dropdown-item'">
+                    <img class="sh_lang_flag" t-att-src="language[2]" />
+                    <t t-esc="language[1]" />
+                </a>
+            </t>
+        </t>
+    </t>
+
+</templates>

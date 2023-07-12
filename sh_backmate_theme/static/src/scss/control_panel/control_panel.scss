@@ -1,0 +1,12 @@
+.o_control_panel .o_cp_bottom .o_calendar_buttons .o_calendar_scale_buttons .dropdown.btn-group:not(.show) .scale_button_selection{color: $primaryColor;background: transparent;border-color: transparent;}
+.o_control_panel .o_cp_bottom .o_calendar_buttons .o_calendar_scale_buttons .o_calendar_button_day,
+.o_control_panel .o_cp_bottom .o_calendar_buttons .o_calendar_scale_buttons .o_calendar_button_week,
+.o_control_panel .o_cp_bottom .o_calendar_buttons .o_calendar_scale_buttons .o_calendar_button_month,
+.o_control_panel .o_cp_bottom .o_calendar_buttons .o_calendar_scale_buttons .o_calendar_button_year{background: #ffffff;border: 1.5px solid #ffffff;color: $primaryColor;margin: 0px;}
+
+body .o_control_panel .o_cp_bottom .o_calendar_buttons .o_calendar_scale_buttons .btn-secondary:hover{color: #000000;background-color: #f8f9fa;border-color: #e9ecef;}
+body .o_control_panel .o_cp_bottom .o_calendar_buttons .o_calendar_scale_buttons .btn-secondary.focus{color: $primaryColor;}
+.o_control_panel .o_cp_bottom .o_cp_bottom_right .o_cp_pager .o_pager .btn-group .o_pager_next,
+.o_control_panel .o_cp_bottom .o_cp_bottom_left .btn-group > button,
+.o_control_panel .o_cp_bottom .o_calendar_buttons .sh_refresh{margin-left: 5px;}
+.o_control_panel .o_cp_top .o_cp_top_left .o_form_status_indicator .o_form_status_indicator_buttons button{background-color: transparent !important; border-color: transparent !important;}

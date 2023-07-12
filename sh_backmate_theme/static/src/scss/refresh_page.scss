@@ -1,0 +1,4 @@
+.o_form_view .o_form_sheet .o_notebook .sh_refresh,.o_form_view .o_form_sheet_bg > .o_form_sheet .sh_refresh{display: none !important;}
+@media only screen and (max-width: 767.98px){
+    .o_control_panel .o_cp_bottom .o_cp_bottom_left .o_cp_buttons .btn.sh_refresh:active,.o_control_panel .o_cp_bottom .o_cp_bottom_left .o_cp_buttons .btn.sh_refresh:hover,.o_control_panel .o_cp_bottom .o_cp_bottom_left .o_cp_buttons .btn.sh_refresh:focus{color: #ffffff !important;}
+}

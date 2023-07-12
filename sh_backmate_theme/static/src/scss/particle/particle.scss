@@ -1,0 +1,57 @@
+.o_main_navbar {border-bottom: 0px !important;}
+
+@if $festival_style =='christmas' {
+  canvas {display: block;vertical-align: bottom;width: 100%;height: 100%;}
+  #particles-js {position: absolute;width: 100%;height: 100%;background-color: #b61924;background-image: url("/sh_backmate_theme/static/src/img/sh_christmas.jpg");background-repeat: no-repeat;background-size: cover;background-position: 50% 50%;}
+  .count-particles {position: absolute;top: 48px;left: 0;width: 80px;color: #13E8E9;font-size: .8em;text-align: left;text-indent: 4px;line-height: 14px;padding-bottom: 2px;font-family: Helvetica, Arial, sans-serif;font-weight: bold;}
+  .js-count-particles {font-size: 1.1em;}
+  #stats,
+  .count-particles {-webkit-user-select: none;margin-top: 5px;margin-left: 5px;}
+  #stats {border-radius: 3px 3px 0 0;overflow: hidden;}
+  .count-particles {border-radius: 0 0 3px 3px;}
+  @if $theme_style=='style_8' {
+    body.o_web_client{
+      // background: url("/sh_backmate_theme/static/src/img/sh_christmas.jpg")  !important;
+      background:#b61924  !important;
+      background-size: 100% !important;position: relative;
+    }
+    body.o_web_client::after{content: "";position: absolute; width: 100%; height: 100%;background-color: rgba(0, 0, 0, 0.4); z-index: -1;}
+  }
+}
+
+@if $festival_style =='new_year' {
+  .sh_particle_main .sh_particle_container .sh_light_rope{ background-repeat: no-repeat; background-size: 100%; background-image: url("/sh_backmate_theme/static/src/img/sh_new_year_one.jpg");}
+  .sh_light_rope {text-align: center;white-space: nowrap;overflow: hidden;position: absolute;z-index: 0;margin: 0;padding: 0;pointer-events: none;width: 100%;height: 100%;}
+  .sh_light_rope:nth-child(odd) {margin-bottom: 5px !important;animation-duration: 1.8s;}
+  .sh_light_rope:nth-child(3n+1) {animation-duration: 1.4s;}
+  .sh_light_rope li:before {content: "";position: absolute;background: #222;width: 3px;height: 18px;border-radius: 0px;top: -17.666667px;left: 8px;}
+  .sh_light_rope:last-child:after {content: none;}
+  .sh_light_rope li {position: relative;animation-fill-mode: both;animation-iteration-count: infinite;list-style: none;margin: 0;padding: 0;display: block;width: 18px;height: 18px;border-radius: 100%;margin: 7px 57px 0px 57px !important;display: inline-block;background: rgba(255, 189, 86, 1);animation-name: flash-1;animation-duration: 2s;}  
+  .sh_light_rope li:nth-child(2n+1) {background: rgba(255, 189, 86, 1);animation-name: flash-2;animation-duration: 1s;}
+  .sh_light_rope li:nth-child(4n+2) {background: rgba(255, 189, 86, 1);animation-name: flash-3;animation-duration: 1.1s;}
+  @keyframes flash-1 {
+    0%,
+    100% {background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #c19538 30%, #c19f52 40%, transparent 80%), radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #e7c874 25%, #ad8a3b 62.5%, #b38f3e 100%);box-shadow: 0px 0px 9px 5px rgba(255, 189, 86, 0.80%);}
+    50% {box-shadow: 0px 0px 9px 5px rgba(255, 189, 86, 0.5);}
+  }
+  @keyframes flash-2 {
+    0%,
+    100% {background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #c19538 30%, #c19f52 40%, transparent 80%), radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #e7c874 25%, #ad8a3b 62.5%, #b38f3e 100%);box-shadow: 0px 0px 9px 5px rgba(255, 189, 86, 0.80%);}
+    50% {box-shadow: 0px 0px 9px 5px rgba(255, 189, 86, 0.5);}
+  }
+  @keyframes flash-3 {
+    0%,
+    100% {background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #c19538 30%, #c19f52 40%, transparent 80%), radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #e7c874 25%, #ad8a3b 62.5%, #b38f3e 100%);box-shadow: 0px 0px 9px 5px rgba(255, 189, 86, 0.80%);}
+    50% {box-shadow: 0px 0px 9px 5px rgba(255, 189, 86, 0.5);}
+  }
+
+  @media only screen and (max-width: 786px){
+    .sh_light_rope li {margin: 7px 30px 0px 30px !important;}
+  }
+  @if $theme_style=='style_8' {
+    body.o_web_client{
+      background: url("/sh_backmate_theme/static/src/img/sh_new_year_one.jpg") !important;
+      background-size: 100% 100% !important;
+    }
+  }
+}

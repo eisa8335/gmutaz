@@ -1,0 +1,33 @@
+@if $is_sticky_form==True {
+    // Normal views
+
+    @if $body_background_type=='bg_img' {
+        .o_content .o_form_view .o_form_statusbar {background: #ffffffe0;}
+    }
+    .o_content,.modal-content{max-width: 100%;}
+    .o_content .o_form_sheet {overflow-x: auto;}
+    .o_content .o_form_sheet .oe_button_box .o_dropdown_more {padding: 0.1em;width: min-content;}
+    .o_content .o_form_statusbar {position: sticky !important;top: 0;z-index: 2;}
+    .o_content .oe_title span.o_field_widget {max-width: 100%;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;width: initial;}
+    .o_content .oe_title span:active {white-space: normal;}
+
+    @include media-breakpoint-down(sm) {
+        min-width: auto;
+        .oe_button_box+.oe_title,.oe_button_box+.oe_avatar+.oe_title {width: 100%;}
+        .o_form_sheet {min-width: auto;}
+        .o_group .o_field_widget.o_text_overflow {width: auto !important;}
+        .o_group_col_6 {width: 100%;}
+        .o_statusbar_buttons_dropdown {
+            border: {bottom: 0;radius: 0;top: 0;}
+            height: 100%;}
+        .o_statusbar_buttons>.btn {border-radius: 0;border: 0;width: 100%;margin-bottom: 0.2rem;
+            &:last-child {margin-bottom: 0;}
+        }
+        .o_statusbar_status {
+            .o_arrow_button:first-child::before {content: none;display: none;}
+        }
+        .app_settings_block {
+            .row { margin: 0;}
+        }
+    }
+}
